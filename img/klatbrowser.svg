@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="1280" height="720"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1280" height="48" fill="#0f0f23" opacity="0.95"/>
+  <circle cx="24" cy="24" r="5" fill="#ef4444"/>
+  <circle cx="38" cy="24" r="5" fill="#f59e0b"/>
+  <circle cx="52" cy="24" r="5" fill="#10b981"/>
+  <text x="640" y="30" text-anchor="middle" font-family="system-ui" font-size="14" fill="#888">https://github.com/klatasia  🔒 Secure</text>
+  
+  <!-- Toolbar -->
+  <rect x="0" y="48" width="1280" height="56" fill="#1a1a2e"/>
+  <rect x="20" y="58" width="400" height="36" fill="#0f0f23" rx="18"/>
+  <text x="40" y="78" font-family="system-ui" font-size="13" fill="#6c63ff">🔒  https://klatasia.software</text>
+  <circle cx="1220" cy="76" r="18" fill="url(#blue)" opacity="0.2"/>
+  <text x="1220" y="80" text-anchor="middle" font-family="system-ui" font-size="14" fill="#6c63ff">➕</text>
+  
+  <!-- Tabs -->
+  <rect x="20" y="120" width="1240" height="40" fill="#0f0f23" rx="8 8 0 0"/>
+  <rect x="20" y="120" width="180" height="40" fill="#1a1a2e" rx="8 8 0 0"/>
+  <text x="110" y="144" text-anchor="middle" font-family="system-ui" font-size="13" font-weight="bold" fill="#6c63ff">💻  KlatAsia</text>
+  <text x="300" y="144" text-anchor="middle" font-family="system-ui" font-size="13" fill="#888">🤖  Klat AI</text>
+  <text x="420" y="144" text-anchor="middle" font-family="system-ui" font-size="13" fill="#888">🌐  Klat Browser</text>
+  <text x="540" y="144" text-anchor="middle" font-family="system-ui" font-size="13" fill="#888">📥  Klat Downloader</text>
+  <circle cx="1240" cy="140" r="14" fill="#333"/>
+  <text x="1240" y="144" text-anchor="middle" font-family="system-ui" font-size="14" fill="#888">+</text>
+  
+  <!-- Speed Dial -->
+  <g font-family="system-ui" font-size="13" fill="#ccc">
+    <rect x="80" y="190" width="240" height="140" fill="#0f0f23" rx="12"/>
+    <text x="200" y="240" text-anchor="middle" font-size="32">🤖</text>
+    <text x="200" y="280" text-anchor="middle" font-weight="bold" fill="#fff">Klat AI</text>
+    <text x="200" y="300" text-anchor="middle" font-size="11" fill="#6c63ff">Click to chat</text>
+    
+    <rect x="360" y="190" width="240" height="140" fill="#0f0f23" rx="12"/>
+    <text x="480" y="240" text-anchor="middle" font-size="32">📥</text>
+    <text x="480" y="280" text-anchor="middle" font-weight="bold" fill="#fff">Klat Downloader</text>
+    <text x="480" y="300" text-anchor="middle" font-size="11" fill="#10b981">Manage downloads</text>
+    
+    <rect x="640" y="190" width="240" height="140" fill="#0f0f23" rx="12"/>
+    <text x="760" y="240" text-anchor="middle" font-size="32">📝</text>
+    <text x="760" y="280" text-anchor="middle" font-weight="bold" fill="#fff">Klat Office</text>
+    <text x="760" y="300" text-anchor="middle" font-size="11" fill="#f59e0b">Create documents</text>
+    
+    <rect x="920" y="190" width="240" height="140" fill="#0f0f23" rx="12"/>
+    <text x="1040" y="240" text-anchor="middle" font-size="32">📺</text>
+    <text x="1040" y="280" text-anchor="middle" font-weight="bold" fill="#fff">Klat Tube</text>
+    <text x="1040" y="300" text-anchor="middle" font-size="11" fill="#ef4444">Watch ad-free</text>
+  </g>
+  
+  <!-- Shield status -->
+  <rect x="80" y="380" width="1120" height="100" fill="linear-gradient(135deg, rgba(16,185,129,0.1), rgba(108,99,255,0.1))" rx="12" stroke="#10b981" stroke-opacity="0.3"/>
+  <text x="640" y="415" text-anchor="middle" font-family="system-ui" font-size="18" font-weight="bold" fill="#10b981">🛡️  12 trackers blocked today</text>
+  <rect x="550" y="435" width="180" height="30" fill="url(#blue)" rx="15"/>
+  <text x="640" y="453" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#fff">Klat Engine v2.1</text>
+  
+  <!-- Engine comparison -->
+  <text x="640" y="520" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#fff">Engine Comparison</text>
+  <g font-family="system-ui" font-size="11" fill="#ccc" transform="translate(100, 540)">
+    <text x="0" y="0">Feature</text>
+    <text x="180" y="0" text-anchor="middle">Klat Engine</text>
+    <text x="330" y="0" text-anchor="middle">Chromium</text>
+    <text x="480" y="0" text-anchor="middle">Gecko</text>
+    <text x="630" y="0" text-anchor="middle">WebKit</text>
+  </g>
+  <g font-family="system-ui" font-size="11" transform="translate(100, 565)">
+    <text x="0" y="0" fill="#fff">Binary Size</text>
+    <text x="180" y="0" text-anchor="middle" fill="#10b981">~45 MB</text>
+    <text x="330" y="0" text-anchor="middle" fill="#888">~180 MB</text>
+    <text x="480" y="0" text-anchor="middle" fill="#888">~120 MB</text>
+    <text x="630" y="0" text-anchor="middle" fill="#888">~90 MB</text>
+    <text x="0" y="25" fill="#fff">RAM (10 tabs)</text>
+    <text x="180" y="25" text-anchor="middle" fill="#10b981">~380 MB</text>
+    <text x="330" y="25" text-anchor="middle" fill="#888">~650 MB</text>
+    <text x="480" y="25" text-anchor="middle" fill="#888">~520 MB</text>
+    <text x="630" y="25" text-anchor="middle" fill="#888">~480 MB</text>
+    <text x="0" y="50" fill="#fff">Native Adblock</text>
+    <text x="180" y="50" text-anchor="middle" fill="#10b981">✅ Yes</text>
+    <text x="330" y="50" text-anchor="middle" fill="#ef4444">❌ Limited</text>
+    <text x="480" y="50" text-anchor="middle" fill="#10b981">✅ Yes</text>
+    <text x="630" y="50" text-anchor="middle" fill="#f59e0b">⚠️ Partial</text>
+    <text x="0" y="75" fill="#fff">Video Download</text>
+    <text x="180" y="75" text-anchor="middle" fill="#10b981">✅ Built-in</text>
+    <text x="330" y="75" text-anchor="middle" fill="#ef4444">❌ Extension</text>
+    <text x="480" y="75" text-anchor="middle" fill="#ef4444">❌ Extension</text>
+    <text x="630" y="75" text-anchor="middle" fill="#ef4444">❌ Extension</text>
+    <text x="0" y="100" fill="#fff">Custom Engine Mods</text>
+    <text x="180" y="100" text-anchor="middle" fill="#10b981">✅ Full</text>
+    <text x="330" y="100" text-anchor="middle" fill="#f59e0b">⚠️ Flags</text>
+    <text x="480" y="100" text-anchor="middle" fill="#f59e0b">⚠️ Prefs</text>
+    <text x="630" y="100" text-anchor="middle" fill="#ef4444">❌ None</text>
+  </g>
+  
+  <!-- Bottom -->
+  <text x="640" y="680" text-anchor="middle" font-family="system-ui" font-size="12" fill="#666">
+    🚀 Not Chromium  •  🛡️ Built-in Adblock  •  📹 Video Download  •  🎨 Themes  •  🔒 Zero Telemetry
+  </text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <rect x="40" y="30" width="720" height="44" rx="8" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <circle cx="60" cy="52" r="8" fill="#ef4444"/>
+  <circle cx="84" cy="52" r="8" fill="#f59e0b"/>
+  <circle cx="108" cy="52" r="8" fill="#10b981"/>
+  <text x="400" y="56" font-family="system-ui" font-size="14" fill="#8b949e" text-anchor="middle">Klat OS - Terminal</text>
+  <rect x="40" y="90" width="720" height="380" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect x="50" y="100" width="700" height="360" rx="8" fill="#0d1117"/>
+  <text x="70" y="130" font-family="monospace" font-size="14" fill="#7ee787">user@klatos</text>
+  <text x="200" y="130" font-family="monospace" font-size="14" fill="#fff">:</text>
+  <text x="220" y="130" font-family="monospace" font-size="14" fill="#79c0ff">~</text>
+  <text x="270" y="130" font-family="monospace" font-size="14" fill="#d2a8ff">$</text>
+  <text x="310" y="130" font-family="monospace" font-size="14" fill="#fff"> klat-update && klat-install vscode firefox</text>
+  <text x="70" y="165" font-family="monospace" font-size="13" fill="#a5d6ff">[sudo] password for user:</text>
+  <text x="70" y="200" font-family="monospace" font-size="13" fill="#fff">********</text>
+  <text x="70" y="235" font-family="monospace" font-size="13" fill="#a5d6ff">🔄 Checking for updates...</text>
+  <text x="70" y="255" font-family="monospace" font-size="13" fill="#7ee787">✓ System is up to date (2026.07.11)</text>
+  <text x="70" y="275" font-family="monospace" font-size="13" fill="#a5d6ff">📦 Installing packages: vscode, firefox</text>
+  <text x="70" y="295" font-family="monospace" font-size="13" fill="#7ee787">✓ vscode installed (Flatpak)</text>
+  <text x="70" y="315" font-family="monospace" font-size="13" fill="#7ee787">✓ firefox installed (Flatpak)</text>
+  <text x="70" y="335" font-family="monospace" font-size="13" fill="#7ee787">🎉 All packages installed successfully!</text>
+  <text x="70" y="365" font-family="monospace" font-size="14" fill="#d2a8ff">user@klatos</text>
+  <text x="200" y="365" font-family="monospace" font-size="14" fill="#fff">:</text>
+  <text x="220" y="365" font-family="monospace" font-size="14" fill="#79c0ff">~</text>
+  <text x="270" y="365" font-family="monospace" font-size="14" fill="#d2a8ff">$</text>
+  <text x="310" y="365" font-family="monospace" font-size="14" fill="#fff"> _</text>
+  <rect x="310" y="352" width="10" height="20" fill="#fff" style="animation: blink 1s infinite;"/>
+</svg>

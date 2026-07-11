@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klat Downloader - Fast Download Manager | KlatAsia Software</title>
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="css/light-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="iconify" data-icon="mdi:code-braces"></span>
+        <span>KlatAsia <span>Software</span></span>
+      </a>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home" class="nav-link"><span class="iconify" data-icon="mdi:home"></span> <span data-i18n="nav.home">Home</span></a></li>
+        <li class="nav-has-submenu">
+          <a href="index.html#products" class="nav-link"><span class="iconify" data-icon="mdi:package-variant"></span> <span data-i18n="nav.products">Products</span> <span class="iconify nav-submenu-arrow" data-icon="mdi:chevron-down"></span></a>
+          <ul class="nav-submenu">
+            <li><a href="klatai.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:robot"></span><span data-i18n="nav.products.sub.klat-ai">Klat AI - Smart AI for coding, images & Q&A</span></a></li>
+            <li><a href="klatoffice.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:file-document"></span><span data-i18n="nav.products.sub.klat-office">Klat Office - MS Office alternative (Writer, Calc, Impress, Draw, Math, Base)</span></a></li>
+            <li><a href="klattube.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:youtube"></span><span data-i18n="nav.products.sub.klat-tube">Klat Tube - YouTube without ads, background play, PiP, SponsorBlock</span></a></li>
+            <li><a href="klatdownloader.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:download"></span><span data-i18n="nav.products.sub.klat-downloader">Klat Downloader - Fast & stable download manager</span></a></li>
+            <li><a href="klatos.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:monitor"></span><span data-i18n="nav.products.sub.klat-os">Klat OS - Linux-based OS (klatos.klat.asia)</span></a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#about" class="nav-link"><span class="iconify" data-icon="mdi:information-outline"></span> <span data-i18n="nav.about">About</span></a></li>
+        <li><a href="index.html#founder" class="nav-link"><span class="iconify" data-icon="mdi:account-tie"></span> <span data-i18n="nav.founder">Founder</span></a></li>
+        <li><a href="index.html#contact" class="nav-link"><span class="iconify" data-icon="mdi:email"></span> <span data-i18n="nav.contact">Contact</span></a></li>
+      </ul>
+      <div class="lang-toggle" id="langToggle" role="button" tabindex="0" aria-label="Switch language">
+        <span class="iconify" data-icon="mdi:earth"></span>
+        <span id="langLabel">EN</span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section hero product-hero">
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <span class="product-badge" data-i18n="product.free">Free License</span>
+        <h1 class="product-hero-title">Klat <span>Downloader</span></h1>
+        <p class="product-hero-desc" data-i18n="product.downloader.desc">Fast and stable download manager supporting HTTP/HTTPS/FTP, BitTorrent, and video streaming sites. Features: multi-threaded downloads, resume capability, scheduler, bandwidth limiter, browser integration, clipboard monitoring, virus scanning. Free on Windows & Linux.</p>
+        <div class="product-hero-meta">
+          <div class="product-platforms">
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:microsoft-windows"></span>Windows</span>
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:linux"></span>Linux</span>
+          </div>
+          <div class="product-rating">
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star-half"></span>
+            <span>4.7/5</span>
+          </div>
+        </div>
+        <div class="product-hero-actions">
+          <a href="#download" class="btn btn-primary btn-lg"><span class="iconify" data-icon="mdi:download"></span> <span data-i18n="hero.cta1">Download Now</span></a>
+          <a href="https://github.com/klatasia/klat-downloader" target="_blank" rel="noopener" class="btn btn-outline btn-lg"><span class="iconify" data-icon="mdi:github"></span> <span data-i18n="product.viewSource">View Source</span></a>
+        </div>
+      </div>
+      <div class="hero-visual fade-in">
+        <div class="product-showcase">
+          <div class="showcase-window">
+            <div class="showcase-header">
+              <div class="showcase-dots"><span></span><span></span><span></span></div>
+              <span class="showcase-title">Klat Downloader - Main Window</span>
+            </div>
+            <div class="showcase-content">
+              <div class="downloader-demo">
+                <div class="toolbar">
+                  <button class="tb-btn" title="New Download"><span class="iconify" data-icon="mdi:plus"></span></button>
+                  <button class="tb-btn" title="Paste URL"><span class="iconify" data-icon="mdi:content-paste"></span></button>
+                  <button class="tb-btn" title="Start"><span class="iconify" data-icon="mdi:play"></span></button>
+                  <button class="tb-btn" title="Pause"><span class="iconify" data-icon="mdi:pause"></span></button>
+                  <button class="tb-btn" title="Stop"><span class="iconify" data-icon="mdi:stop"></span></button>
+                  <div class="tb-sep"></div>
+                  <button class="tb-btn" title="Scheduler"><span class="iconify" data-icon="mdi:calendar-clock"></span></button>
+                  <button class="tb-btn" title="Speed Limiter"><span class="iconify" data-icon="mdi:speedometer"></span></button>
+                  <div class="tb-spacer"></div>
+                  <span class="tb-status">3 active • 12 queued • 2.4 MB/s</span>
+                </div>
+                <div class="downloads-list">
+                  <div class="download-row active">
+                    <div class="dl-info">
+                      <span class="dl-icon"><span class="iconify" data-icon="mdi:file-video"></span></span>
+                      <div>
+                        <span class="dl-name">Ubuntu-24.04-desktop-amd64.iso</span>
+                        <span class="dl-url">releases.ubuntu.com/...</span>
+                      </div>
+                    </div>
+                    <div class="dl-progress">
+                      <div class="progress-bar"><div class="progress-fill" style="width: 67%"></div></div>
+                      <span class="dl-percent">67%</span>
+                    </div>
+                    <div class="dl-details">
+                      <span class="dl-speed">2.4 MB/s</span>
+                      <span class="dl-eta">3 min 12s</span>
+                      <span class="dl-size">3.2 GB / 4.8 GB</span>
+                    </div>
+                    <div class="dl-actions">
+                      <button class="dl-btn" title="Pause"><span class="iconify" data-icon="mdi:pause"></span></button>
+                    </div>
+                  </div>
+                  <div class="download-row active">
+                    <div class="dl-info">
+                      <span class="dl-icon"><span class="iconify" data-icon="mdi:file-document"></span></span>
+                      <div>
+                        <span class="dl-name">KlatOffice-Setup-x64.msi</span>
+                        <span class="dl-url">github.com/klatasia/...</span>
+                      </div>
+                    </div>
+                    <div class="dl-progress">
+                      <div class="progress-bar"><div class="progress-fill" style="width: 23%"></div></div>
+                      <span class="dl-percent">23%</span>
+                    </div>
+                    <div class="dl-details">
+                      <span class="dl-speed">1.8 MB/s</span>
+                      <span class="dl-eta">1 min 45s</span>
+                      <span class="dl-size">72 MB / 312 MB</span>
+                    </div>
+                    <div class="dl-actions">
+                      <button class="dl-btn" title="Pause"><span class="iconify" data-icon="mdi:pause"></span></button>
+                    </div>
+                  </div>
+                  <div class="download-row completed">
+                    <div class="dl-info">
+                      <span class="dl-icon"><span class="iconify" data-icon="mdi:file-image"></span></span>
+                      <div>
+                        <span class="dl-name">wallpaper-4k-collection.zip</span>
+                        <span class="dl-url">unsplash.com/...</span>
+                      </div>
+                    </div>
+                    <div class="dl-progress">
+                      <div class="progress-bar complete"><div class="progress-fill"></div></div>
+                      <span class="dl-percent">100%</span>
+                    </div>
+                    <div class="dl-details">
+                      <span class="dl-speed">Completed</span>
+                      <span class="dl-size">145 MB</span>
+                    </div>
+                    <div class="dl-actions">
+                      <button class="dl-btn" title="Open Folder"><span class="iconify" data-icon="mdi:folder-open"></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.features">Key Features</span>
+        <h2 data-i18n="product.featuresTitle">Powerful Download <span>Engine</span></h2>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #10b981, #34d399);">
+            <span class="iconify" data-icon="mdi:lan-connect"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat1.title">Multi-Threaded Downloads</h3>
+          <p data-i18n="product.dl.feat1.desc">Split files into up to 64 segments for maximum speed. Dynamic segment allocation adapts to network conditions.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #3b82f6, #60a5fa);">
+            <span class="iconify" data-icon="mdi:refresh"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat2.title">Resume & Recovery</h3>
+          <p data-i18n="product.dl.feat2.desc">Automatic resume on connection loss, power failure, or system crash. Checksum verification ensures file integrity.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+            <span class="iconify" data-icon="mdi:magnet"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat3.title">BitTorrent Support</h3>
+          <p data-i18n="product.dl.feat3.desc">Full BitTorrent client built-in. Magnet links, DHT, PEX, encryption, selective file download, sequential download for media.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">
+            <span class="iconify" data-icon="mdi:calendar-clock"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat4.title">Smart Scheduler</h3>
+          <p data-i18n="product.dl.feat4.desc">Queue downloads for off-peak hours. Start/stop based on time, network type, battery level, or custom triggers.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #06b6d4, #22d3ee);">
+            <span class="iconify" data-icon="mdi:speedometer"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat5.title">Bandwidth Limiter</h3>
+          <p data-i18n="product.dl.feat5.desc">Global and per-download speed limits. Schedule limits (unlimited at night, 500 KB/s during work hours).</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ec4899, #f472b6);">
+            <span class="iconify" data-icon="mdi:browser-check"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat6.title">Browser Integration</h3>
+          <p data-i18n="product.dl.feat6.desc">Chrome, Firefox, Edge extensions. Right-click → "Download with Klat". Auto-intercept downloads.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #6366f1, #818cf8);">
+            <span class="iconify" data-icon="mdi:content-paste"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat7.title">Clipboard Monitoring</h3>
+          <p data-i18n="product.dl.feat7.desc">Auto-detect URLs in clipboard. Smart filtering for video/audio/page links. One-click add to queue.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ef4444, #f87171);">
+            <span class="iconify" data-icon="mdi:shield-virus"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat8.title">Virus Scanning</h3>
+          <p data-i18n="product.dl.feat8.desc">Integrate with Windows Defender, ClamAV, or VirusTotal API. Auto-scan completed downloads. Quarantine suspicious files.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #14b8a6, #2dd4bf);">
+            <span class="iconify" data-icon="mdi:youtube"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat9.title">Video Site Support</h3>
+          <p data-i18n="product.dl.feat9.desc">Download from YouTube, Vimeo, Dailymotion, Twitch, Twitter, Instagram, TikTok, and 1000+ sites via yt-dlp backend.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f97316, #fb923c);">
+            <span class="iconify" data-icon="mdi:protocol"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat10.title">Protocol Support</h3>
+          <p data-i18n="product.dl.feat10.desc">HTTP/HTTPS, FTP/FTPS, SFTP, BitTorrent, Metalink, Magnet links. Proxy support (HTTP, SOCKS4/5).</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #84cc16, #a3e635);">
+            <span class="iconify" data-icon="mdi:cog"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat11.title">Advanced Options</h3>
+          <p data-i18n="product.dl.feat11.desc">Custom headers, cookies, auth, user-agent. Post-download actions (run script, extract, move). Categories & tags.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #64748b, #94a3b8);">
+            <span class="iconify" data-icon="mdi:monitor-dashboard"></span>
+          </div>
+          <h3 data-i18n="product.dl.feat12.title">System Tray & Notifications</h3>
+          <p data-i18n="product.dl.feat12.desc">Minimize to tray. Desktop notifications on completion. Speed graph in tray tooltip. Boss key support.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-screenshots" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.screenshots">Screenshots</span>
+        <h2 data-i18n="product.screenshotsTitle">Clean, Functional <span>Interface</span></h2>
+      </div>
+      <div class="screenshots-grid">
+        <div class="screenshot-item main">
+          <img src="img/screenshots/klat-downloader-main.svg" alt="Klat Downloader Main Window" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-downloader-main.svg" alt="New Download Dialog" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-downloader-scheduler.svg" alt="Scheduler" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-downloader-settings.svg" alt="Settings" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-downloader-main.svg" alt="Browser Extension" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-downloader-main.svg" alt="BitTorrent Support" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-use-cases" id="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.useCases">Use Cases</span>
+        <h2 data-i18n="product.useCasesTitle">Built for <span>Every Need</span></h2>
+      </div>
+      <div class="use-cases-grid">
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:file-cloud"></span></div>
+          <h3 data-i18n="product.dl.use1.title">Large File Downloads</h3>
+          <p data-i18n="product.dl.use1.desc">ISO images, game installers, datasets. Multi-threading maximizes your bandwidth. Resume survives any interruption.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:video"></span></div>
+          <h3 data-i18n="product.dl.use2.title">Video Archiving</h3>
+          <p data-i18n="product.dl.use2.desc">Download from 1000+ sites. Batch download playlists/channels. Auto-organize by creator, date, quality.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:magnet"></span></div>
+          <h3 data-i18n="product.dl.use3.title">Torrent Management</h3>
+          <p data-i18n="product.dl.use3.desc">Lightweight BitTorrent client. Selective file download, sequential for streaming, RSS auto-download.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:server-network"></span></div>
+          <h3 data-i18n="product.dl.use4.title">Server & FTP</h3>
+          <p data-i18n="product.dl.use4.desc">SFTP/FTP support with key auth. Mirror directories. Sync with remote servers. Bandwidth scheduling.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-protocols" id="protocols">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.protocols">Supported Protocols</span>
+        <h2 data-i18n="product.protocolsTitle">Universal <span>Compatibility</span></h2>
+      </div>
+      <div class="protocols-grid">
+        <div class="protocol-card">
+          <span class="protocol-icon"><span class="iconify" data-icon="mdi:lan"></span></span>
+          <h3>HTTP / HTTPS</h3>
+          <p>HTTP/1.1, HTTP/2, HTTP/3 (QUIC). TLS 1.3. Chunked encoding. Redirect handling. Custom headers.</p>
+        </div>
+        <div class="protocol-card">
+          <span class="protocol-icon"><span class="iconify" data-icon="mdi:server"></span></span>
+          <h3>FTP / FTPS</h3>
+          <p>Passive/active mode. Implicit/explicit TLS. Site-to-site (FXP). MLSD/MLST. UTF-8 support.</p>
+        </div>
+        <div class="protocol-card">
+          <span class="protocol-icon"><span class="iconify" data-icon="mdi:ssh"></span></span>
+          <h3>SFTP</h3>
+          <p>SSH2 protocol. Key-based auth (Ed25519, RSA, ECDSA). Agent forwarding. SCP fallback.</p>
+        </div>
+        <div class="protocol-card">
+          <span class="protocol-icon"><span class="iconify" data-icon="mdi:magnet"></span></span>
+          <h3>BitTorrent</h3>
+          <p>DHT, PEX, LSD. Encryption (MSE/PE). Magnet links. v2 torrents. Web seeds. Super-seeding.</p>
+        </div>
+        <div class="protocol-card">
+          <span class="protocol-icon"><span class="iconify" data-icon="mdi:link-variant"></span></span>
+          <h3>Metalink</h3>
+          <p>Metalink 3.0/4.0. Multiple mirrors. PGP signatures. Chunk checksums. Dynamic mirror selection.</p>
+        </div>
+        <div class="protocol-card">
+          <span class="protocol-icon"><span class="iconify" data-icon="mdi:proxy"></span></span>
+          <h3>Proxy Support</h3>
+          <p>HTTP/HTTPS proxy. SOCKS4/4a/5. Proxy chains. PAC/WPAD. Per-download proxy. Auth support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-download" id="download">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.downloadTitle">Download</span>
+        <h2 data-i18n="product.downloadTitle">Get Klat Downloader <span>Today</span></h2>
+      </div>
+      <div class="download-grid">
+        <article class="download-card windows">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:microsoft-windows"></span></div>
+          <h3>Windows</h3>
+          <p class="download-version">v4.3.0 • 42 MB</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> Windows 10/11 (64-bit)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Installer (.exe) & Portable (.zip)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Auto-updates via winget/chocolatey</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Hardware acceleration (DXVA2/D3D11)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Shell integration</li>
+          </ul>
+          <a href="https://github.com/klatasia/klat-downloader/releases/latest/download/KlatDownloader-Setup-x64.exe" class="btn btn-primary btn-block download-btn">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.downloadWin">Download for Windows</span>
+          </a>
+          <a href="https://github.com/klatasia/klat-downloader/releases/latest/download/KlatDownloader-Portable-x64.zip" class="btn btn-outline btn-block">
+            <span class="iconify" data-icon="mdi:package-variant"></span>
+            <span data-i18n="product.downloadPortable">Portable Version</span>
+          </a>
+        </article>
+        <article class="download-card linux">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:linux"></span></div>
+          <h3>Linux</h3>
+          <p class="download-version">v4.3.0 • 38 MB</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> AppImage (universal)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> .deb (Debian/Ubuntu/Mint)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> .rpm (Fedora/RHEL/openSUSE)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Flatpak (Flathub)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> AUR (Arch/Manjaro/EndeavourOS)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Nixpkgs</li>
+          </ul>
+          <a href="https://github.com/klatasia/klat-downloader/releases/latest/download/KlatDownloader-x86_64.AppImage" class="btn btn-primary btn-block download-btn">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.downloadLinux">Download AppImage</span>
+          </a>
+          <div class="linux-alts">
+            <a href="https://flathub.org/apps/com.klatasia.KlatDownloader" class="btn btn-outline btn-sm" target="_blank" rel="noopener">
+              <span class="iconify" data-icon="mdi:package-variant"></span> Flatpak
+            </a>
+            <a href="https://github.com/klatasia/klat-downloader/releases/latest" class="btn btn-ghost btn-sm">All Packages</a>
+          </div>
+        </article>
+      </div>
+      <div class="download-footer">
+        <p data-i18n="product.freeLicense">Completely free • Open source (GPL-3.0) • No account • No tracking • No ads</p>
+        <a href="https://github.com/klatasia/klat-downloader" target="_blank" rel="noopener" class="btn btn-ghost">
+          <span class="iconify" data-icon="mdi:github"></span>
+          <span>View Source on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.faq">FAQ</span>
+        <h2 data-i18n="product.faqTitle">Frequently Asked <span>Questions</span></h2>
+      </div>
+      <div class="faq-grid">
+        <details class="faq-item">
+          <summary data-i18n="product.dl.faq1.q">How many segments can I use?</summary>
+          <p data-i18n="product.dl.faq1.a">Up to 64 segments per file. Default is 8. More segments = faster on high-latency connections, but diminishing returns after 16-32.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.dl.faq2.q">Can it download from YouTube?</summary>
+          <p data-i18n="product.dl.faq2.a">Yes! Paste any YouTube URL. Uses yt-dlp backend supporting 1000+ sites. Choose quality, format, audio-only. Subtitles included.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.dl.faq3.q">Does it work with private trackers?</summary>
+          <p data-i18n="product.dl.faq3.a">Yes. Add tracker cookies in settings. Supports passkey in URL. Announce interval respect. DHT/PEX can be disabled per-torrent.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.dl.faq4.q">How does clipboard monitoring work?</summary>
+          <p data-i18n="product.dl.faq4.a">Enable in Settings → General. Klat monitors clipboard for URLs. Smart filter detects video/audio/page links. Notification asks to add to queue.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.dl.faq5.q">Can I limit speed on schedule?</summary>
+          <p data-i18n="product.dl.faq5.a">Yes! Settings → Scheduler → Speed Limits. Example: 100 KB/s 9 AM - 6 PM, unlimited 6 PM - 9 AM. Per-download or global.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.dl.faq6.q">Is portable version fully functional?</summary>
+          <p data-i18n="product.dl.faq6.a">Yes. All features work. Settings stored in app folder. Browser extensions need separate install. No admin rights needed.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="iconify" data-icon="mdi:code-braces"></span> KlatAsia <span>Software</span>
+        </div>
+        <p data-i18n="footer.copyright">&copy; 2026 KlatAsia Software. All rights reserved. Made with <span class="iconify" data-icon="mdi:heart"></span> from Klaten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <rect x="40" y="30" width="720" height="44" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="60" cy="52" r="8" fill="#ef4444"/>
+  <circle cx="84" cy="52" r="8" fill="#f59e0b"/>
+  <circle cx="108" cy="52" r="8" fill="#10b981"/>
+  <text x="400" y="56" font-family="system-ui" font-size="14" fill="#64748b" text-anchor="middle">Klat Tube - Video Player</text>
+  <rect x="40" y="90" width="720" height="380" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="50" y="100" width="700" height="310" rx="8" fill="#000"/>
+  <rect x="50" y="100" width="700" height="310" rx="8" fill="url(#accentGrad)" fill-opacity="0.1"/>
+  <text x="400" y="260" font-family="system-ui" font-size="48" fill="#fff" text-anchor="middle" dominant-baseline="middle" fill-opacity="0.3">▶</text>
+  <text x="400" y="320" font-family="system-ui" font-size="16" fill="#fff" text-anchor="middle" fill-opacity="0.7">Klat Tube - Ad-Free YouTube Player</text>
+  <rect x="50" y="420" width="700" height="60" rx="8" fill="rgba(0,0,0,0.8)"/>
+  <rect x="60" y="425" width="500" height="50" rx="4" fill="#1e293b"/>
+  <rect x="70" y="430" width="300" height="40" rx="4" fill="#334155"/>
+  <rect x="70" y="430" width="180" height="40" rx="4" fill="#ef4444"/>
+  <rect x="380" y="430" width="170" height="40" rx="4" fill="#1e293b" stroke="#ef4444" stroke-width="1"/>
+  <text x="465" y="455" font-family="system-ui" font-size="12" fill="#fff" text-anchor="middle" dominant-baseline="middle">SponsorBlock: Skip</text>
+  <rect x="560" y="430" width="50" height="40" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="585" y="455" font-family="system-ui" font-size="16" fill="#fff" text-anchor="middle" dominant-baseline="middle">🔼</text>
+  <rect x="620" y="430" width="50" height="40" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="645" y="455" font-family="system-ui" font-size="16" fill="#fff" text-anchor="middle" dominant-baseline="middle">⬜</text>
+  <rect x="680" y="430" width="50" height="40" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="705" y="455" font-family="system-ui" font-size="16" fill="#fff" text-anchor="middle" dominant-baseline="middle">⛶</text>
+  <rect x="50" y="100" width="700" height="40" rx="8" fill="rgba(0,0,0,0.7)"/>
+  <text x="100" y="125" font-family="system-ui" font-size="14" fill="#fff" font-weight="600">How to Build a Custom Mechanical Keyboard - Complete Guide</text>
+  <text x="700" y="125" font-family="system-ui" font-size="12" fill="#94a3b8" text-anchor="end">TechWithTim • 2.4M views</text>
+  <rect x="50" y="420" width="200" height="160" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="150" y="440" font-family="system-ui" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">Up Next</text>
+  <rect x="60" y="450" width="180" height="40" rx="4" fill="#334155"/>
+  <text x="80" y="475" font-family="system-ui" font-size="10" fill="#e2e8f0">Building a Custom Keyboard...</text>
+  <text x="80" y="490" font-family="system-ui" font-size="9" fill="#94a3b8">Keychron • 150K views</text>
+  <rect x="60" y="495" width="180" height="40" rx="4" fill="#334155"/>
+  <text x="80" y="520" font-family="system-ui" font-size="10" fill="#e2e8f0">Lubing Switches Tutorial</text>
+  <text x="80" y="535" font-family="system-ui" font-size="9" fill="#94a3b8">Taeha Types • 89K views</text>
+  <rect x="60" y="540" width="180" height="40" rx="4" fill="#334155"/>
+  <text x="80" y="565" font-family="system-ui" font-size="10" fill="#e2e8f0">Best Keycaps 2024</text>
+  <text x="80" y="580" font-family="system-ui" font-size="9" fill="#94a3b8">Hipyo Tech • 234K views</text>
+</svg>

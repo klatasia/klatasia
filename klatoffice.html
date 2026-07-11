@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klat Office - Complete Office Suite | KlatAsia Software</title>
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="css/light-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="iconify" data-icon="mdi:code-braces"></span>
+        <span>KlatAsia <span>Software</span></span>
+      </a>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home" class="nav-link"><span class="iconify" data-icon="mdi:home"></span> <span data-i18n="nav.home">Home</span></a></li>
+        <li class="nav-has-submenu">
+          <a href="index.html#products" class="nav-link"><span class="iconify" data-icon="mdi:package-variant"></span> <span data-i18n="nav.products">Products</span> <span class="iconify nav-submenu-arrow" data-icon="mdi:chevron-down"></span></a>
+          <ul class="nav-submenu">
+            <li><a href="klatai.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:robot"></span><span data-i18n="nav.products.sub.klat-ai">Klat AI - Smart AI for coding, images & Q&A</span></a></li>
+            <li><a href="klatoffice.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:file-document"></span><span data-i18n="nav.products.sub.klat-office">Klat Office - MS Office alternative (Writer, Calc, Impress, Draw, Math, Base)</span></a></li>
+            <li><a href="klattube.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:youtube"></span><span data-i18n="nav.products.sub.klat-tube">Klat Tube - YouTube without ads, background play, PiP, SponsorBlock</span></a></li>
+            <li><a href="klatdownloader.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:download"></span><span data-i18n="nav.products.sub.klat-downloader">Klat Downloader - Fast & stable download manager</span></a></li>
+            <li><a href="klatos.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:monitor"></span><span data-i18n="nav.products.sub.klat-os">Klat OS - Linux-based OS (klatos.klat.asia)</span></a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#about" class="nav-link"><span class="iconify" data-icon="mdi:information-outline"></span> <span data-i18n="nav.about">About</span></a></li>
+        <li><a href="index.html#founder" class="nav-link"><span class="iconify" data-icon="mdi:account-tie"></span> <span data-i18n="nav.founder">Founder</span></a></li>
+        <li><a href="index.html#contact" class="nav-link"><span class="iconify" data-icon="mdi:email"></span> <span data-i18n="nav.contact">Contact</span></a></li>
+      </ul>
+      <div class="lang-toggle" id="langToggle" role="button" tabindex="0" aria-label="Switch language">
+        <span class="iconify" data-icon="mdi:earth"></span>
+        <span id="langLabel">EN</span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section hero product-hero">
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <span class="product-badge" data-i18n="product.free">Free License</span>
+        <h1 class="product-hero-title">Klat <span>Office</span></h1>
+        <p class="product-hero-desc" data-i18n="product.office.desc">Complete office suite alternative to MS Office. Includes Writer, Calc, Impress, Draw, Math, and Base. Full MS Office format compatibility, PDF export, templates, macros. Free on Windows & Linux.</p>
+        <div class="product-hero-meta">
+          <div class="product-platforms">
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:microsoft-windows"></span>Windows</span>
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:linux"></span>Linux</span>
+          </div>
+          <div class="product-rating">
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star-half"></span>
+            <span>4.6/5</span>
+          </div>
+        </div>
+        <div class="product-hero-actions">
+          <a href="#download" class="btn btn-primary btn-lg"><span class="iconify" data-icon="mdi:download"></span> <span data-i18n="hero.cta1">Download Now</span></a>
+          <a href="https://github.com/klatasia/klat-office" target="_blank" rel="noopener" class="btn btn-outline btn-lg"><span class="iconify" data-icon="mdi:github"></span> <span data-i18n="product.viewSource">View Source</span></a>
+        </div>
+      </div>
+      <div class="hero-visual fade-in">
+        <div class="product-showcase">
+          <div class="showcase-window">
+            <div class="showcase-header">
+              <div class="showcase-dots"><span></span><span></span><span></span></div>
+              <span class="showcase-title">Klat Office - Writer</span>
+            </div>
+            <div class="showcase-content">
+              <div class="office-demo">
+                <div class="office-ribbon">
+                  <div class="ribbon-tabs">
+                    <span class="tab active" data-i18n="product.office.ribbon.home">Home</span>
+                    <span class="tab" data-i18n="product.office.ribbon.insert">Insert</span>
+                    <span class="tab" data-i18n="product.office.ribbon.layout">Layout</span>
+                    <span class="tab" data-i18n="product.office.ribbon.references">References</span>
+                    <span class="tab" data-i18n="product.office.ribbon.review">Review</span>
+                    <span class="tab" data-i18n="product.office.ribbon.view">View</span>
+                  </div>
+                  <div class="ribbon-groups">
+                    <div class="ribbon-group">
+                      <div class="ribbon-btn large"><span class="iconify" data-icon="mdi:format-paint"></span><span data-i18n="product.office.ribbon.paste">Paste</span></div>
+                      <div class="ribbon-btn"><span class="iconify" data-icon="mdi:format-bold"></span><span data-i18n="product.office.ribbon.bold">Bold</span></div>
+                      <div class="ribbon-btn"><span class="iconify" data-icon="mdi:format-italic"></span><span data-i18n="product.office.ribbon.italic">Italic</span></div>
+                    </div>
+                    <div class="ribbon-sep"></div>
+                    <div class="ribbon-group">
+                      <div class="ribbon-btn"><span class="iconify" data-icon="mdi:format-font"></span><span>Font</span></div>
+                      <div class="ribbon-btn"><span class="iconify" data-icon="mdi:format-size"></span><span>12</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="office-ruler"></div>
+                <div class="office-document">
+                  <h1 data-i18n="product.office.demo.title">Welcome to Klat Writer</h1>
+                  <p data-i18n="product.office.demo.p1">Create professional documents with ease. Full compatibility with <strong>.docx</strong>, <strong>.doc</strong>, and <strong>.odt</strong> formats.</p>
+                  <h2 data-i18n="product.office.demo.h2">Key Features</h2>
+                  <ul>
+                    <li data-i18n="product.office.demo.li1">Advanced formatting: styles, themes, columns, sections</li>
+                    <li data-i18n="product.office.demo.li2">Mail merge for personalized letters and emails</li>
+                    <li data-i18n="product.office.demo.li3">Track changes, comments, and collaboration tools</li>
+                    <li data-i18n="product.office.demo.li4">Table of contents, indexes, cross-references</li>
+                    <li data-i18n="product.office.demo.li5">Equation editor with MathML support</li>
+                    <li data-i18n="product.office.demo.li6">Export to PDF/A, EPUB, HTML, and more</li>
+                  </ul>
+                  <p data-i18n="product.office.demo.p2">Also included: <strong>Calc</strong> (spreadsheets), <strong>Impress</strong> (presentations), <strong>Draw</strong> (vector graphics), <strong>Math</strong> (formulas), <strong>Base</strong> (databases).</p>
+                </div>
+                <div class="office-statusbar">
+                  <span>Page 1 of 1</span>
+                  <span>Words: 247</span>
+                  <span>English (US)</span>
+                  <div class="zoom"><span class="iconify" data-icon="mdi:minus"></span> 100% <span class="iconify" data-icon="mdi:plus"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.features">Key Features</span>
+        <h2 data-i18n="product.featuresTitle">Six Apps, <span>One Suite</span></h2>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon writer"><span class="iconify" data-icon="mdi:file-document"></span></div>
+          <h3>Klat Writer</h3>
+          <p data-i18n="product.office.writer.desc">Word processor with styles, templates, mail merge, track changes, comments, TOC, indexes, and full .docx/.odt compatibility.</p>
+          <ul class="app-features">
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.writer.f1">Advanced formatting & styles</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.writer.f2">Mail merge & form letters</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.writer.f3">Track changes & comments</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.writer.f4">Master documents & subdocs</span></li>
+          </ul>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon calc"><span class="iconify" data-icon="mdi:table"></span></div>
+          <h3>Klat Calc</h3>
+          <p data-i18n="product.office.calc.desc">Spreadsheet with 500+ functions, pivot tables, charts, conditional formatting, solver, scenarios, and full .xlsx/.ods support.</p>
+          <ul class="app-features">
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.calc.f1">500+ financial/statistical functions</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.calc.f2">Pivot tables & charts</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.calc.f3">Solver & goal seek</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.calc.f4">Multi-threaded calculation</span></li>
+          </ul>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon impress"><span class="iconify" data-icon="mdi:presentation"></span></div>
+          <h3>Klat Impress</h3>
+          <p data-i18n="product.office.impress.desc">Presentation software with animations, transitions, master slides, presenter view, and full .pptx/.odp compatibility.</p>
+          <ul class="app-features">
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.impress.f1">Animations & slide transitions</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.impress.f2">Master slides & layouts</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.impress.f3">Presenter view & remote</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.impress.f4">Export to PDF, video, images</span></li>
+          </ul>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon draw"><span class="iconify" data-icon="mdi:vector-square"></span></div>
+          <h3>Klat Draw</h3>
+          <p data-i18n="product.office.draw.desc">Vector graphics editor for diagrams, flowcharts, org charts, posters. Layers, connectors, 3D objects, SVG/PDF export.</p>
+          <ul class="app-features">
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.draw.f1">Flowcharts & diagrams</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.draw.f2">Smart connectors & glue points</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.draw.f3">3D objects & effects</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.draw.f4">SVG, PDF, EMF export</span></li>
+          </ul>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon math"><span class="iconify" data-icon="mdi:function"></span></div>
+          <h3>Klat Math</h3>
+          <p data-i18n="product.office.math.desc">Formula editor with point-and-click interface, LaTeX import/export, MathML support. Integrates with all apps.</p>
+          <ul class="app-features">
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.math.f1">WYSIWYG equation editing</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.math.f2">LaTeX & MathML import/export</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.math.f3">Symbol catalog & templates</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.math.f4">Inline & display modes</span></li>
+          </ul>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon base"><span class="iconify" data-icon="mdi:database"></span></div>
+          <h3>Klat Base</h3>
+          <p data-i18n="product.office.base.desc">Database frontend with forms, reports, queries, SQL view. HSQLDB embedded, MySQL/PostgreSQL/JDBC/ODBC connectivity.</p>
+          <ul class="app-features">
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.base.f1">Forms & reports designer</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.base.f2">Visual query builder</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.base.f3">External DB connectivity</span></li>
+            <li><span class="iconify" data-icon="mdi:check"></span> <span data-i18n="product.office.base.f4">Macro & script automation</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-screenshots" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.screenshots">Screenshots</span>
+        <h2 data-i18n="product.screenshotsTitle">See Klat Office in <span>Action</span></h2>
+      </div>
+      <div class="screenshots-grid">
+        <div class="screenshot-item main">
+          <img src="img/screenshots/klat-office-writer.svg" alt="Klat Writer" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-office-calc.svg" alt="Klat Calc" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-office-impress.svg" alt="Klat Impress" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-office-draw.svg" alt="Klat Draw" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-office-math.svg" alt="Klat Math" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-office-base.svg" alt="Klat Base" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-use-cases" id="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.useCases">Use Cases</span>
+        <h2 data-i18n="product.useCasesTitle">Perfect for <span>Every Workflow</span></h2>
+      </div>
+      <div class="use-cases-grid">
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:file-document"></span></div>
+          <h3 data-i18n="product.office.use1.title">Document Creation</h3>
+          <p data-i18n="product.office.use1.desc">Professional documents, reports, letters with advanced formatting, mail merge, and collaboration tools.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:table"></span></div>
+          <h3 data-i18n="product.office.use2.title">Data Analysis</h3>
+          <p data-i18n="product.office.use2.desc">Complex spreadsheets, pivot tables, charts, statistical functions, and solver for business intelligence.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:presentation"></span></div>
+          <h3 data-i18n="product.office.use3.title">Presentations</h3>
+          <p data-i18n="product.office.use3.desc">Stunning slides with animations, transitions, master templates, and presenter view for conferences.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:vector-square"></span></div>
+          <h3 data-i18n="product.office.use4.title">Diagrams & Graphics</h3>
+          <p data-i18n="product.office.use4.desc">Flowcharts, org charts, technical diagrams, posters with layers, connectors, and 3D effects.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-tech" id="tech-details">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.techDetails">Technical Details</span>
+        <h2 data-i18n="product.techTitle">Built for <span>Productivity</span></h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3 data-i18n="product.office.tech1.title">Performance</h3>
+          <ul>
+            <li>Cold start < 2 seconds</li>
+            <li>Handles 100k+ row spreadsheets</li>
+            <li>Multi-core calculation engine</li>
+            <li>GPU-accelerated rendering</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.office.tech2.title">Extensibility</h3>
+          <ul>
+            <li>Python, Basic, JavaScript macros</li>
+            <li>UNO API for automation</li>
+            <li>Extension manager (.oxt)</li>
+            <li>Custom UI via XML</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.office.tech3.title">Collaboration</h3>
+          <ul>
+            <li>Track changes & comments</li>
+            <li>Document comparison</li>
+            <li>Version history (local)</li>
+            <li>Cloud sync via Nextcloud/ownCloud</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.office.tech4.title">Accessibility</h3>
+          <ul>
+            <li>Screen reader support (NVDA, JAWS)</li>
+            <li>High contrast themes</li>
+            <li>Keyboard navigation</li>
+            <li>ARIA labels throughout</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-download" id="download">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.downloadTitle">Download</span>
+        <h2 data-i18n="product.downloadTitle">Get Klat Office <span>Today</span></h2>
+      </div>
+      <div class="download-grid">
+        <article class="download-card windows">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:microsoft-windows"></span></div>
+          <h3>Windows</h3>
+          <p class="download-version">v7.6.0 • 285 MB</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> Windows 10/11 (64-bit)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> MSI installer & Portable (.zip)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> MSI for enterprise deployment</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Shell extensions (thumbnails, preview)</li>
+          </ul>
+          <a href="https://github.com/klatasia/klat-office/releases/latest/download/KlatOffice-Setup-x64.msi" class="btn btn-primary btn-block download-btn">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.downloadWin">Download for Windows</span>
+          </a>
+          <a href="https://github.com/klatasia/klat-office/releases/latest/download/KlatOffice-Portable-x64.zip" class="btn btn-outline btn-block">
+            <span class="iconify" data-icon="mdi:package-variant"></span>
+            <span data-i18n="product.downloadPortable">Portable Version</span>
+          </a>
+        </article>
+        <article class="download-card linux">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:linux"></span></div>
+          <h3>Linux</h3>
+          <p class="download-version">v7.6.0 • 310 MB</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> Flatpak (Flathub - recommended)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> .deb (Debian/Ubuntu/Mint)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> .rpm (Fedora/RHEL/openSUSE)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> AppImage (universal)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> AUR (Arch/Manjaro)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Snap (Snapcraft)</li>
+          </ul>
+          <a href="https://flathub.org/apps/org.klatasia.KlatOffice" class="btn btn-primary btn-block download-btn" target="_blank" rel="noopener">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.downloadFlatpak">Install via Flatpak</span>
+          </a>
+          <div class="linux-alts">
+            <a href="https://github.com/klatasia/klat-office/releases/latest/download/KlatOffice-x86_64.AppImage" class="btn btn-outline btn-sm" target="_blank" rel="noopener">AppImage</a>
+            <a href="https://github.com/klatasia/klat-office/releases/latest" class="btn btn-ghost btn-sm">All Packages</a>
+          </div>
+        </article>
+      </div>
+      <div class="download-footer">
+        <p data-i18n="product.freeLicense">Completely free • Open source (MPL-2.0) • No telemetry • No account required</p>
+        <a href="https://github.com/klatasia/klat-office" target="_blank" rel="noopener" class="btn btn-ghost">
+          <span class="iconify" data-icon="mdi:github"></span>
+          <span>View Source on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.faq">FAQ</span>
+        <h2 data-i18n="product.faqTitle">Frequently Asked <span>Questions</span></h2>
+      </div>
+      <div class="faq-grid">
+        <details class="faq-item">
+          <summary data-i18n="product.office.faq1.q">Is Klat Office compatible with Microsoft Office?</summary>
+          <p data-i18n="product.office.faq1.a">Yes! Klat Office opens, edits, and saves .docx, .xlsx, .pptx files with high fidelity. Complex formatting, macros, and advanced features may have minor differences.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.office.faq2.q">Can I use VBA macros?</summary>
+          <p data-i18n="product.office.faq2.a">Klat Office supports Basic macros (similar to VBA) and Python/JavaScript. VBA macros need conversion. Basic macros run natively; use the macro recorder to port logic.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.office.faq3.q">Does it support collaborative editing?</summary>
+          <p data-i18n="product.office.faq3.a">Real-time co-editing via Nextcloud/ownCloud integration. Track changes and comments work offline. For Google Docs-style live editing, use the web version (coming soon).</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.office.faq4.q">Can I install only Writer?</summary>
+          <p data-i18n="product.office.faq4.a">The installer lets you choose components. Minimum install (Writer only) is ~80 MB. Flatpak/AppImage are monolithic but sandboxed.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.office.faq5.q">Is there a mobile version?</summary>
+          <p data-i18n="product.office.faq5.a">Not yet. Klat Office Viewer for Android (read-only) is in beta. Full editing on mobile planned for 2027. Use web/cloud alternatives for now.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.office.faq6.q">How do I get templates?</summary>
+          <p data-i18n="product.office.faq6.a">File → New → Templates. Built-in templates + online repository (templates.klatasia.com). Community templates in .otp/.ots/.ott format.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="iconify" data-icon="mdi:code-braces"></span> KlatAsia <span>Software</span>
+        </div>
+        <p data-i18n="footer.copyright">&copy; 2026 KlatAsia Software. All rights reserved. Made with <span class="iconify" data-icon="mdi:heart"></span> from Klaten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

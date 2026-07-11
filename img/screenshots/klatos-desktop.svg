@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(20,20,30,0.95)"/>
+      <stop offset="100%" style="stop-color:rgba(30,30,40,0.98)"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <rect x="40" y="30" width="720" height="44" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="60" cy="52" r="8" fill="#ef4444"/>
+  <circle cx="84" cy="52" r="8" fill="#f59e0b"/>
+  <circle cx="108" cy="52" r="8" fill="#10b981"/>
+  <text x="400" y="56" font-family="system-ui" font-size="14" fill="#64748b" text-anchor="middle">Klat OS - Desktop</text>
+  <rect x="40" y="90" width="720" height="380" rx="12" fill="#000" fill-opacity="0.3" stroke="#fff" stroke-width="1" stroke-opacity="0.1"/>
+  <rect x="50" y="100" width="700" height="360" rx="12" fill="url(#bgGrad)"/>
+  <rect x="70" y="120" width="100" height="110" rx="12" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="120" cy="160" r="28" fill="#5c6bc0"/>
+  <text x="120" y="165" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">🤖</text>
+  <text x="120" y="200" font-family="system-ui" font-size="11" fill="#fff" text-anchor="middle" font-weight="500">Klat AI</text>
+  <rect x="200" y="120" width="100" height="110" rx="12" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="250" cy="160" r="28" fill="#3b82f6"/>
+  <text x="250" y="165" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">🌐</text>
+  <text x="250" y="200" font-family="system-ui" font-size="11" fill="#fff" text-anchor="middle" font-weight="500">Klat Browser</text>
+  <rect x="330" y="120" width="100" height="110" rx="12" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="380" cy="160" r="28" fill="#10b981"/>
+  <text x="380" y="165" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">📥</text>
+  <text x="380" y="200" font-family="system-ui" font-size="11" fill="#fff" text-anchor="middle" font-weight="500">Klat Downloader</text>
+  <rect x="460" y="120" width="100" height="110" rx="12" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="510" cy="160" r="28" fill="#f59e0b"/>
+  <text x="510" y="165" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">📄</text>
+  <text x="510" y="200" font-family="system-ui" font-size="11" fill="#fff" text-anchor="middle" font-weight="500">Klat Office</text>
+  <rect x="590" y="120" width="100" height="110" rx="12" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="640" cy="160" r="28" fill="#ef4444"/>
+  <text x="640" y="165" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">▶</text>
+  <text x="640" y="200" font-family="system-ui" font-size="11" fill="#fff" text-anchor="middle" font-weight="500">Klat Tube</text>
+  <rect x="70" y="260" width="100" height="110" rx="12" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="120" cy="300" r="28" fill="#8b5cf6"/>
+  <text x="120" y="305" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">📦</text>
+  <text x="120" y="340" font-family="system-ui" font-size="11" fill="#fff" text-anchor="middle" font-weight="500">Software Center</text>
+  <rect x="200" y="260" width="100" height="110" rx="12" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="250" cy="300" r="28" fill="#ec4899"/>
+  <text x="250" y="305" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">📁</text>
+  <text x="250" y="340" font-family="system-ui" font-size="11" fill="#fff" text-anchor="middle" font-weight="500">Files</text>
+  <rect x="330" y="260" width="100" height="110" rx="12" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="380" cy="300" r="28" fill="#06b6d4"/>
+  <text x="380" y="305" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">💻</text>
+  <text x="380" y="340" font-family="system-ui" font-size="11" fill="#fff" text-anchor="middle" font-weight="500">Terminal</text>
+  <rect x="460" y="260" width="100" height="110" rx="12" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="510" cy="300" r="28" fill="#14b8a6"/>
+  <text x="510" y="305" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">⚙</text>
+  <text x="510" y="340" font-family="system-ui" font-size="11" fill="#fff" text-anchor="middle" font-weight="500">Settings</text>
+  <rect x="50" y="420" width="700" height="60" rx="12" fill="url(#panelGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="80" y="430" width="44" height="44" rx="8" fill="rgba(255,255,255,0.1)"/>
+  <text x="102" y="452" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">🏠</text>
+  <rect x="140" y="430" width="44" height="44" rx="8" fill="rgba(102,126,234,0.3)"/>
+  <text x="162" y="452" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">📁</text>
+  <rect x="200" y="430" width="44" height="44" rx="8" fill="rgba(255,255,255,0.1)"/>
+  <text x="222" y="452" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">💻</text>
+  <rect x="260" y="430" width="44" height="44" rx="8" fill="rgba(255,255,255,0.1)"/>
+  <text x="282" y="452" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">🌐</text>
+  <text x="400" y="455" font-family="monospace" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle" font-weight="600">14:32</text>
+  <rect x="580" y="430" width="44" height="44" rx="8" fill="rgba(255,255,255,0.1)"/>
+  <text x="602" y="452" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">📶</text>
+  <rect x="640" y="430" width="44" height="44" rx="8" fill="rgba(255,255,255,0.1)"/>
+  <text x="662" y="452" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">🔊</text>
+  <rect x="700" y="430" width="44" height="44" rx="8" fill="rgba(255,255,255,0.1)"/>
+  <text x="722" y="452" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">🔋</text>
+</svg>

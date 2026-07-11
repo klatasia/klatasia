@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#f87171"/>
+    </linearGradient>
+    <linearGradient id="purple2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="1280" height="720"/>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="280" height="720" fill="#0d0d0d" stroke="#222" stroke-width="0 1 0 0"/>
+  
+  <g font-family="system-ui" fill="#fff">
+    <!-- Sidebar Header -->
+    <rect x="0" y="0" width="280" height="56" fill="#0d0d0d" stroke="#222" stroke-width="0 0 1 0"/>
+    <circle cx="30" cy="28" r="14" fill="url(#red)"/>
+    <text x="30" y="32" text-anchor="middle" font-size="16">▶</text>
+    <text x="56" y="28" font-size="16" font-weight="bold">Klat Tube</text>
+    <rect x="56" y="38" width="60" height="14" fill="#10b981" rx="7"/>
+    <text x="86" y="48" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">Ad-Free</text>
+    
+    <!-- Nav -->
+    <g font-size="14" font-weight="500">
+      <rect x="8" y="72" width="264" height="44" fill="#1a1a2e" rx="8"/>
+      <text x="48" y="100">🏠  Home</text>
+      <text x="48" y="140">🔥  Trending</text>
+      <text x="48" y="180">🎵  Music</text>
+      <text x="48" y="220">🎮  Gaming</text>
+      <rect x="8" y="248" width="264" height="44" fill="#6c63ff" opacity="0.15" rx="8"/>
+      <text x="48" y="276" fill="#6c63ff">📋  Subscriptions</text>
+      <text x="48" y="316">🕐  History</text>
+      <text x="48" y="356">⏰  Watch Later</text>
+      <text x="48" y="396">📥  Downloads</text>
+    </g>
+    
+    <!-- Sidebar footer -->
+    <circle cx="50" cy="660" r="18" fill="#1a1a2e" stroke="#333"/>
+    <text x="50" y="664" text-anchor="middle" font-size="14">🌙</text>
+    <circle cx="100" cy="660" r="18" fill="#1a1a2e" stroke="#333"/>
+    <text x="100" y="664" text-anchor="middle" font-size="14">⚙</text>
+  </g>
+  
+  <!-- Main Content -->
+  <g font-family="system-ui" transform="translate(300, 20)">
+    <!-- Video Player -->
+    <rect x="0" y="0" width="960" height="540" fill="#000"/>
+    <rect x="0" y="0" width="960" height="540" fill="url(#purple2)" opacity="0.15"/>
+    <text x="480" y="240" text-anchor="middle" font-size="32" fill="#fff" opacity="0.7">
+      🎬 How Klat Engine Works - Technical Deep Dive
+    </text>
+    <text x="480" y="280" text-anchor="middle" font-size="16" fill="#888">Click to play</text>
+    
+    <!-- Progress bar overlay -->
+    <rect x="0" y="500" width="960" height="40" fill="#000" opacity="0.7"/>
+    <rect x="0" y="500" width="336" height="4" fill="url(#red)" rx="2"/>
+    <circle cx="336" cy="502" r="8" fill="url(#red)" opacity="0"/>
+    <!-- Sponsor segments -->
+    <rect x="60" y="500" width="80" height="4" fill="#fbbf24" rx="2" title="Sponsor: 0:45 - 1:30"/>
+    <rect x="0" y="500" width="60" height="4" fill="#8b5cf6" rx="2" title="Intro: 0:00 - 0:45"/>
+    <rect x="650" y="500" width="70" height="4" fill="#ef4444" rx="2" title="Filler: 8:20 - 9:10"/>
+    
+    <text x="80" y="528" font-size="12" fill="#fff" font-variant-numeric="tabular-nums">4:23</text>
+    <text x="880" y="528" font-size="12" fill="#fff" font-variant-numeric="tabular-nums">12:34</text>
+    
+    <!-- Controls -->
+    <g transform="translate(0, 540)">
+      <circle cx="120" cy="24" r="24" fill="#fff"/>
+      <text x="120" y="28" text-anchor="middle" font-size="16" fill="#000">⏸</text>
+      <circle cx="180" cy="24" r="20" fill="#333"/>
+      <text x="180" y="27" text-anchor="middle" font-size="14" fill="#fff">⏮</text>
+      <circle cx="60" cy="24" r="20" fill="#333"/>
+      <text x="60" y="27" text-anchor="middle" font-size="14" fill="#fff">⏭</text>
+      
+      <circle cx="840" cy="24" r="20" fill="#333"/>
+      <text x="840" y="27" text-anchor="middle" font-size="14" fill="#ccc">🔊</text>
+      <rect x="870" y="18" width="80" height="12" fill="#333" rx="6"/>
+      <rect x="870" y="18" width="64" height="12" fill="#ef4444" rx="6"/>
+      
+      <circle cx="920" cy="24" r="20" fill="#333"/>
+      <text x="920" y="27" text-anchor="middle" font-size="14" fill="#ccc">⛶</text>
+    </g>
+    
+    <!-- Video Info -->
+    <text x="0" y="580" font-size="20" font-weight="bold" fill="#fff">How Klat Engine Works - Technical Deep Dive</text>
+    
+    <!-- Channel -->
+    <g transform="translate(0, 600)">
+      <circle cx="24" cy="24" r="22" fill="url(#purple2)"/>
+      <text x="24" y="28" text-anchor="middle" font-size="16" fill="#fff">💻</text>
+      <text x="56" y="20" font-size="16" font-weight="bold" fill="#fff">KlatAsia Software</text>
+      <text x="56" y="38" font-size="12" fill="#888">128K subscribers</text>
+      <rect x="840" y="12" width="100" height="32" fill="#ef4444" rx="16"/>
+      <text x="890" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Subscribe</text>
+    </g>
+    
+    <!-- Meta -->
+    <g transform="translate(0, 640)" font-size="13" fill="#888">
+      <text x="0" y="0">👁  452K views</text>
+      <text x="150" y="0">📅  3 days ago</text>
+      <text x="300" y="0" fill="#10b981" font-weight="bold">🛡️  No Ads</text>
+    </g>
+    
+    <!-- Actions -->
+    <g transform="translate(0, 665)" font-size="14" fill="#ccc">
+      <text x="0" y="0">👍  12K</text>
+      <text x="100" y="0">👎</text>
+      <text x="140" y="0">🔗  Share</text>
+      <rect x="240" y="-18" width="120" height="36" fill="url(#red)" rx="8"/>
+      <text x="300" y="2" text-anchor="middle" font-weight="bold" fill="#fff">📥 Download</text>
+      <text x="400" y="0">🔖  Save</text>
+    </g>
+  </g>
+  
+  <!-- Bottom features -->
+  <text x="640" y="695" text-anchor="middle" font-family="system-ui" font-size="11" fill="#666">
+    🚫 Zero Ads  •  ⏯ Background Play  •  📦 PiP  •  📥 Download Video/Audio  •  ⚡ SponsorBlock  •  🔒 No Tracking  •  🎨 Themes
+  </text>
+</svg>

@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fc"/>
+      <stop offset="100%" style="stop-color:#eef1f6"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="green2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#16a34a"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#dc2626"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9333ea"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ea580c"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0891b2"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="1280" height="720"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1280" height="48" fill="#fff" opacity="0.95" stroke="#e5e7eb" stroke-width="0 0 1 0"/>
+  <circle cx="24" cy="24" r="5" fill="#ef4444"/>
+  <circle cx="38" cy="24" r="5" fill="#f59e0b"/>
+  <circle cx="52" cy="24" r="5" fill="#10b981"/>
+  <text x="110" y="30" font-family="system-ui" font-size="14" font-weight="bold" fill="#1a1a2e">Klat Office Suite</text>
+  
+  <!-- Start Center -->
+  <g font-family="system-ui">
+    <!-- Apps Grid -->
+    <g transform="translate(80, 80)">
+      <!-- Writer -->
+      <rect x="0" y="0" width="320" height="200" fill="#fff" rx="14" stroke="#e5e7eb" stroke-width="2"/>
+      <rect x="0" y="0" width="320" height="200" fill="url(#blue)" rx="14 14 0 0" opacity="0.1"/>
+      <circle cx="160" cy="70" r="32" fill="url(#blue)"/>
+      <text x="160" y="78" text-anchor="middle" font-size="24" fill="#fff">📄</text>
+      <text x="160" y="120" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">Klat Writer</text>
+      <text x="160" y="142" text-anchor="middle" font-size="12" fill="#888">Word Processor</text>
+      <rect x="80" y="160" width="160" height="30" fill="url(#blue)" rx="15"/>
+      <text x="160" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Open Writer</text>
+      
+      <!-- Calc -->
+      <rect x="360" y="0" width="320" height="200" fill="#fff" rx="14" stroke="#e5e7eb"/>
+      <rect x="360" y="0" width="320" height="200" fill="url(#green2)" rx="14 14 0 0" opacity="0.1"/>
+      <circle cx="520" cy="70" r="32" fill="url(#green2)"/>
+      <text x="520" y="78" text-anchor="middle" font-size="24" fill="#fff">📊</text>
+      <text x="520" y="120" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">Klat Calc</text>
+      <text x="520" y="142" text-anchor="middle" font-size="12" fill="#888">Spreadsheet</text>
+      <rect x="440" y="160" width="160" height="30" fill="url(#green2)" rx="15"/>
+      <text x="520" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Open Calc</text>
+      
+      <!-- Impress -->
+      <rect x="720" y="0" width="320" height="200" fill="#fff" rx="14" stroke="#e5e7eb"/>
+      <rect x="720" y="0" width="320" height="200" fill="url(#red)" rx="14 14 0 0" opacity="0.1"/>
+      <circle cx="880" cy="70" r="32" fill="url(#red)"/>
+      <text x="880" y="78" text-anchor="middle" font-size="24" fill="#fff">📽</text>
+      <text x="880" y="120" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">Klat Impress</text>
+      <text x="880" y="142" text-anchor="middle" font-size="12" fill="#888">Presentations</text>
+      <rect x="800" y="160" width="160" height="30" fill="url(#red)" rx="15"/>
+      <text x="880" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Open Impress</text>
+      
+      <!-- Draw -->
+      <rect x="0" y="240" width="320" height="200" fill="#fff" rx="14" stroke="#e5e7eb"/>
+      <rect x="0" y="240" width="320" height="200" fill="url(#purple)" rx="14 14 0 0" opacity="0.1"/>
+      <circle cx="160" cy="310" r="32" fill="url(#purple)"/>
+      <text x="160" y="318" text-anchor="middle" font-size="24" fill="#fff">🎨</text>
+      <text x="160" y="360" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">Klat Draw</text>
+      <text x="160" y="382" text-anchor="middle" font-size="12" fill="#888">Vector Graphics</text>
+      <rect x="80" y="400" width="160" height="30" fill="url(#purple)" rx="15"/>
+      <text x="160" y="418" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Open Draw</text>
+      
+      <!-- Math -->
+      <rect x="360" y="240" width="320" height="200" fill="#fff" rx="14" stroke="#e5e7eb"/>
+      <rect x="360" y="240" width="320" height="200" fill="url(#orange)" rx="14 14 0 0" opacity="0.1"/>
+      <circle cx="520" cy="310" r="32" fill="url(#orange)"/>
+      <text x="520" y="318" text-anchor="middle" font-size="24" fill="#fff">√</text>
+      <text x="520" y="360" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">Klat Math</text>
+      <text x="520" y="382" text-anchor="middle" font-size="12" fill="#888">Formula Editor</text>
+      <rect x="440" y="400" width="160" height="30" fill="url(#orange)" rx="15"/>
+      <text x="520" y="418" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Open Math</text>
+      
+      <!-- Base -->
+      <rect x="720" y="240" width="320" height="200" fill="#fff" rx="14" stroke="#e5e7eb"/>
+      <rect x="720" y="240" width="320" height="200" fill="url(#cyan)" rx="14 14 0 0" opacity="0.1"/>
+      <circle cx="880" cy="310" r="32" fill="url(#cyan)"/>
+      <text x="880" y="318" text-anchor="middle" font-size="24" fill="#fff">🗃</text>
+      <text x="880" y="360" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">Klat Base</text>
+      <text x="880" y="382" text-anchor="middle" font-size="12" fill="#888">Database</text>
+      <rect x="800" y="400" width="160" height="30" fill="url(#cyan)" rx="15"/>
+      <text x="880" y="418" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Open Base</text>
+    </g>
+    
+    <!-- Recent Documents -->
+    <g transform="translate(1100, 80)">
+      <text x="90" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#888" letter-spacing="0.5">Recent Documents</text>
+      <g font-size="13" fill="#1a1a2e">
+        <rect x="10" y="30" width="160" height="60" fill="#fff" rx="8" stroke="#e5e7eb"/>
+        <circle cx="30" cy="60" r="18" fill="url(#blue)"/>
+        <text x="30" y="65" text-anchor="middle" font-size="12" fill="#fff">📄</text>
+        <text x="60" y="50" font-size="12" font-weight="bold">Q4_Budget.odt</text>
+        <text x="60" y="68" font-size="10" fill="#888">2 hours ago</text>
+        
+        <rect x="10" y="100" width="160" height="60" fill="#fff" rx="8" stroke="#e5e7eb"/>
+        <circle cx="30" cy="130" r="18" fill="url(#green2)"/>
+        <text x="30" y="135" text-anchor="middle" font-size="12" fill="#fff">📊</text>
+        <text x="60" y="120" font-size="12" font-weight="bold">Sales_Q3.ods</text>
+        <text x="60" y="138" font-size="10" fill="#888">Yesterday</text>
+        
+        <rect x="10" y="170" width="160" height="60" fill="#fff" rx="8" stroke="#e5e7eb"/>
+        <circle cx="30" cy="200" r="18" fill="url(#red)"/>
+        <text x="30" y="205" text-anchor="middle" font-size="12" fill="#fff">📽</text>
+        <text x="60" y="190" font-size="12" font-weight="bold">Launch_2024.odp</text>
+        <text x="60" y="208" font-size="10" fill="#888">3 days ago</text>
+        
+        <rect x="10" y="240" width="160" height="60" fill="#fff" rx="8" stroke="#e5e7eb"/>
+        <circle cx="30" cy="270" r="18" fill="url(#purple)"/>
+        <text x="30" y="275" text-anchor="middle" font-size="12" fill="#fff">🎨</text>
+        <text x="60" y="260" font-size="12" font-weight="bold">Logos.odg</text>
+        <text x="60" y="278" font-size="10" fill="#888">Last week</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Bottom features -->
+  <text x="640" y="580" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#1a1a2e">
+    📝 Writer  📊 Calc  📽 Impress  🎨 Draw  √ Math  🗃 Base
+  </text>
+  <text x="640" y="600" text-anchor="middle" font-family="system-ui" font-size="11" fill="#888">
+    Full MS Office Compatibility  •  ODF 1.3 Native  •  PDF/A Export  •  120+ Languages  •  Extensions  •  Macros (Basic/Python/JS)
+  </text>
+  <text x="640" y="690" text-anchor="middle" font-family="system-ui" font-size="11" fill="#999">
+    Based on LibreOffice  •  MPL-2.0/LGPL-3.0+  •  Free for Commercial Use  •  No Telemetry
+  </text>
+</svg>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klat AI - Smart AI Assistant | KlatAsia Software</title>
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="css/light-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="iconify" data-icon="mdi:code-braces"></span>
+        <span>KlatAsia <span>Software</span></span>
+      </a>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home" class="nav-link"><span class="iconify" data-icon="mdi:home"></span> <span data-i18n="nav.home">Home</span></a></li>
+        <li class="nav-has-submenu">
+          <a href="index.html#products" class="nav-link"><span class="iconify" data-icon="mdi:package-variant"></span> <span data-i18n="nav.products">Products</span> <span class="iconify nav-submenu-arrow" data-icon="mdi:chevron-down"></span></a>
+          <ul class="nav-submenu">
+            <li><a href="klatai.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:robot"></span><span data-i18n="nav.products.sub.klat-ai">Klat AI - Smart AI for coding, images & Q&A</span></a></li>
+            <li><a href="klatoffice.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:file-document"></span><span data-i18n="nav.products.sub.klat-office">Klat Office - MS Office alternative (Writer, Calc, Impress, Draw, Math, Base)</span></a></li>
+            <li><a href="klattube.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:youtube"></span><span data-i18n="nav.products.sub.klat-tube">Klat Tube - YouTube without ads, background play, PiP, SponsorBlock</span></a></li>
+            <li><a href="klatdownloader.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:download"></span><span data-i18n="nav.products.sub.klat-downloader">Klat Downloader - Fast & stable download manager</span></a></li>
+            <li><a href="klatos.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:monitor"></span><span data-i18n="nav.products.sub.klat-os">Klat OS - Linux-based OS (klatos.klat.asia)</span></a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#about" class="nav-link"><span class="iconify" data-icon="mdi:information-outline"></span> <span data-i18n="nav.about">About</span></a></li>
+        <li><a href="index.html#founder" class="nav-link"><span class="iconify" data-icon="mdi:account-tie"></span> <span data-i18n="nav.founder">Founder</span></a></li>
+        <li><a href="index.html#contact" class="nav-link"><span class="iconify" data-icon="mdi:email"></span> <span data-i18n="nav.contact">Contact</span></a></li>
+      </ul>
+      <div class="lang-toggle" id="langToggle" role="button" tabindex="0" aria-label="Switch language">
+        <span class="iconify" data-icon="mdi:earth"></span>
+        <span id="langLabel">EN</span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section hero product-hero">
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <span class="product-badge" data-i18n="product.free">Free License</span>
+        <h1 class="product-hero-title">Klat <span>AI</span></h1>
+        <p class="product-hero-desc" data-i18n="product.ai.desc">Smart AI assistant for coding, image generation, and general Q&A. Supports multiple AI models, code completion, debugging help, creative image generation with prompts, and intelligent answers to any question. Free and unlimited.</p>
+        <div class="product-hero-meta">
+          <div class="product-platforms">
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:microsoft-windows"></span>Windows</span>
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:linux"></span>Linux</span>
+          </div>
+          <div class="product-rating">
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star-half"></span>
+            <span>4.8/5</span>
+          </div>
+        </div>
+        <div class="product-hero-actions">
+          <a href="#download" class="btn btn-primary btn-lg"><span class="iconify" data-icon="mdi:download"></span> <span data-i18n="hero.cta1">Download Now</span></a>
+          <a href="https://github.com/klatasia/klat-ai" target="_blank" rel="noopener" class="btn btn-outline btn-lg"><span class="iconify" data-icon="mdi:github"></span> <span data-i18n="product.viewSource">View Source</span></a>
+        </div>
+      </div>
+      <div class="hero-visual fade-in">
+        <div class="product-showcase">
+          <div class="showcase-window">
+            <div class="showcase-header">
+              <div class="showcase-dots"><span></span><span></span><span></span></div>
+              <span class="showcase-title">Klat AI Assistant</span>
+            </div>
+            <div class="showcase-content">
+              <div class="ai-chat-demo">
+                <div class="chat-messages">
+                  <div class="message user">
+                    <div class="message-avatar"><span class="iconify" data-icon="mdi:account"></span></div>
+                    <div class="message-content">
+                      <p>Write a Python function to fetch data from an API with error handling and retry logic</p>
+                    </div>
+                  </div>
+                  <div class="message ai">
+                    <div class="message-avatar"><span class="iconify" data-icon="mdi:robot"></span></div>
+                    <div class="message-content">
+                      <pre><code>import requests
+from time import sleep
+
+def fetch_with_retry(url, max_retries=3, backoff=1):
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            return response.json()
+        except requests.RequestException as e:
+            if attempt == max_retries - 1:
+                raise
+            sleep(backoff * (2 ** attempt))
+    return None</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-input">
+                  <input type="text" placeholder="Ask me anything...">
+                  <button><span class="iconify" data-icon="mdi:send"></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.features">Key Features</span>
+        <h2 data-i18n="product.featuresTitle">Powerful <span>AI Capabilities</span></h2>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #5c6bc0, #7986cb);">
+            <span class="iconify" data-icon="mdi:code-braces"></span>
+          </div>
+          <h3 data-i18n="product.ai.feat1.title">Code Assistant</h3>
+          <p data-i18n="product.ai.feat1.desc">Intelligent code completion, debugging help, refactoring suggestions, and multi-language support for Python, JavaScript, TypeScript, and more.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #3b82f6, #60a5fa);">
+            <span class="iconify" data-icon="mdi:image"></span>
+          </div>
+          <h3 data-i18n="product.ai.feat2.title">Image Generation</h3>
+          <p data-i18n="product.ai.feat2.desc">Create stunning images from text prompts with multiple AI models. Support for styles, aspect ratios, and iterative refinement.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #10b981, #34d399);">
+            <span class="iconify" data-icon="mdi:chat-question"></span>
+          </div>
+          <h3 data-i18n="product.ai.feat3.title">General Q&A</h3>
+          <p data-i18n="product.ai.feat3.desc">Answer questions on any topic - science, history, creative writing, analysis, translation, and more with citations.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">
+            <span class="iconify" data-icon="mdi:model"></span>
+          </div>
+          <h3 data-i18n="product.ai.feat4.title">Multi-Model Support</h3>
+          <p data-i18n="product.ai.feat4.desc">Switch between different AI models (GPT, Claude, Llama, local models) based on your needs and privacy requirements.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ef4444, #f87171);">
+            <span class="iconify" data-icon="mdi:shield-check"></span>
+          </div>
+          <h3 data-i18n="product.ai.feat5.title">Privacy First</h3>
+          <p data-i18n="product.ai.feat5.desc">Run models locally on your device. No data sent to cloud unless you choose cloud models. Full offline capability.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+            <span class="iconify" data-icon="mdi:api"></span>
+          </div>
+          <h3 data-i18n="product.ai.feat6.title">API Integration</h3>
+          <p data-i18n="product.ai.feat6.desc">REST API and Python SDK for integrating AI capabilities into your own applications and workflows.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-screenshots" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.screenshots">Screenshots</span>
+        <h2 data-i18n="product.screenshotsTitle">See Klat AI in <span>Action</span></h2>
+      </div>
+      <div class="screenshots-grid">
+        <div class="screenshot-item main">
+          <img src="img/screenshots/klat-ai-main.svg" alt="Klat AI Main Interface" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-ai-code.svg" alt="Klat AI Code Assistant" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-ai-image.svg" alt="Klat AI Image Generation" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-ai-chat.svg" alt="Klat AI Chat Interface" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-ai-models.svg" alt="Klat AI Settings" loading="lazy">
+        </div>
+        <div class="screenshot-item">
+          <img src="img/screenshots/klat-ai-code.svg" alt="Klat AI Model Selection" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-use-cases" id="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.useCases">Use Cases</span>
+        <h2 data-i18n="product.useCasesTitle">Perfect for <span>Every Workflow</span></h2>
+      </div>
+      <div class="use-cases-grid">
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:code-braces"></span></div>
+          <h3 data-i18n="product.ai.use1.title">Software Development</h3>
+          <p data-i18n="product.ai.use1.desc">Code generation, debugging, code review, documentation writing, and learning new frameworks.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:pen"></span></div>
+          <h3 data-i18n="product.ai.use2.title">Content Creation</h3>
+          <p data-i18n="product.ai.use2.desc">Blog posts, marketing copy, social media content, creative writing, and translation.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:chart-line"></span></div>
+          <h3 data-i18n="product.ai.use3.title">Data Analysis</h3>
+          <p data-i18n="product.ai.use3.desc">SQL queries, data visualization code, statistical analysis, and insights generation.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:school"></span></div>
+          <h3 data-i18n="product.ai.use4.title">Learning & Education</h3>
+          <p data-i18n="product.ai.use4.desc">Explain complex concepts, practice coding, language learning, and homework assistance.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-tech" id="tech-details">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.techDetails">Technical Details</span>
+        <h2 data-i18n="product.techTitle">Built for <span>Developers</span></h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3 data-i18n="product.ai.tech1.title">Supported Models</h3>
+          <ul>
+            <li>GPT-4, GPT-3.5 Turbo (via API)</li>
+            <li>Claude 3 Opus/Sonnet/Haiku</li>
+            <li>Llama 3, Mistral, CodeLlama (local)</li>
+            <li>Custom GGUF models</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.ai.tech2.title">System Requirements</h3>
+          <ul>
+            <li>Windows 10/11 (64-bit)</li>
+            <li>Ubuntu 20.04+, Fedora 38+, Arch</li>
+            <li>4 GB RAM minimum (8 GB+ recommended)</li>
+            <li>2 GB disk space + model storage</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.ai.tech3.title">Local Inference</h3>
+          <ul>
+            <li>llama.cpp backend</li>
+            <li>GPU acceleration (CUDA, Metal, Vulkan)</li>
+            <li>Quantized models (4-bit, 8-bit)</li>
+            <li>Streaming responses</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-download" id="download">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.downloadTitle">Download</span>
+        <h2 data-i18n="product.downloadTitle">Get Klat AI <span>Today</span></h2>
+      </div>
+      <div class="download-grid">
+        <article class="download-card windows">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:microsoft-windows"></span></div>
+          <h3>Windows</h3>
+          <p class="download-version">v1.2.0 • 145 MB</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> Windows 10/11 (64-bit)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Installer (.exe) & Portable (.zip)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Auto-updates enabled</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Includes Python runtime</li>
+          </ul>
+          <a href="https://github.com/klatasia/klat-ai/releases/latest/download/KlatAI-Setup-x64.exe" class="btn btn-primary btn-block download-btn">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.downloadWin">Download for Windows</span>
+          </a>
+          <a href="https://github.com/klatasia/klat-ai/releases/latest/download/KlatAI-Portable-x64.zip" class="btn btn-outline btn-block">
+            <span class="iconify" data-icon="mdi:package-variant"></span>
+            <span data-i18n="product.downloadPortable">Portable Version</span>
+          </a>
+        </article>
+        <article class="download-card linux">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:linux"></span></div>
+          <h3>Linux</h3>
+          <p class="download-version">v1.2.0 • 138 MB</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> AppImage (universal)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> .deb (Debian/Ubuntu/Mint)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> .rpm (Fedora/RHEL/openSUSE)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> AUR package (Arch/Manjaro)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Flatpak (Flathub)</li>
+          </ul>
+          <a href="https://github.com/klatasia/klat-ai/releases/latest/download/KlatAI-x86_64.AppImage" class="btn btn-primary btn-block download-btn">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.downloadLinux">Download AppImage</span>
+          </a>
+          <div class="linux-alts">
+            <a href="https://github.com/klatasia/klat-ai/releases/latest" class="btn btn-outline btn-sm">View All Linux Packages</a>
+          </div>
+        </article>
+      </div>
+      <div class="download-footer">
+        <p data-i18n="product.freeLicense">Completely free • Open source (MIT) • No account required • No telemetry</p>
+        <a href="https://github.com/klatasia/klat-ai" target="_blank" rel="noopener" class="btn btn-ghost">
+          <span class="iconify" data-icon="mdi:github"></span>
+          <span>View Source on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.faq">FAQ</span>
+        <h2 data-i18n="product.faqTitle">Frequently Asked <span>Questions</span></h2>
+      </div>
+      <div class="faq-grid">
+        <details class="faq-item">
+          <summary data-i18n="product.ai.faq1.q">Is Klat AI completely free?</summary>
+          <p data-i18n="product.ai.faq1.a">Yes! Klat AI is 100% free and open source (MIT license). No subscriptions, no usage limits, no hidden costs. Cloud models require your own API keys.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.ai.faq2.q">Can I run it offline?</summary>
+          <p data-i18n="product.ai.faq2.a">Absolutely. Download local models (Llama, Mistral, CodeLlama) and use Klat AI completely offline. Perfect for privacy-sensitive work.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.ai.faq3.q">Which programming languages are supported?</summary>
+          <p data-i18n="product.ai.faq3.a">All major languages: Python, JavaScript, TypeScript, Go, Rust, C++, Java, C#, PHP, Ruby, Swift, Kotlin, and many more.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.ai.faq4.q">How do I update Klat AI?</summary>
+          <p data-i18n="product.ai.faq4.a">Windows installer has auto-update. Linux AppImage updates via AppImageUpdate. Or download latest from GitHub releases.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.ai.faq5.q">Can I use my own API keys?</summary>
+          <p data-i18n="product.ai.faq5.a">Yes! Add your OpenAI, Anthropic, or other API keys in Settings to use cloud models alongside local ones.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.ai.faq6.q">Is my code/data sent anywhere?</summary>
+          <p data-i18n="product.ai.faq6.a">Only if you use cloud models. Local models run entirely on your machine. No telemetry, no data collection, ever.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="iconify" data-icon="mdi:code-braces"></span> KlatAsia <span>Software</span>
+        </div>
+        <p data-i18n="footer.copyright">&copy; 2026 KlatAsia Software. All rights reserved. Made with <span class="iconify" data-icon="mdi:heart"></span> from Klaten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

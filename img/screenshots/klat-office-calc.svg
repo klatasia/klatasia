@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <rect x="40" y="30" width="720" height="44" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="60" cy="52" r="8" fill="#ef4444"/>
+  <circle cx="84" cy="52" r="8" fill="#f59e0b"/>
+  <circle cx="108" cy="52" r="8" fill="#10b981"/>
+  <text x="400" y="56" font-family="system-ui" font-size="14" fill="#64748b" text-anchor="middle">Klat Calc - Spreadsheet</text>
+  <rect x="40" y="90" width="720" height="40" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="70" y="115" font-family="system-ui" font-size="12" fill="#334155" font-weight="600">File  Edit  View  Insert  Format  Tools  Data  Window  Help</text>
+  <rect x="40" y="145" width="720" height="40" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="50" y="150" width="100" height="30" rx="4" fill="#3b82f6"/>
+  <text x="100" y="170" font-family="system-ui" font-size="12" fill="#fff" text-anchor="middle" dominant-baseline="middle">Σ AutoSum</text>
+  <rect x="160" y="150" width="60" height="30" rx="4" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="190" y="170" font-family="system-ui" font-size="12" fill="#334155" text-anchor="middle" dominant-baseline="middle">Sort</text>
+  <rect x="230" y="150" width="80" height="30" rx="4" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="270" y="170" font-family="system-ui" font-size="12" fill="#334155" text-anchor="middle" dominant-baseline="middle">Filter</text>
+  <rect x="320" y="150" width="100" height="30" rx="4" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="370" y="170" font-family="system-ui" font-size="12" fill="#334155" text-anchor="middle" dominant-baseline="middle">Pivot Table</text>
+  <rect x="430" y="150" width="80" height="30" rx="4" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="470" y="170" font-family="system-ui" font-size="12" fill="#334155" text-anchor="middle" dominant-baseline="middle">Chart</text>
+  <rect x="520" y="150" width="180" height="30" rx="4" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="530" y="170" font-family="system-ui" font-size="12" fill="#64748b" dominant-baseline="middle">🔍  Search functions: SUM, VLOOKUP, IF...</text>
+  <rect x="40" y="200" width="300" height="260" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="190" y="225" font-family="system-ui" font-size="13" fill="#334155" text-anchor="middle" font-weight="600">Functions</text>
+  <rect x="50" y="240" width="280" height="35" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="190" y="263" font-family="system-ui" font-size="11" fill="#1e40af" text-anchor="middle">Financial: PV, FV, PMT, IRR, NPV</text>
+  <rect x="50" y="285" width="280" height="35" rx="6" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="190" y="308" font-family="system-ui" font-size="11" fill="#334155" text-anchor="middle">Statistical: AVERAGE, STDEV, COUNTIF</text>
+  <rect x="50" y="330" width="280" height="35" rx="6" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="190" y="353" font-family="system-ui" font-size="11" fill="#334155" text-anchor="middle">Logical: IF, AND, OR, IFERROR, SWITCH</text>
+  <rect x="50" y="375" width="280" height="35" rx="6" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="190" y="398" font-family="system-ui" font-size="11" fill="#334155" text-anchor="middle">Lookup: VLOOKUP, XLOOKUP, INDEX/MATCH</text>
+  <rect x="50" y="420" width="280" height="35" rx="6" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="190" y="443" font-family="system-ui" font-size="11" fill="#334155" text-anchor="middle">Text: CONCAT, TEXT, LEFT, RIGHT, MID</text>
+  <rect x="360" y="200" width="380" height="260" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="550" y="225" font-family="system-ui" font-size="16" fill="#334155" text-anchor="middle" font-weight="600">Quarterly Sales Report</text>
+  <rect x="400" y="240" width="300" height="200" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="550" y="310" font-family="system-ui" font-size="12" fill="#64748b" text-anchor="middle">📊 Column Chart - Sales by Quarter</text>
+  <text x="550" y="330" font-family="system-ui" font-size="11" fill="#94a3b8" text-anchor="middle">Q1: $1.2M  •  Q2: $1.5M  •  Q3: $1.8M  •  Q4: $2.1M</text>
+  <rect x="380" y="240" width="180" height="80" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+  <text x="470" y="270" font-family="system-ui" font-size="18" fill="#065f46" text-anchor="middle" font-weight="700">$6.6M</text>
+  <text x="470" y="295" font-family="system-ui" font-size="11" fill="#047857" text-anchor="middle">Total Revenue</text>
+  <rect x="580" y="240" width="180" height="80" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="670" y="270" font-family="system-ui" font-size="18" fill="#92400e" text-anchor="middle" font-weight="700">+28%</text>
+  <text x="670" y="295" font-family="system-ui" font-size="11" fill="#92400e" text-anchor="middle">YoY Growth</text>
+  <rect x="380" y="340" width="180" height="80" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="470" y="370" font-family="system-ui" font-size="18" fill="#1e40af" text-anchor="middle" font-weight="700">1,247</text>
+  <text x="470" y="395" font-family="system-ui" font-size="11" fill="#1e40af" text-anchor="middle">Transactions</text>
+  <rect x="580" y="340" width="180" height="80" rx="8" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+  <text x="670" y="370" font-family="system-ui" font-size="18" fill="#9d174d" text-anchor="middle" font-weight="700">$5,293</text>
+  <text x="670" y="395" font-family="system-ui" font-size="11" fill="#9d174d" text-anchor="middle">Avg. Order</text>
+  <rect x="40" y="480" width="720" height="30" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="100" y="500" font-family="system-ui" font-size="12" fill="#64748b">Sheet1  Sheet2  Sheet3  +</text>
+  <text x="700" y="500" font-family="system-ui" font-size="12" fill="#64748b" text-anchor="end">Ready  |  1,048,576 rows  |  16,384 cols</text>
+</svg>

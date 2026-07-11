@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(20,20,30,0.95)"/>
+      <stop offset="100%" style="stop-color:rgba(30,30,40,0.98)"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <rect x="40" y="30" width="720" height="44" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="60" cy="52" r="8" fill="#ef4444"/>
+  <circle cx="84" cy="52" r="8" fill="#f59e0b"/>
+  <circle cx="108" cy="52" r="8" fill="#10b981"/>
+  <text x="400" y="56" font-family="system-ui" font-size="14" fill="#64748b" text-anchor="middle">Klat OS - Driver Manager</text>
+  <rect x="40" y="90" width="720" height="380" rx="12" fill="url(#panelGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="60" y="110" width="680" height="50" rx="8" fill="rgba(255,255,255,0.05)"/>
+  <text x="90" y="142" font-family="system-ui" font-size="16" fill="#fff" font-weight="600">🔧 Driver Manager</text>
+  <text x="90" y="160" font-family="system-ui" font-size="12" fill="#94a3b8">Auto-detect and install proprietary drivers for your hardware</text>
+  <rect x="600" y="120" width="120" height="30" rx="6" fill="#667eea"/>
+  <text x="660" y="140" font-family="system-ui" font-size="13" fill="#fff" text-anchor="middle" dominant-baseline="middle">🔍 Scan</text>
+  <rect x="60" y="180" width="680" height="260" rx="8" fill="rgba(255,255,255,0.03)"/>
+  <rect x="80" y="195" width="640" height="80" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="100" y="210" width="50" height="50" rx="8" fill="#76b900"/>
+  <text x="125" y="240" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">🟢</text>
+  <text x="170" y="225" font-family="system-ui" font-size="16" fill="#fff" font-weight="600">NVIDIA GeForce RTX 4070</text>
+  <text x="170" y="245" font-family="system-ui" font-size="12" fill="#94a3b8">GPU • Driver: 550.90.07 (Proprietary) • DKMS: ✓</text>
+  <rect x="580" y="215" width="120" height="40" rx="6" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="1"/>
+  <text x="640" y="240" font-family="system-ui" font-size="13" fill="#10b981" text-anchor="middle" dominant-baseline="middle" font-weight="600">✓ Active</text>
+  <rect x="80" y="290" width="640" height="80" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="100" y="305" width="50" height="50" rx="8" fill="#007acc"/>
+  <text x="125" y="335" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">🔵</text>
+  <text x="170" y="320" font-family="system-ui" font-size="16" fill="#fff" font-weight="600">AMD Radeon RX 7900 XTX</text>
+  <text x="170" y="340" font-family="system-ui" font-size="12" fill="#94a3b8">GPU • Driver: amdgpu (Open Source) • Mesa: 24.1</text>
+  <rect x="580" y="310" width="120" height="40" rx="6" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="1"/>
+  <text x="640" y="335" font-family="system-ui" font-size="13" fill="#10b981" text-anchor="middle" dominant-baseline="middle" font-weight="600">✓ Active</text>
+  <rect x="80" y="385" width="640" height="80" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="100" y="400" width="50" height="50" rx="8" fill="#f59e0b"/>
+  <text x="125" y="430" font-family="system-ui" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="middle">📡</text>
+  <text x="170" y="415" font-family="system-ui" font-size="16" fill="#fff" font-weight="600">Intel Wi-Fi 6E AX210</text>
+  <text x="170" y="435" font-family="system-ui" font-size="12" fill="#94a3b8">Network • Driver: iwlwifi • Firmware: 2024.05</text>
+  <rect x="580" y="405" width="120" height="40" rx="6" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="1"/>
+  <text x="640" y="430" font-family="system-ui" font-size="13" fill="#10b981" text-anchor="middle" dominant-baseline="middle" font-weight="600">✓ Active</text>
+</svg>
