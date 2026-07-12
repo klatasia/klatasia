@@ -11,12 +11,12 @@
       'nav.products': 'Products',
       'nav.founder': 'Founder',
       'nav.contact': 'Contact',
-      'nav.products.sub.klat-ai': 'Klat AI - Smart AI for coding, images & Q&A',
-      'nav.products.sub.klat-browser': 'Klat Browser - Own Klat Engine (not Chrome/Gecko/WebKit)',
-      'nav.products.sub.klat-downloader': 'Klat Downloader - Fast & stable download manager',
-      'nav.products.sub.klat-office': 'Klat Office - MS Office alternative (Writer, Calc, Impress, Draw, Math, Base)',
-      'nav.products.sub.klat-tube': 'Klat Tube - YouTube without ads, background play, PiP, SponsorBlock',
-      'nav.products.sub.klat-os': 'Klat OS - Linux-based OS (klatos.klat.asia)',
+      'nav.products.sub.klat-ai': 'Klat AI',
+      'nav.products.sub.klat-browser': 'Klat Browser',
+      'nav.products.sub.klat-downloader': 'Klat Downloader',
+      'nav.products.sub.klat-office': 'Klat Office',
+      'nav.products.sub.klat-tube': 'Klat Tube',
+      'nav.products.sub.klat-os': 'Klat OS',
       'hero.title': 'Welcome to <span>KlatAsia Software</span>',
       'hero.subtitle': 'Building innovative digital solutions with quality products accessible to everyone. Free, open-source, and cross-platform (Windows & Linux).',
       'hero.cta1': 'View Products',
@@ -95,12 +95,12 @@
       'nav.products': 'Produk',
       'nav.founder': 'Founder',
       'nav.contact': 'Kontak',
-      'nav.products.sub.klat-ai': 'Klat AI - AI pintar untuk coding, gambar & tanya jawab',
-      'nav.products.sub.klat-browser': 'Klat Browser - Engine Klat sendiri (bukan Chrome/Gecko/WebKit)',
-      'nav.products.sub.klat-downloader': 'Klat Downloader - Multi-thread, BitTorrent, streaming sites',
-      'nav.products.sub.klat-office': 'Klat Office - Writer, Calc, Impress, Draw, Math, Base',
-      'nav.products.sub.klat-tube': 'Klat Tube - YouTube tanpa iklan, background play, PiP, SponsorBlock',
-      'nav.products.sub.klat-os': 'Klat OS - OS berbasis Linux (klatos.klat.asia)',
+      'nav.products.sub.klat-ai': 'Klat AI',
+      'nav.products.sub.klat-browser': 'Klat Browser',
+      'nav.products.sub.klat-downloader': 'Klat Downloader',
+      'nav.products.sub.klat-office': 'Klat Office',
+      'nav.products.sub.klat-tube': 'Klat Tube',
+      'nav.products.sub.klat-os': 'Klat OS',
       'hero.title': 'Selamat Datang di <span>KlatAsia Software</span>',
       'hero.subtitle': 'Membangun solusi digital inovatif dengan produk berkualitas yang dapat diakses siapa saja. Gratis, open-source, dan cross-platform (Windows & Linux).',
       'hero.cta1': 'Lihat Produk',
@@ -303,7 +303,7 @@
     });
 
     document.documentElement.lang = lang === 'id' ? 'id' : 'en';
-    if (langLabel) langLabel.textContent = lang.toUpperCase();
+    updateLangLabels();
   }
 
   function switchLang() {
@@ -317,8 +317,26 @@
     }
   }
 
+  function updateLangLabels() {
+    if (langLabel) langLabel.textContent = lang.toUpperCase();
+    if (langLabelMobile) langLabelMobile.textContent = lang.toUpperCase();
+  }
+
   if (langToggle) {
     langToggle.addEventListener('click', switchLang);
+  }
+
+  // Mobile language toggle
+  var langToggleMobile = document.getElementById('langToggleMobile');
+  var langLabelMobile = document.getElementById('langLabelMobile');
+  if (langToggleMobile) {
+    langToggleMobile.addEventListener('click', switchLang);
+  }
+
+  // Update both language labels
+  function updateLangLabels() {
+    if (langLabel) langLabel.textContent = lang.toUpperCase();
+    if (langLabelMobile) langLabelMobile.textContent = lang.toUpperCase();
   }
 
   // ========== LOAD PRODUCTS VIA AJAX ==========

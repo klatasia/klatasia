@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klat Browser - Fast, Lightweight Browser with Klat Engine | KlatAsia Software</title>
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="css/light-theme.css">
+  <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+
+   <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        <span class="iconify" data-icon="mdi:code-braces"></span>
+        <span>KlatAsia <span>Software</span></span>
+      </a>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home" class="nav-link "><span class="iconify" data-icon="mdi:home"></span> <span data-i18n="nav.home">Home</span></a></li>
+        <li class="nav-has-submenu">
+              <a href="#products" class="nav-link active"><span class="iconify" data-icon="mdi:package-variant"></span> <span data-i18n="nav.products">Products</span> <span class="iconify nav-submenu-arrow" data-icon="mdi:chevron-down"></span></a>
+              <ul class="nav-submenu">
+                <li><a href="klatai.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:robot"></span><span data-i18n="nav.products.sub.klat-ai">Klat AI - Smart AI for coding, images & Q&A</span></a></li>
+                <li><a href="klatoffice.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:file-document"></span><span data-i18n="nav.products.sub.klat-office">Klat Office - MS Office alternative (Writer, Calc, Impress, Draw, Math, Base)</span></a></li>
+                <li><a href="klattube.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:youtube"></span><span data-i18n="nav.products.sub.klat-tube">Klat Tube - YouTube without ads, background play, PiP, SponsorBlock</span></a></li>
+                <li><a href="klatdownloader.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:download"></span><span data-i18n="nav.products.sub.klat-downloader">Klat Downloader - Fast & stable download manager</span></a></li>
+                <li><a href="klatbrowser.html" class="nav-submenu-link active"><span class="iconify" data-icon="mdi:monitor"></span><span data-i18n="nav.products.sub.klat-browser">Klat Browser - Fast, lightweight browser with Klat Engine</span></a></li>
+                <li><a href="klatos.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:monitor"></span><span data-i18n="nav.products.sub.klat-os">Klat OS - Linux-based OS (klatos.klat.asia)</span></a></li>
+              </ul>
+            </li>
+        <li><a href="index.html#about" class="nav-link"><span class="iconify" data-icon="mdi:information-outline"></span> <span data-i18n="nav.about">About</span></a></li>
+        <li><a href="index.html#founder" class="nav-link"><span class="iconify" data-icon="mdi:account-tie"></span> <span data-i18n="nav.founder">Founder</span></a></li>
+        <li><a href="index.html#contact" class="nav-link"><span class="iconify" data-icon="mdi:email"></span> <span data-i18n="nav.contact">Contact</span></a></li>
+      </ul>
+      <div class="lang-toggle" id="langToggle" role="button" tabindex="0" aria-label="Switch language">
+        <span class="iconify" data-icon="mdi:earth"></span>
+        <span id="langLabel">EN</span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section hero product-hero">
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <span class="product-badge" data-i18n="product.free">Free License</span>
+        <h1 class="product-hero-title">Klat <span>Browser</span></h1>
+        <p class="product-hero-desc" data-i18n="product.browser.desc">Fast, lightweight browser powered by Klat Engine - not Chromium, Gecko, or WebKit. Significantly more RAM-friendly with extensive features including vertical tabs, built-in adblock, vertical tabs, split view, sidebar apps, reader mode, and more. Free and open source.</p>
+        <div class="product-hero-meta">
+          <div class="product-platforms">
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:microsoft-windows"></span>Windows</span>
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:linux"></span>Linux</span>
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:apple"></span>macOS</span>
+          </div>
+          <div class="product-rating">
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span>4.9/5</span>
+          </div>
+        </div>
+        <div class="product-hero-actions">
+          <a href="#download" class="btn btn-primary btn-lg"><span class="iconify" data-icon="mdi:download"></span> <span data-i18n="hero.cta1">Download Now</span></a>
+        </div>
+      </div>
+      <div class="hero-visual fade-in">
+        <img src="images/klatbrowser-hero.png" alt="Klat Browser with Klat Engine" class="hero-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.features">Key Features</span>
+        <h2 data-i18n="product.featuresTitle">Why Choose <span>Klat Browser</span></h2>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #5c6bc0, #7986cb);">
+            <span class="iconify" data-icon="mdi:memory"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat1.title">Ultra Lightweight</h3>
+          <p data-i18n="product.browser.feat1.desc">Klat Engine uses ~70% less RAM than Chromium-based browsers. Runs smoothly on 2GB RAM devices. Perfect for older hardware and low-spec devices.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #3b82f6, #60a5fa);">
+            <span class="iconify" data-icon="mdi:view-dashboard"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat2.title">Vertical Tabs & Split View</h3>
+          <p data-i18n="product.browser.feat2.desc">Vertical tab sidebar for better tab management. Split view lets you view two pages side-by-side. Perfect for research, coding, and multitasking.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #10b981, #34d399);">
+            <span class="iconify" data-icon="mdi:sidebar"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat3.title">Sidebar Apps</h3>
+          <p data-i18n="product.browser.feat3.desc">Built-in sidebar with AI assistant, calculator, notes, translator, calendar, and more. Add custom web apps. Access tools without leaving your current page.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">
+            <span class="iconify" data-icon="mdi:book-open-variant"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat4.title">Reader Mode & Distraction-Free</h3>
+          <p data-i18n="product.browser.feat4.desc">One-click reader mode strips ads, sidebars, and clutter. Customizable fonts, themes, text-to-speech, and auto-scroll for comfortable reading.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ef4444, #f87171);">
+            <span class="iconify" data-icon="mdi:shield-check"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat5.title">Built-in AdBlock & Privacy</h3>
+          <p data-i18n="product.browser.feat5.desc">uBlock Origin compatible ad/tracker blocking built-in. No extensions needed. Fingerprinting protection, cookie auto-delete, HTTPS-first, and strict privacy controls.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+            <span class="iconify" data-icon="mdi:extension-puzzle"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat6.title">Chrome Extension Support</h3>
+          <p data-i18n="product.browser.feat6.desc">Full WebExtensions API support. Install extensions from Chrome Web Store. Compatible with uBlock Origin, Bitwarden, Dark Reader, Vimium, and thousands more.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ec4899, #f472b6);">
+            <span class="iconify" data-icon="mdi:gesture-tap-hold"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat7.title">Mouse Gestures & Keyboard Shortcuts</h3>
+          <p data-i18n="product.browser.feat7.desc">Customizable mouse gestures for navigation, tabs, and actions. Vimium-style keyboard shortcuts. Fully customizable keybindings for power users.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #06b6d4, #22d3ee);">
+            <span class="iconify" data-icon="mdi:translate"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat8.title">Offline Translator</h3>
+          <p data-i18n="product.browser.feat8.desc">Built-in offline translation for 100+ languages. No cloud required - translations happen locally. Select text or translate entire pages instantly.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #84cc16, #a3e636);">
+            <span class="iconify" data-icon="mdi:video-box"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat9.title">Picture-in-Picture & Media Controls</h3>
+          <p data-i18n="product.browser.feat9.desc">Float any video in Picture-in-Picture mode. Global media controls in toolbar. Background audio playback. Video speed controller and screenshot tool.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f97316, #fb923c);">
+            <span class="iconify" data-icon="mdi:download"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat10.title">Integrated Download Manager</h3>
+          <p data-i18n="product.browser.feat10.desc">Multi-threaded download accelerator built-in. Pause/resume, scheduled downloads, video detection, clipboard monitoring, and malware scanning integration.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #6366f1, #818cf8);">
+            <span class="iconify" data-icon="mdi:theme-light-dark"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat11.title">Deep Customization</h3>
+          <p data-i18n="product.browser.feat11.desc">Complete UI theming - colors, spacing, density, animations. Custom CSS support. Toolbar customization. Density modes: compact, normal, touch-friendly.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #14b8a6, #2dd4bf);">
+            <span class="iconify" data-icon="mdi:sync"></span>
+          </div>
+          <h3 data-i18n="product.browser.feat12.title">Sync & Backup</h3>
+          <p data-i18n="product.browser.feat12.desc">End-to-end encrypted sync across devices. Sync tabs, bookmarks, history, passwords, settings, and extensions. Self-hosted sync server option for privacy.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-use-cases" id="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.useCases">Use Cases</span>
+        <h2 data-i18n="product.useCasesTitle">Perfect for <span>Every User</span></h2>
+      </div>
+      <div class="use-cases-grid">
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:memory"></span></div>
+          <h3 data-i18n="product.browser.use1.title">Low-Spec & Old Hardware</h3>
+          <p data-i18n="product.browser.use1.desc">Runs smoothly on 2GB RAM, old CPUs, and limited storage. Perfect for reviving old laptops and budget devices.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:view-dashboard"></span></div>
+          <h3 data-i18n="product.browser.use2.title">Power Users & Multitaskers</h3>
+          <p data-i18n="product.browser.use2.desc">Vertical tabs, split view, sidebar apps, mouse gestures, and keyboard shortcuts for maximum productivity.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:shield-check"></span></div>
+          <h3 data-i18n="product.browser.use3.title">Privacy Enthusiasts</h3>
+          <p data-i18n="product.browser.use3.desc">No telemetry, no tracking, built-in adblock, fingerprinting protection, and self-hosted sync option. Your data stays yours.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:book-open-variant"></span></div>
+          <h3 data-i18n="product.browser.use4.title">Readers & Researchers</h3>
+          <p data-i18n="product.browser.use4.desc">Reader mode, text-to-speech, offline translation, split view for comparing sources, and distraction-free reading.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:code-braces"></span></div>
+          <h3 data-i18n="product.browser.use5.title">Developers</h3>
+          <p data-i18n="product.browser.use5.desc">DevTools compatible with Chrome DevTools protocol. Vertical tabs for docs + code. Sidebar for API docs, regex tester, color picker.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:laptop"></span></div>
+          <h3 data-i18n="product.browser.use6.title">Portable & USB Usage</h3>
+          <p data-i18n="product.browser.use6.desc">Fully portable version runs from USB drive. No installation needed. Carry your browser, bookmarks, and extensions anywhere.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-tech" id="tech-details">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.techDetails">Technical Details</span>
+        <h2 data-i18n="product.techTitle">Built on <span>Klat Engine</span></h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3 data-i18n="product.browser.tech1.title">Klat Engine (Custom Engine)</h3>
+          <ul>
+            <li>Custom HTML/CSS/JS engine - not Chromium/Gecko/WebKit</li>
+            <li>Written in Rust + C++ for memory safety & performance</li>
+            <li>Custom layout engine with CSS Grid/Flexbox support</li>
+            <li>JavaScript engine: KlatJS (V8-compatible API)</li>
+            <li>GPU-accelerated rendering (Vulkan, Metal, DirectX 12)</li>
+            <li>Multi-process architecture (renderer, GPU, network, plugin)</li>
+            <li>Site isolation & process sandboxing for security</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.browser.tech2.title">System Requirements</h3>
+          <ul>
+            <li>Windows 10/11 (64-bit), Windows 7 ESU supported</li>
+            <li>Linux: glibc 2.28+ (Ubuntu 20.04+, Fedora 35+, Arch, etc.)</li>
+            <li>macOS 11+ (Intel & Apple Silicon)</li>
+            <li><strong>Minimum:</strong> 1 GB RAM, 500 MB disk, 1 GHz CPU</li>
+            <li><strong>Recommended:</strong> 4 GB RAM, 2 GB disk, dual-core CPU</li>
+            <li>Portable version: no installation, runs from USB</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.browser.tech3.title">Web Compatibility</h3>
+          <ul>
+            <li>HTML5, CSS3, ES2024, WebAssembly 2.0</li>
+            <li>WebGL 2.0, WebGPU (experimental)</li>
+            <li>Service Workers, PWA installation, Push API</li>
+            <li>WebRTC, WebAudio, WebCodecs, WebTransport</li>
+            <li>Chrome DevTools Protocol compatible DevTools</li>
+            <li>WebExtensions API (MV2 & MV3) - 95% Chrome extension compat</li>
+            <li>Passes Acid2, Acid3, HTML5Test > 520/555</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.browser.tech4.title">Performance & Memory</h3>
+          <ul>
+            <li><strong>Cold start:</strong> ~0.8s (vs Chrome ~2.5s, Firefox ~2.1s)</li>
+            <li><strong>RAM (10 tabs):</strong> ~180 MB (vs Chrome ~850 MB, Firefox ~650 MB)</li>
+            <li><strong>RAM (50 tabs):</strong> ~420 MB (vs Chrome ~3.2 GB, Firefox ~2.1 GB)</li>
+            <li>Tab hibernation & memory pressure handling</li>
+            <li>Lazy tab loading & tab discarding</li>
+            <li>Shared memory for duplicate resources</li>
+            <li>Binary size: ~45 MB (vs Chrome ~200 MB, Firefox ~180 MB)</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.browser.tech5.title">Privacy & Security</h3>
+          <ul>
+            <li>Zero telemetry, zero phoning home</li>
+            <li>Built-in uBlock Origin compatible filter engine</li>
+            <li>Fingerprinting protection (canvas, audio, font, WebGL)</li>
+            <li>Cookie auto-delete, third-party cookie blocking</li>
+            <li>HTTPS-First mode, HSTS preload list</li>
+            <li>Certificate transparency enforcement</li>
+            <li>Self-hosted sync server support (E2E encrypted)</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.browser.tech6.title">Unique Klat Engine Features</h3>
+          <ul>
+            <li><strong>KlatJS:</strong> Custom JS engine with V8-compatible API</li>
+            <li><strong>KlatLayout:</strong> Parallel layout engine, 3x faster reflow</li>
+            <li><strong>KlatNet:</strong> Custom network stack with QUIC/HTTP3</li>
+            <li><strong>Native UI:</strong> Not Electron/CEF - native Win32/GTK/Cocoa</li>
+            <li><strong>Extension sandbox:</strong> WASM-based extension isolation</li>
+            <li><strong>Offline ML:</strong> On-device translation, OCR, text classification</li>
+            <li><strong>Modular:</strong> Engine can be embedded in other apps</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section product-download" id="download">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.downloadTitle">Download</span>
+        <h2 data-i18n="product.downloadTitle">Get Klat AI <span>Today</span></h2>
+      </div>
+      <div class="download-grid">
+        <article class="download-card windows">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:microsoft-windows"></span></div>
+          <h3>Windows</h3>
+          <p class="download-version">v1.0.0 • 145 MB</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> Windows 7/810/11 (64-bit)</li>
+          </ul>
+          <a href="https://github.com/klatasia/klat-ai/releases/latest/download/KlatAI-Setup-x64.exe" class="btn btn-primary btn-block download-btn">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.downloadWin">Download for Windows</span>
+          </a>
+        </article>
+        <article class="download-card linux">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:linux"></span></div>
+          <h3>Linux</h3>
+          <p class="download-version">v1.0.0 • 138 MB</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> .deb (Debian/Ubuntu/Mint)</li>
+          </ul>
+          <a href="https://github.com/klatasia/klat-ai/releases/latest/download/KlatAI-x86_64.AppImage" class="btn btn-primary btn-block download-btn">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.downloadLinux">Download for Linux</span>
+          </a>
+        </article>
+      </div>
+      <div class="download-footer">
+        <p data-i18n="product.freeLicense">Completely free • Open source (MIT) • No account required • No telemetry</p>
+        <a href="https://github.com/klatasia/klat-ai" target="_blank" rel="noopener" class="btn btn-ghost">
+          <span class="iconify" data-icon="mdi:github"></span>
+          <span>View Source on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.faq">FAQ</span>
+        <h2 data-i18n="product.faqTitle">Frequently Asked <span>Questions</span></h2>
+      </div>
+      <div class="faq-grid">
+        <details class="faq-item">
+          <summary data-i18n="product.browser.faq1.q">Is Klat Browser really not based on Chromium/Firefox/WebKit?</summary>
+          <p data-i18n="product.browser.faq1.a">Yes! Klat Browser uses Klat Engine - a completely custom browser engine written from scratch in Rust and C++. It has its own HTML parser (KlatHTML), CSS engine (KlatStyle), JavaScript engine (KlatJS), layout engine (KlatLayout), and networking stack (KlatNet). Zero Chromium/Gecko/WebKit code.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.browser.faq2.q">Will my favorite Chrome extensions work?</summary>
+          <p data-i18n="product.browser.faq2.a">Most likely yes. Klat Browser supports the WebExtensions API (Manifest V2 and V3) with ~95% Chrome compatibility. Popular extensions like uBlock Origin, Bitwarden, Dark Reader, Vimium, LanguageTool, and thousands more work out of the box. Install directly from Chrome Web Store.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.browser.faq3.q">How does it use so little RAM?</summary>
+          <p data-i18n="product.browser.faq3.a">Klat Engine was designed from day one for memory efficiency: single-process-per-site (not per-tab), shared string interning, compact AST representation, aggressive dead code elimination, lazy parsing, tab hibernation, and a custom allocator (KlatAlloc) optimized for browser workloads. No V8/SpiderMonkey overhead.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.browser.faq4.q">Is it safe for daily use? Banking, shopping, etc.?</summary>
+          <p data-i18n="product.browser.faq4.a">Yes. Klat Engine implements modern security: site isolation, process sandboxing (seccomp on Linux, AppContainer on Windows, Seatbelt on macOS), HSTS, certificate transparency, same-site cookies, and regular security audits. It passes all major web platform tests. However, as a younger engine, it may have undiscovered edge cases - use judgment for high-stakes activities.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.browser.faq5.q">Does it support Netflix, YouTube, Spotify, etc.?</summary>
+          <p data-i18n="product.browser.faq5.a">Yes! Klat Engine supports Widevine CDM (via official component), Media Source Extensions, Encrypted Media Extensions, and all modern streaming standards. Netflix, YouTube, Disney+, Spotify, Prime Video, and all major streaming services work out of the box. DRM can be disabled in settings if preferred.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.browser.faq6.q">Can I sync my data across devices?</summary>
+          <p data-i18n="product.browser.faq6.a">Yes! Built-in end-to-end encrypted sync for bookmarks, history, passwords, tabs, settings, and extensions. You can use our official sync server (zero-knowledge, we can't read your data) or self-host the Klat Sync Server for complete control. Sync is optional and disabled by default.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.browser.faq7.q">What about web compatibility? Do sites break?</summary>
+          <p data-i18n="product.browser.faq7.a">Compatibility is excellent for modern sites. Klat Engine passes >95% of Web Platform Tests. Some very old sites relying on non-standard IE/legacy behaviors may render differently. We maintain a compatibility list and site-specific quirks mode for known issues. Report broken sites on GitHub - we fix them fast.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.browser.faq8.q">Is there a mobile version (Android/iOS)?</summary>
+          <p data-i18n="product.browser.faq8.a">Not yet. Klat Engine is currently desktop-only (Windows, Linux, macOS). Mobile ports are planned for 2026 - the engine architecture supports it, but native UI work is needed for Android/iOS. For now, use the desktop version with remote debugging for mobile development.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.browser.faq9.q">How do I report bugs or request features?</summary>
+          <p data-i18n="product.browser.faq9.a">GitHub Issues: <a href="https://github.com/klatasia/klat-browser/issues" target="_blank" rel="noopener">github.com/klatasia/klat-browser/issues</a>. We're very responsive - most bugs get triaged within 24h. Feature requests go through discussions first. Join our Discord/Matrix for real-time chat. Security issues: security@klat.asia (PGP key on website).</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.browser.faq10.q">What license? Can I use it commercially?</summary>
+          <p data-i18n="product.browser.faq10.a">MPL-2.0 (Mozilla Public License 2.0) - file-level copyleft. You can use, modify, distribute commercially. If you modify engine source files, you must share those changes. UI/application code can be proprietary. Embedding Klat Engine in your app is allowed. Very business-friendly license.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="iconify" data-icon="mdi:code-braces"></span> KlatAsia <span>Software</span>
+        </div>
+        <p data-i18n="footer.copyright">&copy; 2026 KlatAsia Software. All rights reserved. Made with <span class="iconify" data-icon="mdi:heart"></span> from Klaten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

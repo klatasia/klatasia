@@ -6,7 +6,6 @@
   <title>Klat Downloader - Fast Download Manager | KlatAsia Software</title>
   <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   <link rel="stylesheet" href="css/light-theme.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
@@ -23,13 +22,13 @@
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html#home" class="nav-link"><span class="iconify" data-icon="mdi:home"></span> <span data-i18n="nav.home">Home</span></a></li>
         <li class="nav-has-submenu">
-          <a href="index.html#products" class="nav-link"><span class="iconify" data-icon="mdi:package-variant"></span> <span data-i18n="nav.products">Products</span> <span class="iconify nav-submenu-arrow" data-icon="mdi:chevron-down"></span></a>
+          <a href="index.html#products" class="nav-link active"><span class="iconify" data-icon="mdi:package-variant"></span> <span data-i18n="nav.products">Products</span> <span class="iconify nav-submenu-arrow" data-icon="mdi:chevron-down"></span></a>
           <ul class="nav-submenu">
-            <li><a href="klatai.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:robot"></span><span data-i18n="nav.products.sub.klat-ai">Klat AI - Smart AI for coding, images & Q&A</span></a></li>
-            <li><a href="klatoffice.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:file-document"></span><span data-i18n="nav.products.sub.klat-office">Klat Office - MS Office alternative (Writer, Calc, Impress, Draw, Math, Base)</span></a></li>
-            <li><a href="klattube.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:youtube"></span><span data-i18n="nav.products.sub.klat-tube">Klat Tube - YouTube without ads, background play, PiP, SponsorBlock</span></a></li>
-            <li><a href="klatdownloader.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:download"></span><span data-i18n="nav.products.sub.klat-downloader">Klat Downloader - Fast & stable download manager</span></a></li>
-            <li><a href="klatos.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:monitor"></span><span data-i18n="nav.products.sub.klat-os">Klat OS - Linux-based OS (klatos.klat.asia)</span></a></li>
+            <li><a href="klatai.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:robot"></span><span data-i18n="nav.products.sub.klat-ai">Klat AI</span></a></li>
+            <li><a href="klatoffice.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:file-document"></span><span data-i18n="nav.products.sub.klat-office">Klat Office</span></a></li>
+            <li><a href="klattube.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:youtube"></span><span data-i18n="nav.products.sub.klat-tube">Klat Tube</span></a></li>
+            <li><a href="klatdownloader.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:download"></span><span data-i18n="nav.products.sub.klat-downloader">Klat Downloader</span></a></li>
+            <li><a href="klatos.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:monitor"></span><span data-i18n="nav.products.sub.klat-os">Klat OS</span></a></li>
           </ul>
         </li>
         <li><a href="index.html#about" class="nav-link"><span class="iconify" data-icon="mdi:information-outline"></span> <span data-i18n="nav.about">About</span></a></li>
@@ -69,94 +68,7 @@
         </div>
       </div>
       <div class="hero-visual fade-in">
-        <div class="product-showcase">
-          <div class="showcase-window">
-            <div class="showcase-header">
-              <div class="showcase-dots"><span></span><span></span><span></span></div>
-              <span class="showcase-title">Klat Downloader - Main Window</span>
-            </div>
-            <div class="showcase-content">
-              <div class="downloader-demo">
-                <div class="toolbar">
-                  <button class="tb-btn" title="New Download"><span class="iconify" data-icon="mdi:plus"></span></button>
-                  <button class="tb-btn" title="Paste URL"><span class="iconify" data-icon="mdi:content-paste"></span></button>
-                  <button class="tb-btn" title="Start"><span class="iconify" data-icon="mdi:play"></span></button>
-                  <button class="tb-btn" title="Pause"><span class="iconify" data-icon="mdi:pause"></span></button>
-                  <button class="tb-btn" title="Stop"><span class="iconify" data-icon="mdi:stop"></span></button>
-                  <div class="tb-sep"></div>
-                  <button class="tb-btn" title="Scheduler"><span class="iconify" data-icon="mdi:calendar-clock"></span></button>
-                  <button class="tb-btn" title="Speed Limiter"><span class="iconify" data-icon="mdi:speedometer"></span></button>
-                  <div class="tb-spacer"></div>
-                  <span class="tb-status">3 active • 12 queued • 2.4 MB/s</span>
-                </div>
-                <div class="downloads-list">
-                  <div class="download-row active">
-                    <div class="dl-info">
-                      <span class="dl-icon"><span class="iconify" data-icon="mdi:file-video"></span></span>
-                      <div>
-                        <span class="dl-name">Ubuntu-24.04-desktop-amd64.iso</span>
-                        <span class="dl-url">releases.ubuntu.com/...</span>
-                      </div>
-                    </div>
-                    <div class="dl-progress">
-                      <div class="progress-bar"><div class="progress-fill" style="width: 67%"></div></div>
-                      <span class="dl-percent">67%</span>
-                    </div>
-                    <div class="dl-details">
-                      <span class="dl-speed">2.4 MB/s</span>
-                      <span class="dl-eta">3 min 12s</span>
-                      <span class="dl-size">3.2 GB / 4.8 GB</span>
-                    </div>
-                    <div class="dl-actions">
-                      <button class="dl-btn" title="Pause"><span class="iconify" data-icon="mdi:pause"></span></button>
-                    </div>
-                  </div>
-                  <div class="download-row active">
-                    <div class="dl-info">
-                      <span class="dl-icon"><span class="iconify" data-icon="mdi:file-document"></span></span>
-                      <div>
-                        <span class="dl-name">KlatOffice-Setup-x64.msi</span>
-                        <span class="dl-url">github.com/klatasia/...</span>
-                      </div>
-                    </div>
-                    <div class="dl-progress">
-                      <div class="progress-bar"><div class="progress-fill" style="width: 23%"></div></div>
-                      <span class="dl-percent">23%</span>
-                    </div>
-                    <div class="dl-details">
-                      <span class="dl-speed">1.8 MB/s</span>
-                      <span class="dl-eta">1 min 45s</span>
-                      <span class="dl-size">72 MB / 312 MB</span>
-                    </div>
-                    <div class="dl-actions">
-                      <button class="dl-btn" title="Pause"><span class="iconify" data-icon="mdi:pause"></span></button>
-                    </div>
-                  </div>
-                  <div class="download-row completed">
-                    <div class="dl-info">
-                      <span class="dl-icon"><span class="iconify" data-icon="mdi:file-image"></span></span>
-                      <div>
-                        <span class="dl-name">wallpaper-4k-collection.zip</span>
-                        <span class="dl-url">unsplash.com/...</span>
-                      </div>
-                    </div>
-                    <div class="dl-progress">
-                      <div class="progress-bar complete"><div class="progress-fill"></div></div>
-                      <span class="dl-percent">100%</span>
-                    </div>
-                    <div class="dl-details">
-                      <span class="dl-speed">Completed</span>
-                      <span class="dl-size">145 MB</span>
-                    </div>
-                    <div class="dl-actions">
-                      <button class="dl-btn" title="Open Folder"><span class="iconify" data-icon="mdi:folder-open"></span></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img src="images/klatdownloader-hero.png" alt="Klat Downloader Main Window" class="hero-image" loading="lazy">
       </div>
     </div>
   </section>
@@ -256,35 +168,6 @@
     </div>
   </section>
 
-  <section class="section product-screenshots" id="screenshots">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-i18n="product.screenshots">Screenshots</span>
-        <h2 data-i18n="product.screenshotsTitle">Clean, Functional <span>Interface</span></h2>
-      </div>
-      <div class="screenshots-grid">
-        <div class="screenshot-item main">
-          <img src="img/screenshots/klat-downloader-main.svg" alt="Klat Downloader Main Window" loading="lazy">
-        </div>
-        <div class="screenshot-item">
-          <img src="img/screenshots/klat-downloader-main.svg" alt="New Download Dialog" loading="lazy">
-        </div>
-        <div class="screenshot-item">
-          <img src="img/screenshots/klat-downloader-scheduler.svg" alt="Scheduler" loading="lazy">
-        </div>
-        <div class="screenshot-item">
-          <img src="img/screenshots/klat-downloader-settings.svg" alt="Settings" loading="lazy">
-        </div>
-        <div class="screenshot-item">
-          <img src="img/screenshots/klat-downloader-main.svg" alt="Browser Extension" loading="lazy">
-        </div>
-        <div class="screenshot-item">
-          <img src="img/screenshots/klat-downloader-main.svg" alt="BitTorrent Support" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="section product-use-cases" id="use-cases">
     <div class="container">
       <div class="section-header">
@@ -361,62 +244,44 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag" data-i18n="product.downloadTitle">Download</span>
-        <h2 data-i18n="product.downloadTitle">Get Klat Downloader <span>Today</span></h2>
+        <h2 data-i18n="product.downloadTitle">Get Klat AI <span>Today</span></h2>
       </div>
       <div class="download-grid">
         <article class="download-card windows">
           <div class="download-icon"><span class="iconify" data-icon="mdi:microsoft-windows"></span></div>
           <h3>Windows</h3>
-          <p class="download-version">v4.3.0 • 42 MB</p>
+          <p class="download-version">v1.0.0 • 145 MB</p>
           <ul class="download-info">
-            <li><span class="iconify" data-icon="mdi:check"></span> Windows 10/11 (64-bit)</li>
-            <li><span class="iconify" data-icon="mdi:check"></span> Installer (.exe) & Portable (.zip)</li>
-            <li><span class="iconify" data-icon="mdi:check"></span> Auto-updates via winget/chocolatey</li>
-            <li><span class="iconify" data-icon="mdi:check"></span> Hardware acceleration (DXVA2/D3D11)</li>
-            <li><span class="iconify" data-icon="mdi:check"></span> Shell integration</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Windows 7/810/11 (64-bit)</li>
           </ul>
-          <a href="https://github.com/klatasia/klat-downloader/releases/latest/download/KlatDownloader-Setup-x64.exe" class="btn btn-primary btn-block download-btn">
+          <a href="https://github.com/klatasia/klat-ai/releases/latest/download/KlatAI-Setup-x64.exe" class="btn btn-primary btn-block download-btn">
             <span class="iconify" data-icon="mdi:download"></span>
             <span data-i18n="product.downloadWin">Download for Windows</span>
-          </a>
-          <a href="https://github.com/klatasia/klat-downloader/releases/latest/download/KlatDownloader-Portable-x64.zip" class="btn btn-outline btn-block">
-            <span class="iconify" data-icon="mdi:package-variant"></span>
-            <span data-i18n="product.downloadPortable">Portable Version</span>
           </a>
         </article>
         <article class="download-card linux">
           <div class="download-icon"><span class="iconify" data-icon="mdi:linux"></span></div>
           <h3>Linux</h3>
-          <p class="download-version">v4.3.0 • 38 MB</p>
+          <p class="download-version">v1.0.0 • 138 MB</p>
           <ul class="download-info">
-            <li><span class="iconify" data-icon="mdi:check"></span> AppImage (universal)</li>
             <li><span class="iconify" data-icon="mdi:check"></span> .deb (Debian/Ubuntu/Mint)</li>
-            <li><span class="iconify" data-icon="mdi:check"></span> .rpm (Fedora/RHEL/openSUSE)</li>
-            <li><span class="iconify" data-icon="mdi:check"></span> Flatpak (Flathub)</li>
-            <li><span class="iconify" data-icon="mdi:check"></span> AUR (Arch/Manjaro/EndeavourOS)</li>
-            <li><span class="iconify" data-icon="mdi:check"></span> Nixpkgs</li>
           </ul>
-          <a href="https://github.com/klatasia/klat-downloader/releases/latest/download/KlatDownloader-x86_64.AppImage" class="btn btn-primary btn-block download-btn">
+          <a href="https://github.com/klatasia/klat-ai/releases/latest/download/KlatAI-x86_64.AppImage" class="btn btn-primary btn-block download-btn">
             <span class="iconify" data-icon="mdi:download"></span>
-            <span data-i18n="product.downloadLinux">Download AppImage</span>
+            <span data-i18n="product.downloadLinux">Download for Linux</span>
           </a>
-          <div class="linux-alts">
-            <a href="https://flathub.org/apps/com.klatasia.KlatDownloader" class="btn btn-outline btn-sm" target="_blank" rel="noopener">
-              <span class="iconify" data-icon="mdi:package-variant"></span> Flatpak
-            </a>
-            <a href="https://github.com/klatasia/klat-downloader/releases/latest" class="btn btn-ghost btn-sm">All Packages</a>
-          </div>
         </article>
       </div>
       <div class="download-footer">
-        <p data-i18n="product.freeLicense">Completely free • Open source (GPL-3.0) • No account • No tracking • No ads</p>
-        <a href="https://github.com/klatasia/klat-downloader" target="_blank" rel="noopener" class="btn btn-ghost">
+        <p data-i18n="product.freeLicense">Completely free • Open source (MIT) • No account required • No telemetry</p>
+        <a href="https://github.com/klatasia/klat-ai" target="_blank" rel="noopener" class="btn btn-ghost">
           <span class="iconify" data-icon="mdi:github"></span>
           <span>View Source on GitHub</span>
         </a>
       </div>
     </div>
   </section>
+
 
   <section class="section product-faq" id="faq">
     <div class="container">
