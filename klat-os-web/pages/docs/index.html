@@ -1,0 +1,174 @@
+<div class="container">
+  <div class="docs-layout">
+    <aside class="docs-sidebar">
+      <h3>Getting Started</h3>
+      <ul class="docs-nav">
+        <li><a href="#introduction" class="active">Introduction</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#quick-start">Quick Start</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem">Development</h3>
+      <ul class="docs-nav">
+        <li><a href="#kernel">Kernel</a></li>
+        <li><a href="#desktop">Desktop</a></li>
+        <li><a href="#drivers">Drivers</a></li>
+        <li><a href="#api">API Reference</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem">Advanced</h3>
+      <ul class="docs-nav">
+        <li><a href="#building">Building</a></li>
+        <li><a href="#contributing">Contributing</a></li>
+      </ul>
+    </aside>
+
+    <div class="docs-content">
+      <h2 id="introduction">Introduction</h2>
+      <p>KLAT OS is a modern open source operating system built with the Jowo Kernel. This documentation will guide you through the installation, configuration, and development of KLAT OS.</p>
+
+      <div class="card mt-4 mb-4">
+        <h3>System Requirements</h3>
+        <ul style="margin-top:.75rem">
+          <li>x86_64 or ARM64 processor</li>
+          <li>512 MB RAM minimum (2 GB recommended)</li>
+          <li>2 GB free storage space</li>
+          <li>Bootable USB or virtual machine</li>
+        </ul>
+      </div>
+
+      <h2 id="installation">Installation</h2>
+      <p>Before installing KLAT OS, ensure your system meets the minimum requirements and prepare a bootable USB drive.</p>
+
+      <h3>Creating Bootable USB</h3>
+      <pre><code># Download the ISO
+wget https://klat.asia/downloads/klat-os-1.0.iso
+
+# Create bootable USB (Linux)
+sudo dd if=klat-os-1.0.iso of=/dev/sdX bs=4M status=progress
+
+# Create bootable USB (Windows)
+# Use Rufus or Balena Etcher</code></pre>
+
+      <h2 id="quick-start">Quick Start</h2>
+      <p>After installation, boot into KLAT OS and follow the setup wizard.</p>
+      <pre><code># Open terminal
+# Update system
+sudo klat-update
+
+# Install apps
+sudo klat-install browser
+sudo klat-install office
+
+# Check system info
+klat-info</code></pre>
+
+      <h2 id="kernel">Jowo Kernel</h2>
+      <p>The Jowo Kernel is the heart of KLAT OS. It is a modern microkernel designed for performance, security, and stability.</p>
+
+      <h3>Kernel APIs</h3>
+      <pre><code>// Memory allocation
+void* memory_alloc(size_t size);
+
+// Process creation
+pid_t process_create(void* entry, int argc, char** argv);
+
+// IPC messaging
+int ipc_send(pid_t dest, ipc_message_t* msg);
+
+// Driver registration
+int driver_register(const char* name, driver_methods_t* methods);</code></pre>
+
+      <h2 id="desktop">Desktop Environment</h2>
+      <p>The KLAT Desktop Environment provides a modern, user-friendly interface with window management, compositing, and extensive customization.</p>
+
+      <div class="card-grid mt-4">
+        <div class="card">
+          <h3>Window Manager</h3>
+          <p style="color:var(--text3);font-size:.8125rem">Tiling and stacking window management with multi-monitor support</p>
+        </div>
+        <div class="card">
+          <h3>Theme Engine</h3>
+          <p style="color:var(--text3);font-size:.8125rem">Customizable themes with dark and light mode support</p>
+        </div>
+        <div class="card">
+          <h3>Widgets</h3>
+          <p style="color:var(--text3);font-size:.8125rem">Desktop widgets for clock, weather, system monitors</p>
+        </div>
+      </div>
+
+      <h2 id="drivers">Drivers</h2>
+      <p>KLAT OS supports a wide range of hardware components.</p>
+
+      <h3>Graphics</h3>
+      <ul>
+        <li>Intel integrated graphics</li>
+        <li>AMD Radeon (open source driver)</li>
+        <li>NVIDIA (proprietary driver support)</li>
+      </ul>
+
+      <h3>Storage</h3>
+      <ul>
+        <li>SATA / AHCI</li>
+        <li>NVMe</li>
+        <li>USB Storage</li>
+        <li>SD Card</li>
+      </ul>
+
+      <h2 id="api">API Reference</h2>
+      <p>KLAT OS provides a rich API for application development.</p>
+      <pre><code>#include &lt;klat/system.h&gt;
+#include &lt;klat/io.h&gt;
+#include &lt;klat/net.h&gt;
+
+int main() {
+    // Initialize KLAT API
+    klat_init();
+
+    // Create a window
+    window_t* win = window_create("My App", 800, 600);
+
+    // Main loop
+    while (window_is_open(win)) {
+        event_t evt;
+        while (window_poll_event(win, &evt)) {
+            handle_event(&evt);
+        }
+        window_render(win);
+    }
+
+    window_destroy(win);
+    return 0;
+}</code></pre>
+
+      <h2 id="building">Building from Source</h2>
+      <pre><code># Clone the repository
+git clone https://github.com/KlatAsia/KLAT-OS.git
+cd KLAT-OS
+
+# Build the kernel
+make kernel
+
+# Build the desktop environment
+make desktop
+
+# Build applications
+make apps
+
+# Create bootable ISO
+make iso</code></pre>
+
+      <h2 id="contributing">Contributing</h2>
+      <p>We welcome contributions from the community. Here are ways to get involved:</p>
+      <ul>
+        <li>Fix documentation typos</li>
+        <li>Report bugs and suggest features</li>
+        <li>Submit code via pull requests</li>
+        <li>Help translate KLAT OS</li>
+      </ul>
+
+      <div class="card mt-4" style="background:var(--primary);color:#fff;border-color:var(--primary)">
+        <h3 style="color:#fff">Ready to contribute?</h3>
+        <p style="opacity:.9;margin-top:.5rem">Visit our <a href="https://github.com/KlatAsia/KLAT-OS" target="_blank" style="color:#fff;text-decoration:underline">GitHub repository</a> to get started.</p>
+      </div>
+    </div>
+  </div>
+</div>

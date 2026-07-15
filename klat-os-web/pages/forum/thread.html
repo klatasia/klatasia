@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation - KLAT OS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+</head>
+<body x-cloak="" class="forum-thread-page">
+  <div class="forum-container">
+    <div class="forum-breadcrumb">
+      <a href="/forum" class="breadcrumb-link">Forum</a>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-current" x-text="thread ? thread.category : ''"></span>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-current" x-text="thread ? thread.title : ''"></span>
+    </div>
+
+    <div class="forum-thread-layout" x-data="forumThread()">
+      <div class="thread-main-content">
+        <div class="thread-header">
+          <div class="thread-meta">
+            <h1 class="thread-title" x-text="thread ? thread.title : 'Loading...'"></h1>
+            <div class="thread-info">
+              <span class="thread-category-badge" x-text="thread ? thread.category : ''" x-bind:class="thread ? 'category-' + thread.category.toLowerCase().replace(/\s/g, '-') : ''"></span>
+              <span class="thread-author">By: <span class="author-name" x-text="thread ? thread.author : ''"></span></span>
+              <span class="thread-date" x-text="thread ? thread.date : ''"></span>
+              <div class="thread-stats">
+                <span class="stat-item">
+                  <span class="stat-icon">👁️</span>
+                  <span class="stat-value" x-text="thread ? thread.views : 0"></span>
+                </span>
+                <span class="stat-item">
+                  <span class="stat-icon">❤️</span>
+                  <span class="stat-value" x-text="thread ? thread.likes : 0"></span>
+                </span>
+                <span class="stat-item">
+                  <span class="stat-icon">💬</span>
+                  <span class="stat-value" x-text="thread ? thread.replies.length : 0"></span>
+                </span>
+              </div>
+            </div>
+            <div class="thread-badges">
+              <span x-if="thread && thread.pinned" class="badge pinned">📌 Pinned</span>
+              <span x-if="thread && thread.solved" class="badge solved">✓ Solved</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="thread-content">
+          <div class="thread-excerpt">
+            <h3>Excerpt</h3>
+            <p x-text="thread ? thread.excerpt : ''"></p>
+          </div>
+
+          <div class="thread-replies-section">
+            <h3>Replies <span class="reply-count" x-text="thread ? thread.replies.length : 0"></span></h3>
+            <div class="replies-container" x-for="reply in thread.replies" :key="reply.id">
+              <div class="reply-item" :class="reply.depth ? 'nested-reply depth-' + reply.depth : ''">
+                <div class="reply-header">
+                  <div class="reply-author-info">
+                    <img :src="'/img/avatars/' + reply.author + '.jpg'" alt="Reply Author" class="reply-avatar" />
+                    <div class="reply-author-details">
+                      <span class="reply-author-name" x-text="reply.author"></span>
+                      <span class="reply-timestamp" x-text="reply.date"></span>
+                    </div>
+                  </div>
+                  <div class="reply-actions">
+                    <button class="action-btn like-btn" :class="reply.liked ? 'liked' : ''" @click="toggleLike(reply)">
+                      <span class="action-icon">❤️</span>
+                      <span class="action-count" x-text="reply.likes"></span>
+                    </button>
+                    <button class="action-btn reply-btn" @click="replyToReply(reply.id)">
+                      <span class="action-icon">↩</span>
+                      <span class="action-text">Reply</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="reply-content">
+                  <p x-text="reply.content"></p>
+                </div>
+
+                <div class="reply-footer">
+                  <span class="reply-depth-indicator" x-if="reply.depth" x-text="'─'.repeat(reply.depth) + ' ' + (reply.depth === 1 ? 'Replied to ' + getReplyAuthor(reply.parentId) : '')"></span>
+                </div>
+              </div>
+
+              <template x-if="reply.replies && reply.replies.length">
+                <div class="nested-replies">
+                  <div class="nested-replies-container" x-for="nestedReply in reply.replies" :key="nestedReply.id">
+                    <div class="reply-item nested-reply depth-2" :class="nestedReply.depth ? 'depth-' + nestedReply.depth : ''">
+                      <div class="reply-header">
+                        <div class="reply-author-info">
+                          <img :src="'/img/avatars/' + nestedReply.author + '.jpg'" alt="Nested Reply Author" class="reply-avatar" />
+                          <div class="reply-author-details">
+                            <span class="reply-author-name" x-text="nestedReply.author"></span>
+                            <span class="reply-timestamp" x-text="nestedReply.date"></span>
+                          </div>
+                        </div>
+                        <div class="reply-actions">
+                          <button class="action-btn like-btn" :class="nestedReply.liked ? 'liked' : ''" @click="toggleLike(nestedReply)">
+                            <span class="action-icon">❤️</span>
+                            <span class="action-count" x-text="nestedReply.likes"></span>
+                          </button>
+                          <button class="action-btn reply-btn" @click="replyToReply(nestedReply.id)">
+                            <span class="action-icon">↩</span>
+                            <span class="action-text">Reply</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="reply-content">
+                        <p x-text="nestedReply.content"></p>
+                      </div>
+
+                      <div class="reply-footer">
+                        <span class="reply-depth-indicator" x-if="nestedReply.depth" x-text="'─'.repeat(nestedReply.depth) + ' ' + (nestedReply.depth === 1 ? 'Replied to ' + getReplyAuthor(nestedReply.parentId) : '')"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+
+          <div class="reply-form-container">
+            <h3>Post a Reply</h3>
+            <form x-data="replyForm()" @submit.prevent="submitReply">
+              <div class="form-group">
+                <label for="reply-content">Your Reply</label>
+                <textarea id="reply-content" x-model="newReply.content" rows="6" placeholder="Write your reply here..." required></textarea>
+              </div>
+
+              <div class="form-group" x-if="replyingTo">
+                <label>Replying to</label>
+                <div class="replying-to-info">
+                  <span class="replying-to-author" x-text="getReplyAuthor(replyingTo)"></span>
+                  <button type="button" class="cancel-reply-btn" @click="cancelReply">Cancel</button>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-primary">Post Reply</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="thread-sidebar">
+        <div class="thread-actions">
+          <button class="action-btn primary-btn" @click="likeThread">
+            <span class="action-icon">❤️</span>
+            <span class="action-text">Like Thread</span>
+          </button>
+          <button class="action-btn" @click="bookmarkThread">
+            <span class="action-icon">🔖</span>
+            <span class="action-text">Bookmark</span>
+          </button>
+          <button class="action-btn" @click="shareThread">
+            <span class="action-icon">📤</span>
+            <span class="action-text">Share</span>
+          </button>
+        </div>
+
+        <div class="thread-info-card">
+          <h3>Thread Info</h3>
+          <div class="info-item">
+            <span class="info-label">Created</span>
+            <span class="info-value" x-text="thread ? thread.date : ''"></span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Last Updated</span>
+            <span class="info-value" x-text="thread ? thread.date : ''"></span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Views</span>
+            <span class="info-value" x-text="thread ? thread.views : 0"></span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Likes</span>
+            <span class="info-value" x-text="thread ? thread.likes : 0"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="forum-navigation">
+      <a href="/forum" class="nav-btn back-to-forum">← Back to Forum</a>
+    </div>
+  </div>
+
+  <script>
+    function forumThread() {
+      return {
+        thread: null,
+        replyingTo: null,
+        newReply: {
+          content: ''
+        },
+        init() {
+          this.loadThread();
+        },
+        loadThread() {
+          const path = window.location.pathname;
+          const threadId = path.split('/').pop();
+
+          fetch(`/forum/threads/${threadId}.json`)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Thread not found');
+              }
+              return response.json();
+            })
+            .then(data => {
+              this.thread = data;
+            })
+            .catch(error => {
+              console.error('Error loading thread:', error);
+              this.thread = {
+                id: parseInt(path.split('/').pop()),
+                category: 'Unknown',
+                title: 'Sample Thread',
+                author: 'Admin',
+                date: '2026-07-15',
+                views: 0,
+                likes: 0,
+                replies: [],
+                pinned: false,
+                solved: false,
+                excerpt: 'Sample thread content'
+              };
+            });
+        },
+        submitReply() {
+          if (!this.newReply.content) {
+            alert('Please enter a reply');
+            return;
+          }
+
+          const reply = {
+            id: Date.now(),
+            author: 'Current User',
+            date: new Date().toISOString().split('T')[0],
+            content: this.newReply.content,
+            likes: 0,
+            liked: false,
+            depth: this.replyingTo ? this.getReplyDepth(this.replyingTo) + 1 : 0,
+            parentId: this.replyingTo || null
+          };
+
+          if (this.replyingTo) {
+            this.addReplyToThread(reply);
+            this.cancelReply();
+          } else {
+            this.addReplyToThread(reply);
+          }
+
+          this.newReply.content = '';
+          alert('Reply posted successfully!');
+        },
+        addReplyToThread(reply) {
+          if (!this.thread.replies) {
+            this.thread.replies = [];
+          }
+
+          if (this.replyingTo) {
+            const parentReply = this.findReplyById(this.thread.replies, this.replyingTo);
+            if (parentReply) {
+              if (!parentReply.replies) {
+                parentReply.replies = [];
+              }
+              parentReply.replies.push(reply);
+            } else {
+              this.thread.replies.push(reply);
+            }
+          } else {
+            this.thread.replies.push(reply);
+          }
+        },
+        findReplyById(replies, replyId) {
+          for (const reply of replies) {
+            if (reply.id === replyId) {
+              return reply;
+            }
+            if (reply.replies && reply.replies.length) {
+              const found = this.findReplyById(reply.replies, replyId);
+              if (found) {
+                return found;
+              }
+            }
+          }
+          return null;
+        },
+        getReplyDepth(replies, replyId, depth = 0) {
+          for (const reply of replies) {
+            if (reply.id === replyId) {
+              return depth;
+            }
+            if (reply.replies && reply.replies.length) {
+              const foundDepth = this.getReplyDepth(reply.replies, replyId, depth + 1);
+              if (foundDepth !== -1) {
+                return foundDepth;
+              }
+            }
+          }
+          return -1;
+        },
+        getReplyAuthor(replyId) {
+          const findAuthor = (replies) => {
+            for (const reply of replies) {
+              if (reply.id === replyId) {
+                return reply.author;
+              }
+              if (reply.replies && reply.replies.length) {
+                const foundAuthor = findAuthor(reply.replies);
+                if (foundAuthor) {
+                  return foundAuthor;
+                }
+              }
+            }
+            return null;
+          };
+
+          return findAuthor(this.thread.replies) || 'Unknown';
+        },
+        replyToReply(replyId) {
+          this.replyingTo = replyId;
+          document.getElementById('reply-content').focus();
+        },
+        cancelReply() {
+          this.replyingTo = null;
+        },
+        toggleLike(reply) {
+          reply.liked = !reply.liked;
+          if (reply.liked) {
+            reply.likes++;
+          } else {
+            reply.likes--;
+          }
+        },
+        likeThread() {
+          if (this.thread) {
+            this.thread.likes++;
+          }
+        },
+        bookmarkThread() {
+          alert('Thread bookmarked!');
+        },
+        shareThread() {
+          if (navigator.share) {
+            navigator.share({
+              title: this.thread ? this.thread.title : 'KLAT OS Thread',
+              url: window.location.href
+            });
+          } else {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Link copied to clipboard!');
+          }
+        }
+      };
+    }
+
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('forumThread', forumThread);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      Alpine.start();
+    });
+  </script>
+</body>
+</html>

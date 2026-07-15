@@ -1,0 +1,22 @@
+{
+  "apiEndpoint": "https://api.klat.asia",
+  "githubRepo": "https://github.com/KlatAsia/KLAT-OS",
+  "discord": "https://discord.gg/klat",
+  "telegram": "https://t.me/klat",
+  "twitter": "https://twitter.com/klat",
+  "forum": {
+    "categories": [
+      "Development",
+      "Kernel", 
+      "Desktop",
+      "Drivers",
+      "Applications",
+      "Networking",
+      "Filesystem",
+      "Bug Report",
+      "Feature Request",
+      "General Discussion",
+      "Announcements"
+    ]
+  }
+}
