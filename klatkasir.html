@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klat Kasir - Point of Sale System Indonesia | KlatAsia Software</title>
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="css/light-theme.css">
+  <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+
+   <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        <span class="iconify" data-icon="mdi:code-braces"></span>
+        <span>KlatAsia <span>Software</span></span>
+      </a>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home" class="nav-link"><span class="iconify" data-icon="mdi:home"></span> <span data-i18n="nav.home">Home</span></a></li>
+        <li class="nav-has-submenu">
+              <a href="#products" class="nav-link active"><span class="iconify" data-icon="mdi:package-variant"></span> <span data-i18n="nav.products">Products</span> <span class="iconify nav-submenu-arrow" data-icon="mdi:chevron-down"></span></a>
+              <ul class="nav-submenu">
+                <li><a href="klatai.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:robot"></span><span data-i18n="nav.products.sub.klat-ai">Klat AI - Smart AI for coding, images & Q&A</span></a></li>
+                <li><a href="klatoffice.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:file-document"></span><span data-i18n="nav.products.sub.klat-office">Klat Office - MS Office alternative (Writer, Calc, Impress, Draw, Math, Base)</span></a></li>
+                <li><a href="klattube.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:youtube"></span><span data-i18n="nav.products.sub.klat-tube">Klat Tube - YouTube without ads, background play, PiP, SponsorBlock</span></a></li>
+                <li><a href="klatdownloader.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:download"></span><span data-i18n="nav.products.sub.klat-downloader">Klat Downloader - Fast & stable download manager</span></a></li>
+                <li><a href="klatbrowser.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:monitor"></span><span data-i18n="nav.products.sub.klat-browser">Klat Browser - Fast, lightweight browser with Klat Engine</span></a></li>
+                <li><a href="klatkasir.html" class="nav-submenu-link active"><span class="iconify" data-icon="mdi:cash-register"></span><span data-i18n="nav.products.sub.klat-kasir">Klat Kasir - Sistem POS Indonesia</span></a></li>
+                <li><a href="os/index.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:monitor"></span><span data-i18n="nav.products.sub.klat-os">Klat OS - Linux-based OS (klatos.klat.asia)</span></a></li>
+              </ul>
+            </li>
+        <li><a href="index.html#about" class="nav-link"><span class="iconify" data-icon="mdi:information-outline"></span> <span data-i18n="nav.about">About</span></a></li>
+        <li><a href="index.html#founder" class="nav-link"><span class="iconify" data-icon="mdi:account-tie"></span> <span data-i18n="nav.founder">Founder</span></a></li>
+        <li><a href="index.html#contact" class="nav-link"><span class="iconify" data-icon="mdi:email"></span> <span data-i18n="nav.contact">Contact</span></a></li>
+      </ul>
+      <div class="lang-toggle" id="langToggle" role="button" tabindex="0" aria-label="Switch language">
+        <span class="iconify" data-icon="mdi:earth"></span>
+        <span id="langLabel">EN</span>
+      </div>
+      <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle theme">
+        <span id="themeIcon">☀</span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section hero product-hero">
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <span class="product-badge" data-i18n="product.free">Gratis & Open Source</span>
+        <h1 class="product-hero-title">Klat <span>Kasir</span></h1>
+        <p class="product-hero-desc" data-i18n="product.kasir.desc">Sistem Point of Sale (POS) gratis dan open source khusus untuk bisnis Indonesia. Mendukung struk pembelian resmi, integrasi printer thermal 80mm, sistem inventaris, laporan penjualan per pajak, multi-toko, multi-kasir, dan mode offline. Cocok untuk warung, toko, restoran, café, minimarket, dan bisnis UMKM di seluruh Indonesia.</p>
+        <div class="product-hero-meta">
+          <div class="product-platforms">
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:microsoft-windows"></span>Windows</span>
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:linux"></span>Linux</span>
+          </div>
+          <div class="product-rating">
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star-half"></span>
+            <span>4.7/5</span>
+          </div>
+        </div>
+        <div class="product-hero-actions">
+          <a href="#download" class="btn btn-primary btn-lg"><span class="iconify" data-icon="mdi:download"></span> <span data-i18n="hero.cta1">Download Sekarang</span></a>
+          <a href="https://github.com/klatasia/klat-kasir" target="_blank" rel="noopener" class="btn btn-outline btn-lg"><span class="iconify" data-icon="mdi:github"></span> <span data-i18n="product.viewSource">Lihat Source</span></a>
+        </div>
+      </div>
+      <div class="hero-visual fade-in">
+        <img src="images/klatkasir-hero.png" alt="Klat Kasir Point of Sale Interface" class="hero-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.features">Fitur Utama</span>
+        <h2 data-i18n="product.featuresTitle">Kenapa Pilih <span>Klat Kasir</span></h2>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #10b981, #34d399);">
+            <span class="iconify" data-icon="mdi:cash-register"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat1.title">Kasir Cepat & Mudah</h3>
+          <p data-i18n="product.kasir.feat1.desc">Interface kasir yang dirancang untuk kecepatan. Cukup ketik barcode atau cari produk, pilih jumlah, dan transaksi selesai dalam hitungan detik. Cocok untuk jam ramai.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #3b82f6, #60a5fa);">
+            <span class="iconify" data-icon="mdi:receipt-text"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat2.title">Struk Resmi Indonesia</h3>
+          <p data-i18n="product.kasir.feat2.desc">Cetak struk pembelian resmi dengan format standar Indonesia. Termasuk NPWP toko, alamat, tanggal transaksi, PPN 11%, dan detail items sesuai ketentuan DJP.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">
+            <span class="iconify" data-icon="mdi:printer"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat3.title">Printer Thermal 80mm & 58mm</h3>
+          <p data-i18n="product.kasir.feat3.desc">Support langsung printer thermal umum di Indonesia: Xprinter, Epson TM-T20, Goojodoor, Citizen. Auto-cetak struk, cut kertas, dan buka drawer kas.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+            <span class="iconify" data-icon="mdi:barcode"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat4.title">Barcode & QRIS</h3>
+          <p data-i18n="product.kasir.feat4.desc">Scan barcode produk, generate barcode untuk produk tanpa barcode. Dukung pembayaran QRIS (QR Code Indonesian Standard), GoPay, OVO, Dana, ShopeePay.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ef4444, #f87171);">
+            <span class="iconify" data-icon="mdi:package-variant"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat5.title">Inventaris & Stok</h3>
+          <p data-i18n="product.kasir.feat5.desc">Kelola stok otomatis setiap transaksi. Alert stok minimum, laporan persediaan, FIFO, multi-gudang, opname stok, dan integrasi supplier.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ec4899, #f472b6);">
+            <span class="iconify" data-icon="mdi:chart-bar"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat6.title">Laporan Pajak & Keuangan</h3>
+          <p data-i18n="product.kasir.feat6.desc">Laporan penjualan harian, mingguan, bulanan. Laporan PPN masukan/keluar, perhitungan pajak otomatis, ekspor CSV/Excel untuk akuntansi.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #06b6d4, #22d3ee);">
+            <span class="iconify" data-icon: "mdi:account-group"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat7.title">Multi-Kasir & Multi-Toko</h3>
+          <p data-i18n="product.kasir.feat7.desc">Kelola beberapa toko dari satu sistem. Setiap kasir punya akun terpisah. Sinkron data antar toko. Laporan gabungan untuk pemilik bisnis.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #84cc16, #a3e635);">
+            <span class="iconify" data-icon="mdi:wifi-off"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat8.title">Mode Offline & Auto-Sync</h3>
+          <p data-i18n="product.kasir.feat8.desc">Berjualan tanpa internet. Semua transaksi tersimpan lokal. Saat online, data otomatis tersync ke cloud. Tidak ada data yang hilang.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #6366f1, #818cf8);">
+            <span class="iconify" data-icon="mdi:account-cash"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat9.title">Pembayaran Lengkap</h3>
+          <p data-i18n="product.kasir.feat9.desc">Tunai, kartu debit/kredit, QRIS, e-wallet (GoPay, OVO, Dana, ShopeePay), transfer bank, kredit toko, piutang, dan split payment.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f97316, #fb923c);">
+            <span class="iconify" data-icon="mdi:tag-text"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat10.title">Diskon & Promosi</h3>
+          <p data-i18n="product.kasir.feat10.desc">Diskon per item, per transaksi, beli X gratis Y, happy hour, paket bundling, voucher, loyalty points, dan harga khusus member.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #14b8a6, #2dd4bf);">
+            <span class="iconify" data-icon="mdi:truck-delivery"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat11.title">Manajemen Supplier</h3>
+          <p data-i18n="product.kasir.feat11.desc">Database supplier, pemesanan barang, purchase order, penerimaan barang, catatan harga beli, dan riwayat transaksi dengan supplier.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #64748b, #94a3b8);">
+            <span class="iconify" data-icon="mdi:cellphone"></span>
+          </div>
+          <h3 data-i18n="product.kasir.feat12.title">Mobile & Tablet Ready</h3>
+          <p data-i18n="product.kasir.feat12.desc">Interface responsif untuk tablet dan HP. Kasir bisa berjualan dari tablet Android/iPad. Cocok untuk food truck, stand bazaar, atau toko kecil.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-use-cases" id="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.useCases">Jenis Bisnis</span>
+        <h2 data-i18n="product.useCasesTitle">Cocok untuk <span>Bisnis Indonesia</span></h2>
+      </div>
+      <div class="use-cases-grid">
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:store"></span></div>
+          <h3 data-i18n="product.kasir.use1.title">Warung & Toko Kelontong</h3>
+          <p data-i18n="product.kasir.use1.desc">Ribuan item, ratusan transaksi per hari. Klat Kasir dirancang untuk kecepatan kasir warung dengan harga terjangkau. Stok otomatis berkurang.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:silverware-fork-knife"></span></div>
+          <h3 data-i18n="product.kasir.use2.title">Restoran & Café</h3>
+          <p data-i18n="product.kasir.use2.desc">Menu dengan variasi (ukuran, topping), split bill, pemesanan meja, dapur printer, delivery order, dan integrasi GrabFood/GoFood.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:shopping"></span></div>
+          <h3 data-i18n="product.kasir.use3.title">Minimarket & Supermarket</h3>
+          <p data-i18n="product.kasir.use3.desc">Ribuan SKU, barcode scanning, promosi bundling, member card, loyalty points, dan laporan penjualan per departemen/kategori.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:pharmacy"></span></div>
+          <h3 data-i18n="product.kasir.use4.title">Apotek & Toko Obat</h3>
+          <p data-i18n="product.kasir.use4.desc">Track expiry date, batch number, nomor registrasi obat, resep dokter, dan laporan penjualan obat untuk BPJS.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:tshirt-crew"></span></div>
+          <h3 data-i18n="product.kasir.use5.title">Toko Fashion & Garment</h3>
+          <p data-i18n="product.kasir.use5.desc">Variasi ukuran, warna, model. Barcode per variasi, ukuran stok terpisah, display katalog di tablet kasir, dan retur barang.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon: "mdi:fruit-cherries"></span></div>
+          <h3 data-i18n="product.kasir.use6.title">Toko Buah & Sayur</h3>
+          <p data-i18n="product.kasir.use6.desc">Penjualan per kg/ons/pcs. Timbangan digital terintegrasi, harga dinamis sesuai berat, dan manajemen barang basi/rusak.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-tech" id="tech-details">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.techDetails">Detail Teknis</span>
+        <h2 data-i18n="product.techTitle">Spesifikasi <span>Klat Kasir</span></h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3 data-i18n="product.kasir.tech1.title">Spesifikasi Minimum</h3>
+          <ul>
+            <li>Windows 10/11 atau Linux (Ubuntu 20.04+)</li>
+            <li>RAM 2 GB minimum (4 GB recommended)</li>
+            <li>Penyimpanan 500 MB + database</li>
+            <li>Layar minimal 1024x768</li>
+            <li>Printer thermal 80mm/58mm (opsional)</li>
+            <li>Scanner barcode USB (opsional)</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.kasir.tech2.title">Database & Storage</h3>
+          <ul>
+            <li>SQLite (default, tanpa install database)</li>
+            <li>PostgreSQL/MySQL untuk multi-kasir</li>
+            <li>Backup otomatis harian ke local/USB/cloud</li>
+            <li>Restore dari backup dalam 1 klik</li>
+            <li>Ekspor data ke CSV/Excel/JSON</li>
+            <li>Enkripsi data penjualan</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.kasir.tech3.title">Printer & Hardware</h3>
+          <ul>
+            <li>Xprinter XP-N160II / XP-T80II</li>
+            <li>Epson TM-T20III / TM-T82</li>
+            <li>Goojodoor GP-1320D / GP-58MM</li>
+            <li>Citizen CT-S310II / CT-S631</li>
+            <li>Drawer kas: compatible semua merk</li>
+            <li>Customer display: Pole type & VFD</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.kasir.tech4.title">Pembayaran Digital</h3>
+          <ul>
+            <li>QRIS (Standard QR Code Indonesia)</li>
+            <li>GoPay, OVO, Dana, ShopeePay</li>
+            <li>LinkAja, Kredivo, Indodana</li>
+            <li>Transfer bank (BCA, Mandiri, BRI, BNI)</li>
+            <li>Kartu debit/kredit (Visa, Mastercard)</li>
+            <li>Cicilan toko & piutang usaha</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.kasir.tech5.title">Pajak & PPN</h3>
+          <ul>
+            <li>PPN 11% otomatis (per 1 April 2022)</li>
+            <li>PPN 12% (siap untuk kebijakan baru)</li>
+            <li>Potongan PPh 21/22/23 (jika applicable)</li>
+            <li>Faktur pajak digital (e-Faktur DJP)</li>
+            <li>Laporan SPT Masa PPN bulanan</li>
+            <li>Integrasi e-Faktur DJP Online</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.kasir.tech6.title">Koneksi & Integrasi</h3>
+          <ul>
+            <li>API REST untuk integrasi sistem lain</li>
+            <li>Webhook notifikasi real-time</li>
+            <li>Sinkron multi-toko via internet</li>
+            <li>Integrasi WhatsApp Business (struk digital)</li>
+            <li>Export ke software akuntansi (Jurnal, Accurate)</li>
+            <li>Zapier/IFTTT automation support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-download" id="download">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.downloadTitle">Download</span>
+        <h2 data-i18n="product.downloadTitle">Unduh Klat Kasir <span>Sekarang</span></h2>
+      </div>
+      <div class="download-grid">
+        <article class="download-card windows">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:microsoft-windows"></span></div>
+          <h3>Windows</h3>
+          <p class="download-version">v3.2.0 • 78 MB</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> Windows 10/11 (64-bit)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Installer (.exe) & Portable (.zip)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Auto-update tersedia</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Include runtime & driver printer</li>
+          </ul>
+          <a href="https://github.com/klatasia/klat-kasir/releases/latest/download/KlatKasir-Setup-x64.exe" class="btn btn-primary btn-block download-btn">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.downloadWin">Download untuk Windows</span>
+          </a>
+          <a href="https://github.com/klatasia/klat-kasir/releases/latest/download/KlatKasir-Portable-x64.zip" class="btn btn-outline btn-block">
+            <span class="iconify" data-icon="mdi:package-variant"></span>
+            <span data-i18n="product.downloadPortable">Versi Portable</span>
+          </a>
+        </article>
+        <article class="download-card linux">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:linux"></span></div>
+          <h3>Linux</h3>
+          <p class="download-version">v3.2.0 • 72 MB</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> AppImage (universal)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> .deb (Debian/Ubuntu/Mint)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> .rpm (Fedora/RHEL/openSUSE)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> Flatpak (Flathub)</li>
+            <li><span class="iconify" data-icon="mdi:check"></span> AUR (Arch/Manjaro)</li>
+          </ul>
+          <a href="https://github.com/klatasia/klat-kasir/releases/latest/download/KlatKasir-x86_64.AppImage" class="btn btn-primary btn-block download-btn">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.downloadLinux">Download AppImage</span>
+          </a>
+          <div class="linux-alts">
+            <a href="https://github.com/klatasia/klat-kasir/releases/latest" class="btn btn-outline btn-sm">Semua Paket Linux</a>
+          </div>
+        </article>
+      </div>
+      <div class="download-footer">
+        <p data-i18n="product.freeLicense">Gratis sepenuhnya • Open source (GPL-3.0) • Tanpa akun • Tanpa biaya tersembunyi</p>
+        <a href="https://github.com/klatasia/klat-kasir" target="_blank" rel="noopener" class="btn btn-ghost">
+          <span class="iconify" data-icon="mdi:github"></span>
+          <span>Lihat Source di GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.faq">FAQ</span>
+        <h2 data-i18n="product.faqTitle">Pertanyaan yang <span>Sering Ditanyakan</span></h2>
+      </div>
+      <div class="faq-grid">
+        <details class="faq-item">
+          <summary data-i18n="product.kasir.faq1.q">Apakah Klat Kasir gratis?</summary>
+          <p data-i18n="product.kasir.faq1.a">Ya! Klat Kasir 100% gratis dan open source (GPL-3.0). Tidak ada biaya langganan, tidak ada biaya transaksi, tidak ada fitur terkunci. Semua fitur tersedia sejak awal.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.kasir.faq2.q">Apakah mendukung struk resmi Indonesia?</summary>
+          <p data-i18n="product.kasir.faq2.a">Ya! Klat Kasir mencetak struk sesuai standar Indonesia dengan NPWP toko, alamat lengkap, tanggal transaksi, detail item, PPN 11%, dan total yang sesuai ketentuan DJP. Mendukung printer thermal 80mm dan 58mm.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.kasir.faq3.q">Printer thermal apa saja yang didukung?</summary>
+          <p data-i18n="product.kasir.faq3.a">Xprinter XP-N160II, XP-T80II, Epson TM-T20III, TM-T82, Goojodoor GP-1320D, GP-58MM, Citizen CT-S310II, dan mayoritas printer thermal ESC/POS compatible lainnya.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.kasir.faq4.q">Apakah bisa tanpa internet?</summary>
+          <p data-i18n="product.kasir.faq4.a">Ya! Klat Kasir bekerja 100% offline. Semua transaksi, stok, dan laporan tersimpan lokal di komputer Anda. Saat internet tersedia, data bisa disinkronkan ke cloud secara otomatis.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.kasir.faq5.q">Apakah mendukung pembayaran QRIS?</summary>
+          <p data-i18n="product.kasir.faq5.a">Ya! Klat Kasir mendukung QRIS (QR Code Indonesian Standard) untuk pembayaran digital. Juga mendukung GoPay, OVO, Dana, ShopeePay, LinkAja, dan transfer bank.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.kasir.faq6.q">Apakah bisa untuk restoran/café?</summary>
+          <p data-i18n="product.kasir.faq6.a">Ya! Klat Kasir punya mode restoran dengan fitur: menu dengan variasi (ukuran, topping), split bill, pemesanan meja, printer dapur, delivery order, dan integrasi GrabFood/GoFood.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.kasir.faq7.q">Bagaimana dengan laporan pajak PPN?</summary>
+          <p data-i18n="product.kasir.faq7.a">Klat Kasir otomatis menghitung PPN 11% (siap untuk 12%). Laporan PPN masukan/keluar tersedia, bisa diekspor untuk pengisian SPT Masa PPN. Integrasi e-Faktur DJP juga tersedia.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.kasir.faq8.q">Apakah data saya aman?</summary>
+          <p data-i18n="product.kasir.faq8.a">Ya! Data tersimpan lokal dengan enkripsi. Backup otomatis harian bisa disimpan ke USB/cloud. Tidak ada data yang dikirim ke server KlatAsia tanpa persetujuan Anda. Anda kendali penuh atas data.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.kasir.faq9.q">Bisakah multi-toko?</summary>
+          <p data-i18n="product.kasir.faq9.a">Ya! Klat Kasir mendukung multi-toko dengan satu akun. Data tersinkron via internet. Laporan gabungan tersedia untuk pemilik bisnis yang mengelola beberapa cabang.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.kasir.faq10.q">Bagaimana cara mulai?</summary>
+          <p data-i18n="product.kasir.faq10.a">Download, install, jalankan. Wizard setup akan membantu Anda: input data toko, tambah kategori produk, import produk dari CSV (jika ada), setup printer, dan mulai berjualan. Bisa berjualan dalam 10 menit!</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="iconify" data-icon="mdi:code-braces"></span> KlatAsia <span>Software</span>
+        </div>
+        <p data-i18n="footer.copyright">&copy; 2026 KlatAsia Software. All rights reserved. Made with <span class="iconify" data-icon="mdi:heart"></span> from Klaten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

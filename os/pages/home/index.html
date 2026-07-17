@@ -1,0 +1,127 @@
+<section class="hero">
+  <div class="container">
+    <h1 data-i18n="home.hero_title">KLAT OS</h1>
+    <p data-i18n="home.hero_desc">Sistem operasi modern berbasis JowoKernel — kernel monolitik 64-bit yang dikembangkan sepenuhnya dari nol. Dibangun untuk performa, stabilitas, dan kompatibilitas POSIX.</p>
+    <div class="hero-btns">
+      <a href="#/download" class="btn btn-primary" data-i18n="home.btn_download">Download</a>
+      <a href="#/docs" class="btn btn-outline" data-i18n="home.btn_docs">Documentation</a>
+      <a href="https://github.com/KlatAsia/KLAT-OS" target="_blank" class="btn btn-outline" data-i18n="home.btn_github">GitHub</a>
+      <a href="#/forum" class="btn btn-outline" data-i18n="home.btn_forum">Forum</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" data-i18n="home.philosophy_title">Filosofi</h2>
+    <p class="section-desc" data-i18n="home.philosophy_desc">Pengembangan KlatOS didasarkan pada prinsip-prinsip utama yang memastikan kualitas di setiap lapisan sistem.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#9881;</div>
+        <h3 data-i18n="home.arch_title">Modern Architecture</h3>
+        <p data-i18n="home.arch_desc">Seluruh subsistem menggunakan arsitektur modern berbasis object-oriented dan event-driven.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9889;</div>
+        <h3 data-i18n="home.perf_title">Performance First</h3>
+        <p data-i18n="home.perf_desc">Seluruh jalur kritis dirancang untuk meminimalkan overhead: zero-copy VMO, event-driven WaitQueue, non-blocking I/O.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128196;</div>
+        <h3 data-i18n="home.posix_title">POSIX Compatibility</h3>
+        <p data-i18n="home.posix_desc">Mengimplementasikan antarmuka POSIX sehingga berbagai aplikasi dan pustaka dapat dipindahkan dengan perubahan seminimal mungkin.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#127912;</div>
+        <h3 data-i18n="home.gfx_title">Graphics Stack</h3>
+        <p data-i18n="home.gfx_desc">Graphics stack modern berbasis DRM dengan dumb buffer, page flipping, VBlank synchronization, zero-copy framebuffer.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128274;</div>
+        <h3 data-i18n="home.sec_title">Security &amp; Reliability</h3>
+        <p data-i18n="home.sec_desc">Per-process virtual address space, process isolation, guard pages, reference counting, automatic resource cleanup.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128230;</div>
+        <h3 data-i18n="home.clean_title">Clean Architecture</h3>
+        <p data-i18n="home.clean_desc">Kernel tidak dibangun dari kumpulan patch. Desain modular dengan batas antarsubsistem yang jelas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg2)">
+  <div class="container">
+    <h2 class="section-title" data-i18n="home.kernel_title">JowoKernel</h2>
+    <p class="section-desc" data-i18n="home.kernel_desc">Kernel monolitik 64-bit yang menyediakan seluruh layanan sistem operasi kepada userspace melalui antarmuka syscall yang stabil.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3 data-i18n="home.proc_title">Process Management</h3>
+        <p style="color:var(--text3);font-size:.8125rem" data-i18n="home.proc_desc">Multi-process &amp; multi-thread scheduler, context switching, process groups, sessions, job control, signal delivery.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="home.mem_title">Memory Management</h3>
+        <p style="color:var(--text3);font-size:.8125rem" data-i18n="home.mem_desc">Physical Memory Manager, VMM, kernel heap, slab allocator, VMO, memory mapping, shared memory, guard pages.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="home.fs_title">Filesystem</h3>
+        <p style="color:var(--text3);font-size:.8125rem" data-i18n="home.fs_desc">Virtual File System, TmpFS, ProcFS, DeviceFS, file descriptor table, symbolic links, hard links, permission management.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="home.ipc_title">IPC</h3>
+        <p style="color:var(--text3);font-size:.8125rem" data-i18n="home.ipc_desc">Pipes, Unix Domain Socket, shared memory, zero-copy buffer sharing, file descriptor passing (SCM_RIGHTS).</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="home.event_title">Event Infrastructure</h3>
+        <p style="color:var(--text3);font-size:.8125rem" data-i18n="home.event_desc">WaitQueue, poll, select, epoll, event-driven wakeup, non-blocking file descriptors — menghilangkan polling periodik.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="home.desktop_title">Desktop Platform</h3>
+        <p style="color:var(--text3);font-size:.8125rem" data-i18n="home.desktop_desc">Display server, window manager, input server, desktop shell, launcher, notification service, session manager.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" data-i18n="home.release_title">Rilis Terbaru</h2>
+    <p class="section-desc" data-i18n="home.release_desc">Unduh versi terbaru KlatOS</p>
+    <div class="card" style="max-width:600px;margin:0 auto;text-align:center">
+      <h3 data-i18n="home.release_version">KlatOS 1.0</h3>
+      <p style="color:var(--text3);font-size:.875rem;margin-bottom:1rem">July 2026</p>
+      <div class="progress-bar"><div class="progress-fill done" style="width:100%"></div></div>
+      <p style="color:var(--success);font-size:.75rem;margin-top:.5rem;font-weight:600" data-i18n="home.release_status">Stable — Siap Produksi</p>
+      <div style="margin-top:1.5rem"><a href="#/download" class="btn btn-solid" data-i18n="home.btn_download_now">Unduh Sekarang</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg2)">
+  <div class="container">
+    <h2 class="section-title" data-i18n="home.contributors_title">Kontributor Utama</h2>
+    <p class="section-desc" data-i18n="home.contributors_desc">Tim di balik pengembangan KlatOS</p>
+    <div class="contributors-grid">
+      <div class="contributor">
+        <div style="width:80px;height:80px;border-radius:50%;background:var(--primary);margin:0 auto .75rem;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;font-weight:700">K</div>
+        <h4 data-i18n="home.team_kernel">Tim Kernel</h4>
+        <p data-i18n="home.team_kernel_role">Pengembangan JowoKernel</p>
+      </div>
+      <div class="contributor">
+        <div style="width:80px;height:80px;border-radius:50%;background:var(--success);margin:0 auto .75rem;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;font-weight:700">G</div>
+        <h4 data-i18n="home.team_graphics">Tim Grafis</h4>
+        <p data-i18n="home.team_graphics_role">DRM &amp; Desktop Stack</p>
+      </div>
+      <div class="contributor">
+        <div style="width:80px;height:80px;border-radius:50%;background:var(--warning);margin:0 auto .75rem;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;font-weight:700">D</div>
+        <h4 data-i18n="home.team_desktop">Tim Desktop</h4>
+        <p data-i18n="home.team_desktop_role">Window Manager &amp; Shell</p>
+      </div>
+      <div class="contributor">
+        <div style="width:80px;height:80px;border-radius:50%;background:var(--info);margin:0 auto .75rem;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;font-weight:700">U</div>
+        <h4 data-i18n="home.team_userspace">Tim Userspace</h4>
+        <p data-i18n="home.team_userspace_role">Runtime &amp; Libraries</p>
+      </div>
+    </div>
+  </div>
+</section>

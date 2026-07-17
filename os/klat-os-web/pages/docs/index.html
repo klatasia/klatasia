@@ -1,0 +1,222 @@
+<div class="container">
+  <div class="docs-layout">
+    <aside class="docs-sidebar">
+      <h3 data-i18n="docs.nav_overview">Ringkasan</h3>
+      <ul class="docs-nav">
+        <li><a href="#introduction" class="active" data-i18n="docs.nav_intro">Pendahuluan</a></li>
+        <li><a href="#philosophy" data-i18n="docs.nav_philosophy">Filosofi</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_jowokernel">JowoKernel</h3>
+      <ul class="docs-nav">
+        <li><a href="#process" data-i18n="docs.nav_process">Manajemen Proses</a></li>
+        <li><a href="#memory" data-i18n="docs.nav_memory">Manajemen Memori</a></li>
+        <li><a href="#filesystem" data-i18n="docs.nav_filesystem">Filesystem</a></li>
+        <li><a href="#ipc" data-i18n="docs.nav_ipc">IPC</a></li>
+        <li><a href="#events" data-i18n="docs.nav_events">Event Infrastructure</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_userspace">Userspace</h3>
+      <ul class="docs-nav">
+        <li><a href="#runtime" data-i18n="docs.nav_runtime">Runtime</a></li>
+        <li><a href="#posix" data-i18n="docs.nav_posix">Kompatibilitas POSIX</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_graphics">Grafis</h3>
+      <ul class="docs-nav">
+        <li><a href="#graphics" data-i18n="docs.nav_gfx_stack">Graphics Stack</a></li>
+        <li><a href="#libdrm" data-i18n="docs.nav_libdrm">Kompatibilitas libdrm</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_desktop">Desktop</h3>
+      <ul class="docs-nav">
+        <li><a href="#desktop" data-i18n="docs.nav_desktop_plat">Desktop Platform</a></li>
+        <li><a href="#security" data-i18n="docs.nav_security">Keamanan</a></li>
+      </ul>
+    </aside>
+
+    <div class="docs-content">
+      <h2 id="introduction" data-i18n="docs.title_intro">Pendahuluan</h2>
+      <p><strong>KlatOS</strong> adalah sistem operasi modern berbasis <strong>JowoKernel</strong>, sebuah kernel monolitik 64-bit yang dikembangkan sepenuhnya dari nol (from scratch). Seluruh komponen inti sistem, mulai dari kernel, manajemen memori, scheduler, virtual file system, runtime userspace, sistem grafis, hingga desktop environment dirancang dan diimplementasikan secara mandiri tanpa menggunakan kode kernel dari sistem operasi lain.</p>
+      <p>Tujuan utama KlatOS adalah menghadirkan platform desktop modern yang ringan, cepat, stabil, dan kompatibel dengan standar POSIX sehingga mampu menjalankan aplikasi modern melalui antarmuka yang familiar bagi pengembang.</p>
+
+      <div class="card mt-4 mb-4">
+        <h3>Key Facts</h3>
+        <ul style="margin-top:.75rem">
+          <li>Kernel monolitik 64-bit</li>
+          <li>Dikembangkan from scratch</li>
+          <li>Kompatibel POSIX</li>
+          <li>Event-driven architecture</li>
+          <li>Graphics stack berbasis DRM</li>
+          <li>Desktop environment modular</li>
+        </ul>
+      </div>
+
+      <h2 id="philosophy" data-i18n="docs.title_philosophy">Filosofi</h2>
+      <h3 data-i18n="home.arch_title">Modern Architecture</h3>
+      <p data-i18n="home.arch_desc">Seluruh subsistem menggunakan arsitektur modern berbasis object-oriented dan event-driven sehingga setiap komponen memiliki tanggung jawab yang jelas, mudah dipelihara, dan dapat dikembangkan secara independen.</p>
+
+      <h3 data-i18n="home.perf_title">Performance First</h3>
+      <p data-i18n="home.perf_desc">Seluruh jalur kritis dirancang untuk meminimalkan overhead:</p>
+      <ul>
+        <li>Zero-copy Virtual Memory Object (VMO)</li>
+        <li>Event-driven WaitQueue</li>
+        <li>Non-blocking I/O</li>
+        <li>Shared Memory IPC</li>
+        <li>DRM Dumb Buffer</li>
+        <li>Page Flipping</li>
+      </ul>
+
+      <h3 data-i18n="home.posix_title">POSIX Compatibility</h3>
+      <p data-i18n="home.posix_desc">KlatOS mengimplementasikan antarmuka POSIX sehingga berbagai aplikasi dan pustaka dapat dipindahkan dengan perubahan seminimal mungkin.</p>
+
+      <h3 data-i18n="home.clean_title">Clean Architecture</h3>
+      <p data-i18n="home.clean_desc">Kernel tidak dibangun dari kumpulan patch, tetapi menggunakan desain modular yang memiliki batas antarsubsistem yang jelas.</p>
+
+      <h2 id="process" data-i18n="docs.title_process">Manajemen Proses</h2>
+      <p>JowoKernel mengelola proses dan thread dengan fitur lengkap:</p>
+      <ul>
+        <li>Multi-process Scheduler</li>
+        <li>Multi-thread Scheduler</li>
+        <li>Context Switching</li>
+        <li>Process Groups</li>
+        <li>Sessions &amp; Job Control</li>
+        <li>Signal Delivery</li>
+        <li>Process Waiting</li>
+        <li>Orphan Process Handling</li>
+        <li>Zombie Process Management</li>
+      </ul>
+
+      <h2 id="memory" data-i18n="docs.title_memory">Manajemen Memori</h2>
+      <p>Sistem manajemen memori JowoKernel:</p>
+      <ul>
+        <li><strong>Physical Memory Manager (PMM)</strong> — mengelola alokasi frame fisik</li>
+        <li><strong>Virtual Memory Manager (VMM)</strong> — mengelola page table dan mapping</li>
+        <li><strong>Kernel Heap</strong> — alokasi memori dinamis untuk kernel</li>
+        <li><strong>Slab Allocator</strong> — alokasi efisien untuk objek berukuran kecil</li>
+        <li><strong>Virtual Memory Object (VMO)</strong> — abstraksi zero-copy untuk mapping</li>
+        <li><strong>Memory Mapping</strong> — mmap/munmap untuk userspace</li>
+        <li><strong>Shared Memory</strong> — IPC berbasis shared memory</li>
+        <li><strong>Guard Pages</strong> — deteksi stack overflow</li>
+        <li>Copy-on-Write ready infrastructure</li>
+      </ul>
+
+      <h2 id="filesystem" data-i18n="docs.title_filesystem">Filesystem</h2>
+      <p>Virtual File System (VFS) dan filesystem yang tersedia:</p>
+      <ul>
+        <li><strong>Virtual File System (VFS)</strong> — layer abstraksi untuk semua filesystem</li>
+        <li><strong>TmpFS</strong> — filesystem berbasis RAM untuk file sementara</li>
+        <li><strong>ProcFS</strong> — filesystem virtual untuk informasi proses</li>
+        <li><strong>DeviceFS</strong> — filesystem untuk device nodes</li>
+        <li>File Descriptor Table</li>
+        <li>Symbolic Links &amp; Hard Links</li>
+        <li>Permission Management</li>
+        <li>Path Resolution</li>
+      </ul>
+
+      <h2 id="ipc" data-i18n="docs.title_ipc">IPC (Inter-Process Communication)</h2>
+      <p>Implementasi IPC menggunakan Unix Domain Socket modern:</p>
+      <ul>
+        <li>Pipes</li>
+        <li>Unix Domain Socket (AF_UNIX)</li>
+        <li>Socket Pair</li>
+        <li>Stream Socket</li>
+        <li>Non-blocking Socket</li>
+        <li>Shared Memory Transfer</li>
+        <li>Zero-copy Buffer Sharing</li>
+        <li>File Descriptor Passing (SCM_RIGHTS)</li>
+        <li>Epoll Integration</li>
+      </ul>
+
+      <h2 id="events" data-i18n="docs.title_events">Event Infrastructure</h2>
+      <p>Salah satu perubahan arsitektur terbesar pada JowoKernel adalah transisi menuju model event-driven. Setiap objek filesystem memiliki WaitQueue internal.</p>
+      <p>Objek seperti Pipe, Unix Socket, Terminal, DRM Device, dan Input Device dapat membangunkan thread hanya ketika status benar-benar berubah. Pendekatan ini menghilangkan polling periodik yang memboroskan CPU.</p>
+      <pre><code>// Event-driven pattern
+waitqueue_wait(&obj->wq, &ctx);
+// Thread sleeps until event occurs
+// No polling, no busy-waiting</code></pre>
+
+      <h2 id="runtime" data-i18n="docs.title_runtime">Runtime Userspace</h2>
+      <p>KlatOS memiliki runtime userspace yang lengkap. Kernel mampu menjalankan executable ELF 64-bit melalui loader internal.</p>
+      <ul>
+        <li>ELF Loader</li>
+        <li>Dynamic Linker</li>
+        <li>C Runtime</li>
+        <li>POSIX ABI</li>
+        <li>System Call Interface</li>
+        <li>Process Startup</li>
+        <li>Userspace Memory Manager</li>
+      </ul>
+
+      <h2 id="posix" data-i18n="docs.title_posix">Kompatibilitas POSIX</h2>
+      <p>JowoKernel mengimplementasikan sebagian besar syscall dasar yang dibutuhkan sistem UNIX modern:</p>
+      <pre><code>// Process management
+fork()  execve()  wait4()  exit()  kill()
+
+// File I/O
+open()  close()  read()  write()  lseek()
+dup()  dup2()  pipe()
+
+// Memory
+mmap()  munmap()  mprotect()  brk()
+
+// Network
+socket()  socketpair()  bind()  connect()
+listen()  accept4()  sendmsg()  recvmsg()
+
+// Events
+poll()  select()  epoll()</code></pre>
+
+      <h2 id="graphics" data-i18n="docs.title_graphics">Graphics Stack</h2>
+      <p>KlatOS menggunakan graphics stack modern berbasis DRM (Direct Rendering Manager):</p>
+      <ul>
+        <li><strong>DRM Device</strong> — interface ke GPU melalui <code>/dev/dri/card0</code></li>
+        <li><strong>Dumb Buffer</strong> — framebuffer sederhana tanpa GPU acceleration</li>
+        <li><strong>Framebuffer Management</strong> — pengelolaan buffer render</li>
+        <li><strong>Page Flipping</strong> — ganti frame tanpa tearing</li>
+        <li><strong>VBlank Synchronization</strong> — sinkronisasi dengan refresh rate monitor</li>
+        <li><strong>Zero-copy Framebuffer</strong> — sharing buffer antar proses</li>
+        <li><strong>Memory Mapped Graphics</strong> — akses framebuffer via mmap</li>
+        <li><strong>Event-driven Rendering</strong> — render hanya saat ada perubahan</li>
+      </ul>
+
+      <h2 id="libdrm" data-i18n="docs.title_libdrm">Kompatibilitas libdrm</h2>
+      <p>Untuk meningkatkan kompatibilitas, KlatOS menyediakan implementasi clean-room dari API libdrm:</p>
+      <pre><code>// Available API
+drmIoctl()
+drmModeGetResources()
+drmModeCreateDumbBuffer()
+drmModeMapDumbBuffer()
+drmModeAddFB()
+drmModePageFlip()</code></pre>
+      <p>Aplikasi dapat menggunakan API standar tanpa perlu mengetahui implementasi internal kernel.</p>
+
+      <h2 id="desktop" data-i18n="docs.title_desktop">Desktop Platform</h2>
+      <p>Desktop KlatOS dibangun sebagai kumpulan proses independen yang saling berkomunikasi melalui POSIX IPC:</p>
+      <ul>
+        <li><strong>Display Server</strong> — mengelola output display</li>
+        <li><strong>Window Manager</strong> — mengelola jendela dan tata letak</li>
+        <li><strong>Input Server</strong> — menangani keyboard, mouse, touchscreen</li>
+        <li><strong>Desktop Shell</strong> — wallpaper, panel, taskbar</li>
+        <li><strong>Launcher</strong> — peluncur aplikasi</li>
+        <li><strong>Notification Service</strong> — sistem notifikasi</li>
+        <li><strong>Session Manager</strong> — manajemen sesi login</li>
+      </ul>
+      <p>Pendekatan ini meningkatkan stabilitas karena kegagalan satu komponen tidak secara langsung menghentikan keseluruhan desktop.</p>
+
+      <h2 id="security" data-i18n="docs.title_security">Keamanan &amp; Keandalan</h2>
+      <p>JowoKernel dirancang dengan fokus pada stabilitas dan isolasi proses:</p>
+      <ul>
+        <li>Per-process Virtual Address Space</li>
+        <li>Process Isolation</li>
+        <li>Guard Pages</li>
+        <li>Reference Counting</li>
+        <li>Automatic Resource Cleanup</li>
+        <li>WaitQueue Synchronization</li>
+        <li>Memory Leak Detection</li>
+        <li>Automated Stress Testing</li>
+      </ul>
+
+      <div class="card mt-4" style="background:var(--primary);color:#fff;border-color:var(--primary)">
+        <h3 style="color:#fff" data-i18n="docs.explore_title">Siap menjelajahi?</h3>
+        <p style="opacity:.9;margin-top:.5rem"><span data-i18n="docs.explore_desc">Kunjungi repository GitHub kami untuk melihat kode sumber.</span> <a href="https://github.com/KlatAsia/KLAT-OS" target="_blank" style="color:#fff;text-decoration:underline">GitHub</a></p>
+      </div>
+    </div>
+  </div>
+</div>

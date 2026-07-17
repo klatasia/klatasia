@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLAT OS</title>
+  <meta name="description" content="Modern operating system built on JowoKernel">
+  <link rel="icon" href="icons/icon-192x192.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>.nav-links.show{display:flex!important;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:var(--card);border-bottom:1px solid var(--border);padding:1rem;z-index:999}</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#/" class="logo">KLAT OS</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#/" data-page="home" data-i18n="nav.home">Home</a></li>
+        <li><a href="#/download" data-page="download" data-i18n="nav.download">Download</a></li>
+        <li><a href="#/docs" data-page="docs" data-i18n="nav.docs">Documentation</a></li>
+        <li><a href="#/forum" data-page="forum" data-i18n="nav.forum">Forum</a></li>
+        <li><a href="#/roadmap" data-page="roadmap" data-i18n="nav.roadmap">Roadmap</a></li>
+        <li><a href="#/releases" data-page="releases" data-i18n="nav.releases">Releases</a></li>
+        <li><a href="#/blog" data-page="blog" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="#/about" data-page="about" data-i18n="nav.about">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="nav-btn" title="Toggle Theme">&#9790;</button>
+        <button id="lang-toggle" class="nav-btn" title="Toggle Language">ID</button>
+        <button class="nav-btn" onclick="document.getElementById('nav-links').classList.toggle('show')">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="content">
+    <div class="section text-center" style="padding:8rem 0">
+      <p style="color:var(--text3)">Loading...</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4 data-i18n="footer.col1_title">KLAT OS</h4>
+          <ul>
+            <li><a href="#/" data-i18n="nav.home">Home</a></li>
+            <li><a href="#/about" data-i18n="footer.col1_about">About</a></li>
+            <li><a href="#/docs" data-i18n="footer.col1_docs">Documentation</a></li>
+            <li><a href="#/forum" data-i18n="footer.col1_forum">Forum</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.col2_title">Community</h4>
+          <ul>
+            <li><a href="https://github.com/KlatAsia/KLAT-OS" target="_blank" data-i18n="footer.col2_github">GitHub</a></li>
+            <li><a href="https://discord.gg/klat" target="_blank" data-i18n="footer.col2_discord">Discord</a></li>
+            <li><a href="https://twitter.com/klat" target="_blank" data-i18n="footer.col2_twitter">Twitter</a></li>
+            <li><a href="https://t.me/klat" target="_blank" data-i18n="footer.col2_telegram">Telegram</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.col3_title">Resources</h4>
+          <ul>
+            <li><a href="#/docs" data-i18n="footer.col3_docs">Documentation</a></li>
+            <li><a href="#/download" data-i18n="footer.col3_download">Download</a></li>
+            <li><a href="#/blog" data-i18n="footer.col3_blog">Blog</a></li>
+            <li><a href="#/releases" data-i18n="footer.col3_releases">Releases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.col4_title">Legal</h4>
+          <ul>
+            <li><a href="#/privacy" data-i18n="footer.col4_privacy">Privacy Policy</a></li>
+            <li><a href="#/terms" data-i18n="footer.col4_terms">Terms of Service</a></li>
+            <li><a href="https://github.com/KlatAsia/KLAT-OS/blob/main/LICENSE" target="_blank" data-i18n="footer.col4_license">Apache 2.0</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p><span data-i18n="footer.copyright">&copy; 2026 KLAT OS - Developed by</span> <a href="https://klat.asia" target="_blank">KlatAsia Software</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var T = {};
+    var PAGES = {};
+    var currentPage = '';
+
+    function t(key) {
+      return T[key] || key;
+    }
+
+    function applyTranslations() {
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        var val = t(key);
+        if (val !== key) el.textContent = val;
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-placeholder');
+        var val = t(key);
+        if (val !== key) el.placeholder = val;
+      });
+    }
+
+    function loadLang(lang) {
+      return fetch('lang/' + lang + '.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          T = {};
+          Object.keys(data).forEach(function(section) {
+            Object.keys(data[section]).forEach(function(key) {
+              T[section + '.' + key] = data[section][key];
+            });
+          });
+        });
+    }
+
+    function initTheme() {
+      var saved = localStorage.getItem('theme') || 'light';
+      if (saved === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.getElementById('theme-toggle').innerHTML = '&#9788;';
+      }
+    }
+
+    function toggleTheme() {
+      var html = document.documentElement;
+      var isDark = html.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      document.getElementById('theme-toggle').innerHTML = isDark ? '&#9788;' : '&#9790;';
+    }
+
+    function toggleLang() {
+      var current = localStorage.getItem('lang') || 'id';
+      var next = current === 'id' ? 'en' : 'id';
+      localStorage.setItem('lang', next);
+      document.getElementById('lang-toggle').textContent = next.toUpperCase();
+      loadLang(next).then(function() {
+        applyTranslations();
+        PAGES = {};
+        loadPage(currentPage);
+      });
+    }
+
+    function getPageFromHash() {
+      var hash = window.location.hash || '#/';
+      var path = hash.replace('#', '');
+      if (path === '/' || path === '') return 'home';
+      return path.replace(/^\//, '').split('/')[0];
+    }
+
+    function updateNavActive(page) {
+      document.querySelectorAll('#nav-links a').forEach(function(a) {
+        a.classList.toggle('active', a.getAttribute('data-page') === page);
+      });
+    }
+
+    function loadPage(page) {
+      currentPage = page;
+      updateNavActive(page);
+
+      if (PAGES[page]) {
+        renderPage(PAGES[page], page);
+        return;
+      }
+
+      fetch('pages/' + page + '/index.html')
+        .then(function(r) {
+          if (!r.ok) throw new Error('Not found');
+          return r.text();
+        })
+        .then(function(html) {
+          PAGES[page] = html;
+          renderPage(html, page);
+        })
+        .catch(function() {
+          document.getElementById('content').innerHTML =
+            '<div class="section text-center" style="padding:6rem 0">' +
+            '<h1 class="section-title">404</h1>' +
+            '<p class="section-desc">Page not found.</p>' +
+            '<a href="#/" class="btn btn-solid">Go Home</a></div>';
+        });
+    }
+
+    function renderPage(html, page) {
+      document.getElementById('content').innerHTML = html;
+      window.scrollTo(0, 0);
+      document.getElementById('nav-links').classList.remove('show');
+      applyTranslations();
+      initPageScripts(page);
+    }
+
+    function initPageScripts(page) {
+      if (page === 'home') loadJSON('database/forum.json', renderHomeThreads);
+      if (page === 'forum') initForumPage();
+      if (page === 'docs') initDocsPage();
+    }
+
+    function renderHomeThreads(data) {
+      var el = document.getElementById('latest-threads');
+      if (!el || !data.threads) return;
+      var html = '';
+      data.threads.slice(0, 6).forEach(function(th) {
+        var cat = th.category.toLowerCase().replace(/ /g, '-');
+        html += '<div class="card"><div class="update-meta"><span class="cat-badge ' + cat + '">' + th.category + '</span><span>' + th.date + '</span></div><h3>' + th.title + '</h3><p class="update-excerpt">' + th.excerpt + '</p><div class="update-meta" style="margin-top:.75rem"><span>&#128065; ' + th.views + '</span><span>&#10084; ' + th.likes + '</span><span>&#128172; ' + (typeof th.replies === 'object' ? th.replies.length : th.replies) + '</span></div></div>';
+      });
+      el.innerHTML = html;
+    }
+
+    function initForumPage() {
+      loadJSON('database/forum.json', function(data) {
+        var catList = document.getElementById('category-list');
+        var threads = data.threads || [];
+        var categories = data.forum ? data.forum.categories : [];
+
+        if (catList) {
+          var ch = '<li><a href="#" class="active" data-cat="all" data-i18n="forum.cat_all">' + t('forum.cat_all') + '</a></li>';
+          categories.forEach(function(c) { ch += '<li><a href="#" data-cat="' + c + '">' + c + '</a></li>'; });
+          catList.innerHTML = ch;
+          catList.querySelectorAll('a').forEach(function(a) {
+            a.addEventListener('click', function(e) {
+              e.preventDefault();
+              catList.querySelectorAll('a').forEach(function(x) { x.classList.remove('active'); });
+              a.classList.add('active');
+              var cat = a.getAttribute('data-cat');
+              renderThreads(cat === 'all' ? threads : threads.filter(function(th) { return th.category === cat; }));
+            });
+          });
+        }
+
+        renderThreads(threads);
+
+        var si = document.getElementById('forum-search');
+        if (si) {
+          si.addEventListener('input', function() {
+            var q = si.value.toLowerCase();
+            renderThreads(threads.filter(function(th) {
+              return th.title.toLowerCase().indexOf(q) > -1 || th.author.toLowerCase().indexOf(q) > -1;
+            }));
+          });
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            var v = btn.getAttribute('data-view');
+            var sorted = threads.slice();
+            if (v === 'popular') sorted.sort(function(a, b) { return b.views - a.views; });
+            if (v === 'pinned') sorted = sorted.filter(function(th) { return th.pinned; });
+            renderThreads(sorted);
+          });
+        });
+      });
+    }
+
+    function renderThreads(threads) {
+      var list = document.getElementById('thread-list');
+      if (!list) return;
+      if (!threads.length) {
+        list.innerHTML = '<tr><td colspan="6" class="text-center" style="padding:2rem;color:var(--text3)">No threads found</td></tr>';
+        return;
+      }
+      list.innerHTML = threads.map(function(th) {
+        var cat = th.category.toLowerCase().replace(/ /g, '-');
+        var rep = typeof th.replies === 'object' ? th.replies.length : th.replies;
+        return '<tr><td><span class="cat-badge ' + cat + '">' + th.category + '</span></td><td><a href="#/forum/' + th.id + '" class="thread-title">' + (th.pinned ? '<span class="pin-badge">&#128204;</span> ' : '') + (th.solved ? '<span class="solved-badge">&#10003;</span> ' : '') + th.title + '</a></td><td>' + rep + '</td><td>' + th.views + '</td><td>' + th.likes + '</td><td>' + th.author + '</td></tr>';
+      }).join('');
+    }
+
+    function initDocsPage() {
+      document.querySelectorAll('.docs-nav a').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelectorAll('.docs-nav a').forEach(function(x) { x.classList.remove('active'); });
+          a.classList.add('active');
+          var target = document.getElementById(a.getAttribute('href').replace('#', ''));
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    }
+
+    function loadJSON(url, cb) {
+      fetch(url).then(function(r) { return r.json(); }).then(cb).catch(function(e) { console.error('JSON:', url, e); });
+    }
+
+    function handleHashChange() {
+      loadPage(getPageFromHash());
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(function() {});
+      }
+      var lang = localStorage.getItem('lang') || 'id';
+      document.getElementById('lang-toggle').textContent = lang.toUpperCase();
+      initTheme();
+      document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+      document.getElementById('lang-toggle').addEventListener('click', toggleLang);
+      loadLang(lang).then(function() {
+        applyTranslations();
+        handleHashChange();
+      });
+      window.addEventListener('hashchange', handleHashChange);
+    });
+  </script>
+</body>
+</html>

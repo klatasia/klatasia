@@ -1,0 +1,57 @@
+<div class="container" style="padding-top:5rem;padding-bottom:4rem">
+  <h1 class="section-title" data-i18n="forum.title">Forum</h1>
+
+  <div class="forum-layout" style="padding-top:2rem">
+    <aside class="forum-sidebar">
+      <div class="forum-search">
+        <input type="text" id="forum-search" data-i18n-placeholder="forum.search_placeholder" placeholder="Cari thread...">
+      </div>
+      <h3 data-i18n="forum.cat_title">Kategori</h3>
+      <ul class="cat-list" id="category-list">
+        <li><a href="#" class="active" data-cat="all" data-i18n="forum.cat_all">Semua Kategori</a></li>
+      </ul>
+      <div class="forum-stats">
+        <h3 style="font-size:.875rem;font-weight:600;margin-bottom:1rem" data-i18n="forum.stats_title">Statistik</h3>
+        <div class="forum-stat"><span data-i18n="forum.stats_threads">Total Thread</span><span>20</span></div>
+        <div class="forum-stat"><span data-i18n="forum.stats_posts">Total Postingan</span><span>1,250</span></div>
+        <div class="forum-stat"><span data-i18n="forum.stats_users">Pengguna Aktif</span><span>89</span></div>
+      </div>
+    </aside>
+
+    <div class="forum-main">
+      <div class="thread-header">
+        <h1 data-i18n="forum.title">Forum</h1>
+        <div class="thread-filters">
+          <button class="filter-btn active" data-view="latest" data-i18n="forum.filters_latest">Terbaru</button>
+          <button class="filter-btn" data-view="popular" data-i18n="forum.filters_popular">Populer</button>
+          <button class="filter-btn" data-view="pinned" data-i18n="forum.filters_pinned">Dipinned</button>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="thread-table">
+          <thead><tr>
+            <th data-i18n="forum.col_category">Kategori</th>
+            <th data-i18n="forum.col_thread">Thread</th>
+            <th data-i18n="forum.col_replies">Balasan</th>
+            <th data-i18n="forum.col_views">Dilihat</th>
+            <th data-i18n="forum.col_likes">Suka</th>
+            <th data-i18n="forum.col_author">Penulis</th>
+          </tr></thead>
+          <tbody id="thread-list"><tr><td colspan="6" class="text-center" style="padding:2rem;color:var(--text3)">Loading...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="padding-bottom:4rem">
+  <div class="card">
+    <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:1.5rem" data-i18n="forum.create_title">Buat Thread Baru</h3>
+    <form onsubmit="event.preventDefault();alert('Thread created!');">
+      <div class="form-group"><label data-i18n="forum.create_cat">Kategori</label><select required><option value="" data-i18n="forum.create_cat_select">Pilih kategori...</option><option>Development</option><option>Kernel</option><option>Desktop</option><option>Drivers</option><option>Applications</option><option>Networking</option><option>Filesystem</option><option>Bug Report</option><option>Feature Request</option><option>General Discussion</option><option>Announcements</option></select></div>
+      <div class="form-group"><label data-i18n="forum.create_title_label">Judul</label><input type="text" required></div>
+      <div class="form-group"><label data-i18n="forum.create_content">Konten</label><textarea rows="6" required></textarea></div>
+      <button type="submit" class="btn btn-solid" data-i18n="forum.create_btn">Buat Thread</button>
+    </form>
+  </div>
+</div>
