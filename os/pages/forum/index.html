@@ -1,62 +1,80 @@
 <div class="container" style="padding-top:5rem;padding-bottom:4rem">
-  <h1 class="section-title" data-i18n="forum.title">Forum</h1>
+  <!-- Thread List View -->
+  <div id="forum-list-view">
+    <h1 class="section-title" data-i18n="forum.title">Forum</h1>
 
-  <div class="forum-layout" style="padding-top:2rem">
-    <aside class="forum-sidebar">
-      <div id="user-profile-area"></div>
+    <div class="forum-layout" style="padding-top:2rem">
+      <aside class="forum-sidebar">
+        <div id="user-profile-area"></div>
 
-      <div class="forum-search">
-        <input type="text" id="forum-search" data-i18n-placeholder="forum.search_placeholder" placeholder="Cari thread...">
-      </div>
-      <h3 data-i18n="forum.cat_title">Kategori</h3>
-      <ul class="cat-list" id="category-list">
-        <li><a href="#" class="active" data-cat="all" data-i18n="forum.cat_all">Semua Kategori</a></li>
-      </ul>
-      <div class="forum-stats">
-        <h3 style="font-size:.875rem;font-weight:600;margin-bottom:1rem" data-i18n="forum.stats_title">Statistik</h3>
-        <div class="forum-stat"><span data-i18n="forum.stats_threads">Total Thread</span><span id="stat-threads">0</span></div>
-        <div class="forum-stat"><span data-i18n="forum.stats_posts">Total Postingan</span><span>1,250</span></div>
-        <div class="forum-stat"><span data-i18n="forum.stats_users">Pengguna Aktif</span><span>89</span></div>
-      </div>
-    </aside>
-
-    <div class="forum-main">
-      <div class="thread-header">
-        <h1 data-i18n="forum.title">Forum</h1>
-        <div style="display:flex;gap:0.5rem;align-items:center">
-          <div class="thread-filters">
-            <button class="filter-btn active" data-view="latest" data-i18n="forum.filters_latest">Terbaru</button>
-            <button class="filter-btn" data-view="popular" data-i18n="forum.filters_popular">Populer</button>
-            <button class="filter-btn" data-view="pinned" data-i18n="forum.filters_pinned">Dipinned</button>
-          </div>
-          <button class="btn btn-solid btn-sm" id="btn-new-thread" data-i18n="forum.create_btn">Buat Thread</button>
+        <div class="forum-search">
+          <input type="text" id="forum-search" data-i18n-placeholder="forum.search_placeholder" placeholder="Cari thread...">
         </div>
-      </div>
-      <div style="overflow-x:auto">
-        <table class="thread-table">
-          <thead><tr>
-            <th data-i18n="forum.col_category">Kategori</th>
-            <th data-i18n="forum.col_thread">Thread</th>
-            <th data-i18n="forum.col_replies">Balasan</th>
-            <th data-i18n="forum.col_views">Dilihat</th>
-            <th data-i18n="forum.col_likes">Suka</th>
-            <th data-i18n="forum.col_author">Penulis</th>
-            <th id="th-admin" style="display:none" data-i18n="forum.col_admin">Aksi</th>
-          </tr></thead>
-          <tbody id="thread-list"><tr><td colspan="7" class="text-center" style="padding:2rem;color:var(--text3)">Loading...</td></tr></tbody>
-        </table>
+        <h3 data-i18n="forum.cat_title">Kategori</h3>
+        <ul class="cat-list" id="category-list">
+          <li><a href="#" class="active" data-cat="all" data-i18n="forum.cat_all">Semua Kategori</a></li>
+        </ul>
+        <div class="forum-stats">
+          <h3 style="font-size:.875rem;font-weight:600;margin-bottom:1rem" data-i18n="forum.stats_title">Statistik</h3>
+          <div class="forum-stat"><span data-i18n="forum.stats_threads">Total Thread</span><span id="stat-threads">0</span></div>
+          <div class="forum-stat"><span data-i18n="forum.stats_posts">Total Postingan</span><span id="stat-posts">0</span></div>
+          <div class="forum-stat"><span data-i18n="forum.stats_users">Pengguna Aktif</span><span id="stat-users">0</span></div>
+        </div>
+        <div class="online-users-box" style="margin-top:1rem;padding:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius)">
+          <h3 style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text3);margin-bottom:.5rem" data-i18n="forum.online_title">Online</h3>
+          <div id="online-users-list"></div>
+        </div>
+      </aside>
+
+      <div class="forum-main">
+        <div class="thread-header">
+          <h1 data-i18n="forum.title">Forum</h1>
+          <div style="display:flex;gap:0.5rem;align-items:center">
+            <div class="thread-filters">
+              <button class="filter-btn active" data-view="latest" data-i18n="forum.filters_latest">Terbaru</button>
+              <button class="filter-btn" data-view="popular" data-i18n="forum.filters_popular">Populer</button>
+              <button class="filter-btn" data-view="pinned" data-i18n="forum.filters_pinned">Dipinned</button>
+            </div>
+            <button class="btn btn-solid btn-sm" id="btn-new-thread" data-i18n="forum.create_btn">Buat Thread</button>
+          </div>
+        </div>
+
+        <!-- Thread Cards -->
+        <div id="thread-cards"></div>
+
+        <!-- Thread Table (compact) -->
+        <div style="overflow-x:auto;margin-top:1.5rem">
+          <table class="thread-table">
+            <thead><tr>
+              <th data-i18n="forum.col_category">Kategori</th>
+              <th data-i18n="forum.col_thread">Thread</th>
+              <th data-i18n="forum.col_replies">Balasan</th>
+              <th data-i18n="forum.col_views">Dilihat</th>
+              <th data-i18n="forum.col_likes">Suka</th>
+              <th data-i18n="forum.col_author">Penulis</th>
+              <th id="th-admin" style="display:none" data-i18n="forum.col_admin">Aksi</th>
+            </tr></thead>
+            <tbody id="thread-list"><tr><td colspan="7" class="text-center" style="padding:2rem;color:var(--text3)">Loading...</td></tr></tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- Thread Detail View -->
+  <div id="forum-thread-view" style="display:none">
+    <div id="thread-detail"></div>
+  </div>
 </div>
 
+<!-- Create Thread Form -->
 <div class="container" style="padding-bottom:4rem">
   <div class="card" id="create-thread-form" style="display:none">
     <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:1.5rem" data-i18n="forum.create_title">Buat Thread Baru</h3>
     <form id="thread-form">
       <div class="form-group"><label data-i18n="forum.create_cat">Kategori</label><select id="f-cat" required><option value="" data-i18n="forum.create_cat_select">Pilih kategori...</option><option>Announcements</option><option>Kernel</option><option>Desktop</option><option>Drivers</option><option>Applications</option><option>Networking</option><option>Filesystem</option><option>Bug Report</option><option>Feature Request</option><option>General Discussion</option></select></div>
       <div class="form-group"><label data-i18n="forum.create_title_label">Judul</label><input type="text" id="f-title" required></div>
-      <div class="form-group"><label data-i18n="forum.create_content">Konten</label><textarea id="f-content" rows="6" required></textarea></div>
+      <div class="form-group"><label data-i18n="forum.create_content">Konten</label><textarea id="f-content" rows="8" required></textarea></div>
       <div style="display:flex;gap:0.75rem">
         <button type="submit" class="btn btn-solid" data-i18n="forum.create_btn">Buat Thread</button>
         <button type="button" class="btn btn-outline" id="btn-cancel-thread" data-i18n="forum.create_cancel">Batal</button>
@@ -99,10 +117,43 @@
   </div>
 </div>
 
+<style>
+.forum-thread-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1rem 1.25rem; margin-bottom: 0.5rem; transition: all 0.2s; cursor: pointer;
+}
+.forum-thread-card:hover { border-color: var(--primary); box-shadow: var(--shadow); }
+.forum-thread-card .ftc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+.forum-thread-card .ftc-title { font-weight: 700; font-size: 0.9375rem; color: var(--text1); flex: 1; }
+.forum-thread-card .ftc-title:hover { color: var(--primary); }
+.forum-thread-card .ftc-meta { display: flex; gap: 1rem; font-size: 0.75rem; color: var(--text3); margin-top: 0.5rem; flex-wrap: wrap; }
+.forum-thread-card .ftc-meta span { display: inline-flex; align-items: center; gap: 0.25rem; }
+.forum-thread-card .ftc-excerpt { font-size: 0.8125rem; color: var(--text3); margin-top: 0.5rem; line-height: 1.4; }
+.thread-detail-header { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; }
+.thread-detail-header h1 { font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; }
+.thread-detail-meta { display: flex; gap: 1rem; font-size: 0.8125rem; color: var(--text3); flex-wrap: wrap; align-items: center; }
+.thread-detail-body { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1rem; }
+.thread-detail-body .tdb-content { font-size: 0.9375rem; line-height: 1.7; color: var(--text2); white-space: pre-wrap; }
+.reply-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.5rem; }
+.reply-card .rc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+.reply-card .rc-author { font-weight: 700; font-size: 0.875rem; }
+.reply-card .rc-date { font-size: 0.75rem; color: var(--text3); }
+.reply-card .rc-body { font-size: 0.875rem; color: var(--text2); line-height: 1.6; white-space: pre-wrap; }
+.reply-card .rc-actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
+.reply-card .rc-actions button { background: none; border: none; font-size: 0.75rem; color: var(--text3); cursor: pointer; display: flex; align-items: center; gap: 0.25rem; }
+.reply-card .rc-actions button:hover { color: var(--primary); }
+.online-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--success); margin-right: 0.375rem; }
+.online-user-item { display: flex; align-items: center; font-size: 0.8125rem; padding: 0.25rem 0; }
+.back-btn { background: none; border: none; color: var(--primary); font-size: 0.875rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.25rem; margin-bottom: 1rem; }
+.back-btn:hover { color: var(--primary-hover); }
+</style>
+
 <script>
 (function() {
   var currentUser = JSON.parse(localStorage.getItem('forum_user') || 'null');
+  var allThreads = [];
 
+  // --- User Profile ---
   function renderUserProfile() {
     var el = document.getElementById('user-profile-area');
     if (!el) return;
@@ -114,13 +165,29 @@
     }
     var role = currentUser.role || 'member';
     var initial = currentUser.username.charAt(0).toUpperCase();
-    el.innerHTML = '<div class="card user-profile-card"><div class="user-avatar ' + role + '">' + initial + '</div><h4>' + currentUser.fullname + '</h4><span class="user-role-badge ' + role + '">' + role.charAt(0).toUpperCase() + role.slice(1) + '</span><div class="user-stats"><div class="user-stat"><strong>12</strong><span data-i18n="forum.user_threads">Thread</span></div><div class="user-stat"><strong>48</strong><span data-i18n="forum.user_posts">Postingan</span></div></div><button class="btn btn-outline btn-sm" style="width:100%;margin-top:1rem" id="btn-logout" data-i18n="forum.auth_logout">Keluar</button></div>';
+    el.innerHTML = '<div class="card user-profile-card"><div class="user-avatar ' + role + '">' + initial + '</div><h4>' + currentUser.fullname + '</h4><span class="user-role-badge ' + role + '">' + role.charAt(0).toUpperCase() + role.slice(1) + '</span><div class="user-stats"><div class="user-stat"><strong id="user-thread-count">0</strong><span data-i18n="forum.user_threads">Thread</span></div><div class="user-stat"><strong id="user-post-count">0</strong><span data-i18n="forum.user_posts">Postingan</span></div></div><button class="btn btn-outline btn-sm" style="width:100%;margin-top:1rem" id="btn-logout" data-i18n="forum.auth_logout">Keluar</button></div>';
     document.getElementById('btn-logout').onclick = function() {
       currentUser = null;
       localStorage.removeItem('forum_user');
       renderUserProfile();
       renderAdminControls();
+      renderOnlineUsers();
     };
+    updateUserStats();
+  }
+
+  function updateUserStats() {
+    if (!currentUser) return;
+    var ct = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
+    var myThreads = ct.filter(function(t) { return t.author === currentUser.username; });
+    var el1 = document.getElementById('user-thread-count');
+    var el2 = document.getElementById('user-post-count');
+    if (el1) el1.textContent = myThreads.length;
+    if (el2) {
+      var totalReplies = 0;
+      myThreads.forEach(function(t) { totalReplies += (t.replies ? t.replies.length : 0); });
+      el2.textContent = totalReplies;
+    }
   }
 
   function renderAdminControls() {
@@ -128,7 +195,31 @@
     if (th) th.style.display = (currentUser && (currentUser.role === 'admin' || currentUser.role === 'moderator')) ? '' : 'none';
   }
 
-  // Auth modal tabs
+  // --- Online Users ---
+  function renderOnlineUsers() {
+    var el = document.getElementById('online-users-list');
+    if (!el) return;
+    var onlineUsers = JSON.parse(localStorage.getItem('forum_online') || '[]');
+    var now = Date.now();
+    onlineUsers = onlineUsers.filter(function(u) { return (now - u.ts) < 300000; });
+    if (currentUser) {
+      var exists = onlineUsers.find(function(u) { return u.username === currentUser.username; });
+      if (!exists) {
+        onlineUsers.push({ username: currentUser.username, role: currentUser.role, ts: now });
+      } else {
+        exists.ts = now;
+      }
+    }
+    localStorage.setItem('forum_online', JSON.stringify(onlineUsers));
+    var totalUsersEl = document.getElementById('stat-users');
+    if (totalUsersEl) totalUsersEl.textContent = onlineUsers.length;
+    el.innerHTML = onlineUsers.map(function(u) {
+      var role = u.role || 'member';
+      return '<div class="online-user-item"><span class="online-dot"></span>' + u.username + ' <span class="user-role-badge ' + role + '" style="margin-left:.375rem;font-size:.625rem">' + role.charAt(0).toUpperCase() + role.slice(1) + '</span></div>';
+    }).join('');
+  }
+
+  // --- Auth Modal ---
   document.querySelectorAll('.modal-tab').forEach(function(tab) {
     tab.onclick = function() {
       document.querySelectorAll('.modal-tab').forEach(function(t) { t.classList.remove('active'); });
@@ -147,13 +238,11 @@
     e.preventDefault();
     var u = document.getElementById('login-user').value.trim();
     var p = document.getElementById('login-pass').value;
-    // Hardcoded admin
     if (u === 'admin' && p === 'Wsmaja123') {
       currentUser = { username: 'admin', fullname: 'Administrator', email: 'admin@klatos.dev', role: 'admin' };
       localStorage.setItem('forum_user', JSON.stringify(currentUser));
       document.getElementById('auth-modal').classList.remove('show');
-      renderUserProfile();
-      renderAdminControls();
+      renderUserProfile(); renderAdminControls(); renderOnlineUsers();
       return;
     }
     var users = JSON.parse(localStorage.getItem('forum_users') || '[]');
@@ -162,8 +251,7 @@
     currentUser = { username: found.username, fullname: found.fullname, email: found.email, role: found.role };
     localStorage.setItem('forum_user', JSON.stringify(currentUser));
     document.getElementById('auth-modal').classList.remove('show');
-    renderUserProfile();
-    renderAdminControls();
+    renderUserProfile(); renderAdminControls(); renderOnlineUsers();
   };
 
   document.getElementById('register-form').onsubmit = function(e) {
@@ -174,6 +262,7 @@
     var p = document.getElementById('reg-pass').value;
     var p2 = document.getElementById('reg-pass2').value;
     if (p !== p2) { alert('Password tidak cocok!'); return; }
+    if (u === 'admin') { alert('Username tidak tersedia!'); return; }
     var users = JSON.parse(localStorage.getItem('forum_users') || '[]');
     if (users.find(function(x) { return x.username === u; })) { alert('Username sudah digunakan!'); return; }
     var newUser = { username: u, fullname: name, email: email, password: p, role: 'member', joinDate: new Date().toISOString().slice(0,10) };
@@ -182,11 +271,218 @@
     currentUser = { username: u, fullname: name, email: email, role: 'member' };
     localStorage.setItem('forum_user', JSON.stringify(currentUser));
     document.getElementById('auth-modal').classList.remove('show');
-    renderUserProfile();
-    renderAdminControls();
+    renderUserProfile(); renderAdminControls(); renderOnlineUsers();
   };
 
-  // Thread creation
+  // --- Thread List ---
+  function loadThreads(cb) {
+    loadJSON('database/forum.json', function(data) {
+      var builtIn = data.threads || [];
+      var custom = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
+      allThreads = custom.concat(builtIn);
+      if (cb) cb();
+    });
+  }
+
+  function renderThreadCards(threads) {
+    var el = document.getElementById('thread-cards');
+    var listEl = document.getElementById('thread-list');
+    if (el) {
+      el.innerHTML = threads.slice(0, 5).map(function(th) {
+        var cat = th.category.toLowerCase().replace(/ /g, '-');
+        var rep = typeof th.replies === 'object' ? th.replies.length : (th.replies || 0);
+        return '<div class="forum-thread-card" data-id="' + th.id + '">' +
+          '<div class="ftc-top"><span class="cat-badge ' + cat + '">' + th.category + '</span>' +
+          (th.pinned ? '<span class="pin-badge">&#128204; Pinned</span> ' : '') +
+          (th.solved ? '<span class="solved-badge">&#10003; Solved</span>' : '') +
+          '</div><div class="ftc-title">' + th.title + '</div>' +
+          '<div class="ftc-meta"><span>&#128100; ' + th.author + '</span><span>&#128197; ' + th.date + '</span>' +
+          '<span>&#128172; ' + rep + ' balasan</span><span>&#128065; ' + th.views + '</span><span>&#10084; ' + th.likes + '</span></div>' +
+          (th.excerpt ? '<div class="ftc-excerpt">' + th.excerpt + '</div>' : '') +
+          '</div>';
+      }).join('');
+      el.querySelectorAll('.forum-thread-card').forEach(function(card) {
+        card.onclick = function() { openThread(card.getAttribute('data-id')); };
+      });
+    }
+    if (listEl) {
+      listEl.innerHTML = threads.map(function(th) {
+        var cat = th.category.toLowerCase().replace(/ /g, '-');
+        var rep = typeof th.replies === 'object' ? th.replies.length : (th.replies || 0);
+        var adminCol = '';
+        if (currentUser && (currentUser.role === 'admin' || currentUser.role === 'moderator')) {
+          adminCol = '<td class="admin-controls">' +
+            '<button class="admin-btn" onclick="event.stopPropagation();window._forumPin(\'' + th.id + '\')">' + (th.pinned ? 'Unpin' : 'Pin') + '</button>' +
+            '<button class="admin-btn danger" onclick="event.stopPropagation();window._forumDelete(\'' + th.id + '\')">Del</button>' +
+            '</td>';
+        }
+        return '<tr style="cursor:pointer" onclick="window._openThread(\'' + th.id + '\')">' +
+          '<td><span class="cat-badge ' + cat + '">' + th.category + '</span></td>' +
+          '<td><span class="thread-title">' + (th.pinned ? '<span class="pin-badge">&#128204;</span> ' : '') + (th.solved ? '<span class="solved-badge">&#10003;</span> ' : '') + th.title + '</span></td>' +
+          '<td>' + rep + '</td><td>' + th.views + '</td><td>' + th.likes + '</td><td>' + th.author + '</td>' + adminCol + '</tr>';
+      }).join('');
+    }
+    var statEl = document.getElementById('stat-threads');
+    if (statEl) statEl.textContent = threads.length;
+    var postEl = document.getElementById('stat-posts');
+    if (postEl) {
+      var total = 0;
+      threads.forEach(function(t) { total += (typeof t.replies === 'object' ? t.replies.length : (t.replies || 0)); });
+      postEl.textContent = total;
+    }
+  }
+
+  // --- Thread Detail ---
+  window._openThread = window.openThread = function(id) {
+    var th = allThreads.find(function(t) { return t.id === id; });
+    if (!th) return;
+    th.views = (th.views || 0) + 1;
+    saveCustomThread(th);
+    showThreadDetail(th);
+  };
+
+  function openThread(id) { window.openThread(id); }
+
+  function showThreadDetail(th) {
+    document.getElementById('forum-list-view').style.display = 'none';
+    document.getElementById('forum-thread-view').style.display = '';
+    document.getElementById('create-thread-form').style.display = 'none';
+    var cat = th.category.toLowerCase().replace(/ /g, '-');
+    var replies = th.replies || [];
+    var isAuth = !!currentUser;
+    var isAdmin = currentUser && (currentUser.role === 'admin' || currentUser.role === 'moderator');
+
+    var html = '<button class="back-btn" onclick="window._backToList()">&#8592; Kembali ke Forum</button>';
+    html += '<div class="thread-detail-header">';
+    html += '<div style="display:flex;gap:.5rem;align-items:center;margin-bottom:.5rem"><span class="cat-badge ' + cat + '">' + th.category + '</span>';
+    if (th.pinned) html += '<span class="pin-badge" style="font-size:.75rem">&#128204; Pinned</span>';
+    if (th.solved) html += '<span class="solved-badge" style="font-size:.75rem">&#10003; Solved</span>';
+    html += '</div>';
+    html += '<h1>' + th.title + '</h1>';
+    html += '<div class="thread-detail-meta">';
+    html += '<span>&#128100; ' + th.author + '</span>';
+    html += '<span>&#128197; ' + th.date + '</span>';
+    html += '<span>&#128065; ' + th.views + ' dilihat</span>';
+    html += '<span>&#10084; ' + th.likes + ' suka</span>';
+    html += '<span>&#128172; ' + replies.length + ' balasan</span>';
+    html += '</div></div>';
+
+    // Original post
+    html += '<div class="thread-detail-body">';
+    html += '<div class="tdb-content">' + (th.content || th.excerpt || '') + '</div>';
+    html += '<div class="rc-actions">';
+    html += '<button onclick="window._likeThread(\'' + th.id + '\')">&#10084; Suka</button>';
+    if (isAdmin) {
+      html += '<button onclick="window._forumPin(\'' + th.id + '\')">&#128204; ' + (th.pinned ? 'Unpin' : 'Pin') + '</button>';
+      html += '<button onclick="window._forumSolve(\'' + th.id + '\')">&#10003; ' + (th.solved ? 'Unsolve' : 'Solve') + '</button>';
+      html += '<button style="color:var(--danger)" onclick="window._forumDelete(\'' + th.id + '\')">&#128465; Hapus</button>';
+    }
+    html += '</div></div>';
+
+    // Replies
+    replies.forEach(function(r, i) {
+      var rRole = r.role || 'member';
+      var initial = r.author.charAt(0).toUpperCase();
+      html += '<div class="reply-card">';
+      html += '<div class="rc-header"><div style="display:flex;align-items:center;gap:.5rem">';
+      html += '<div class="user-avatar ' + rRole + '" style="width:32px;height:32px;font-size:.875rem;min-width:32px">' + initial + '</div>';
+      html += '<div><span class="rc-author">' + r.author + '</span> <span class="user-role-badge ' + rRole + '" style="font-size:.625rem">' + rRole.charAt(0).toUpperCase() + rRole.slice(1) + '</span></div>';
+      html += '</div><span class="rc-date">' + r.date + '</span></div>';
+      html += '<div class="rc-body">' + r.text + '</div>';
+      html += '<div class="rc-actions">';
+      html += '<button onclick="window._likeReply(\'' + th.id + '\',' + i + ')">&#10084; ' + (r.likes || 0) + '</button>';
+      if (isAdmin) {
+        html += '<button style="color:var(--danger)" onclick="window._deleteReply(\'' + th.id + '\',' + i + ')">&#128465; Hapus</button>';
+      }
+      html += '</div></div>';
+    });
+
+    // Reply form
+    if (isAuth) {
+      html += '<div class="card" style="margin-top:1.5rem"><h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem">Balas Thread</h3>';
+      html += '<form id="reply-form"><div class="form-group"><textarea id="reply-text" rows="4" placeholder="Tulis balasan..." required></textarea></div>';
+      html += '<button type="submit" class="btn btn-solid btn-sm">Kirim Balasan</button></form></div>';
+    } else {
+      html += '<div class="card text-center" style="margin-top:1.5rem;padding:1.5rem"><p style="color:var(--text3);margin-bottom:.75rem">Masuk untuk membalas thread</p><button class="btn btn-solid btn-sm" onclick="document.getElementById(\'auth-modal\').classList.add(\'show\')">Masuk</button></div>';
+    }
+
+    document.getElementById('thread-detail').innerHTML = html;
+    window.scrollTo(0, 0);
+
+    var rf = document.getElementById('reply-form');
+    if (rf) {
+      rf.onsubmit = function(e) {
+        e.preventDefault();
+        var txt = document.getElementById('reply-text').value.trim();
+        if (!txt) return;
+        if (!th.replies) th.replies = [];
+        th.replies.push({
+          author: currentUser.username,
+          role: currentUser.role,
+          text: txt,
+          date: new Date().toISOString().slice(0, 10),
+          likes: 0
+        });
+        saveCustomThread(th);
+        showThreadDetail(th);
+      };
+    }
+  }
+
+  // --- Actions ---
+  window._backToList = function() {
+    document.getElementById('forum-list-view').style.display = '';
+    document.getElementById('forum-thread-view').style.display = 'none';
+    renderThreadCards(allThreads);
+  };
+
+  window._forumPin = function(id) {
+    var th = allThreads.find(function(t) { return t.id === id; });
+    if (th) { th.pinned = !th.pinned; saveCustomThread(th); }
+    renderThreadCards(allThreads);
+  };
+
+  window._forumDelete = function(id) {
+    if (!confirm('Hapus thread ini?')) return;
+    var ct = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
+    ct = ct.filter(function(x) { return x.id !== id; });
+    localStorage.setItem('forum_custom_threads', JSON.stringify(ct));
+    allThreads = allThreads.filter(function(x) { return x.id !== id; });
+    window._backToList();
+  };
+
+  window._forumSolve = function(id) {
+    var th = allThreads.find(function(t) { return t.id === id; });
+    if (th) { th.solved = !th.solved; saveCustomThread(th); showThreadDetail(th); }
+  };
+
+  window._likeThread = function(id) {
+    var th = allThreads.find(function(t) { return t.id === id; });
+    if (th) { th.likes = (th.likes || 0) + 1; saveCustomThread(th); showThreadDetail(th); }
+  };
+
+  window._likeReply = function(id, idx) {
+    var th = allThreads.find(function(t) { return t.id === id; });
+    if (th && th.replies && th.replies[idx]) {
+      th.replies[idx].likes = (th.replies[idx].likes || 0) + 1;
+      saveCustomThread(th); showThreadDetail(th);
+    }
+  };
+
+  window._deleteReply = function(id, idx) {
+    if (!confirm('Hapus balasan?')) return;
+    var th = allThreads.find(function(t) { return t.id === id; });
+    if (th && th.replies) { th.replies.splice(idx, 1); saveCustomThread(th); showThreadDetail(th); }
+  };
+
+  function saveCustomThread(th) {
+    var ct = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
+    var idx = ct.findIndex(function(x) { return x.id === th.id; });
+    if (idx > -1) { ct[idx] = th; } else { ct.unshift(th); }
+    localStorage.setItem('forum_custom_threads', JSON.stringify(ct));
+  }
+
+  // --- Create Thread ---
   var btnNew = document.getElementById('btn-new-thread');
   var createForm = document.getElementById('create-thread-form');
   var btnCancel = document.getElementById('btn-cancel-thread');
@@ -203,27 +499,82 @@
     var title = document.getElementById('f-title').value.trim();
     var content = document.getElementById('f-content').value.trim();
     if (!cat || !title || !content) return;
-    var threads = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
-    threads.unshift({
+    var newTh = {
       id: 'custom-' + Date.now(),
       title: title,
       category: cat,
       author: currentUser.username,
-      date: new Date().toISOString().slice(0,10),
+      date: new Date().toISOString().slice(0, 10),
       views: 0, likes: 0, pinned: false, solved: false,
-      excerpt: content.slice(0, 120),
+      excerpt: content.slice(0, 150),
+      content: content,
       replies: []
-    });
-    localStorage.setItem('forum_custom_threads', JSON.stringify(threads));
+    };
+    allThreads.unshift(newTh);
+    saveCustomThread(newTh);
     createForm.style.display = 'none';
     document.getElementById('f-cat').value = '';
     document.getElementById('f-title').value = '';
     document.getElementById('f-content').value = '';
-    if (typeof window._reloadForum === 'function') window._reloadForum();
+    renderThreadCards(allThreads);
   };
 
-  window._forumUser = { get: function() { return currentUser; }, refresh: renderUserProfile, refreshAdmin: renderAdminControls };
+  // --- Filter ---
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.onclick = function() {
+      document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var v = btn.getAttribute('data-view');
+      var sorted = allThreads.slice();
+      if (v === 'popular') sorted.sort(function(a, b) { return b.views - a.views; });
+      if (v === 'pinned') sorted = sorted.filter(function(th) { return th.pinned; });
+      renderThreadCards(sorted);
+    };
+  });
+
+  // --- Search ---
+  var si = document.getElementById('forum-search');
+  if (si) {
+    si.addEventListener('input', function() {
+      var q = si.value.toLowerCase();
+      renderThreadCards(allThreads.filter(function(th) {
+        return th.title.toLowerCase().indexOf(q) > -1 || th.author.toLowerCase().indexOf(q) > -1 || th.category.toLowerCase().indexOf(q) > -1;
+      }));
+    });
+  }
+
+  // --- Category Filter ---
+  function initCategories() {
+    var catList = document.getElementById('category-list');
+    if (!catList) return;
+    var cats = [];
+    allThreads.forEach(function(t) { if (cats.indexOf(t.category) === -1) cats.push(t.category); });
+    var ch = '<li><a href="#" class="active" data-cat="all" data-i18n="forum.cat_all">Semua Kategori</a></li>';
+    cats.forEach(function(c) { ch += '<li><a href="#" data-cat="' + c + '">' + c + '</a></li>'; });
+    catList.innerHTML = ch;
+    catList.querySelectorAll('a').forEach(function(a) {
+      a.onclick = function(e) {
+        e.preventDefault();
+        catList.querySelectorAll('a').forEach(function(x) { x.classList.remove('active'); });
+        a.classList.add('active');
+        var cat = a.getAttribute('data-cat');
+        renderThreadCards(cat === 'all' ? allThreads : allThreads.filter(function(th) { return th.category === cat; }));
+      };
+    });
+  }
+
+  // --- Init ---
   renderUserProfile();
   renderAdminControls();
+  renderOnlineUsers();
+  loadThreads(function() {
+    renderThreadCards(allThreads);
+    initCategories();
+  });
+
+  window._forumUser = { get: function() { return currentUser; }, refresh: renderUserProfile, refreshAdmin: renderAdminControls };
+
+  // Update online status periodically
+  setInterval(renderOnlineUsers, 60000);
 })();
 </script>
