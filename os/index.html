@@ -217,7 +217,11 @@
       loadJSON('database/forum.json', function(data) {
         var catList = document.getElementById('category-list');
         var threads = data.threads || [];
+        var customThreads = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
+        threads = customThreads.concat(threads);
         var categories = data.forum ? data.forum.categories : [];
+        var statEl = document.getElementById('stat-threads');
+        if (statEl) statEl.textContent = threads.length;
 
         if (catList) {
           var ch = '<li><a href="#" class="active" data-cat="all" data-i18n="forum.cat_all">' + t('forum.cat_all') + '</a></li>';
@@ -257,6 +261,13 @@
             renderThreads(sorted);
           });
         });
+
+        window._reloadForum = function() {
+          var ct = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
+          threads = ct.concat(data.threads || []);
+          if (statEl) statEl.textContent = threads.length;
+          renderThreads(threads);
+        };
       });
     }
 
@@ -264,15 +275,38 @@
       var list = document.getElementById('thread-list');
       if (!list) return;
       if (!threads.length) {
-        list.innerHTML = '<tr><td colspan="6" class="text-center" style="padding:2rem;color:var(--text3)">No threads found</td></tr>';
+        list.innerHTML = '<tr><td colspan="7" class="text-center" style="padding:2rem;color:var(--text3)">No threads found</td></tr>';
         return;
       }
+      var user = (window._forumUser && window._forumUser.get()) || null;
+      var isAdmin = user && (user.role === 'admin' || user.role === 'moderator');
       list.innerHTML = threads.map(function(th) {
         var cat = th.category.toLowerCase().replace(/ /g, '-');
         var rep = typeof th.replies === 'object' ? th.replies.length : th.replies;
-        return '<tr><td><span class="cat-badge ' + cat + '">' + th.category + '</span></td><td><a href="#/forum/' + th.id + '" class="thread-title">' + (th.pinned ? '<span class="pin-badge">&#128204;</span> ' : '') + (th.solved ? '<span class="solved-badge">&#10003;</span> ' : '') + th.title + '</a></td><td>' + rep + '</td><td>' + th.views + '</td><td>' + th.likes + '</td><td>' + th.author + '</td></tr>';
+        var adminCol = '';
+        if (isAdmin) {
+          adminCol = '<td class="admin-controls">' +
+            '<button class="admin-btn" onclick="window._forumPin(\'' + th.id + '\')">' + (th.pinned ? 'Unpin' : 'Pin') + '</button>' +
+            '<button class="admin-btn danger" onclick="window._forumDelete(\'' + th.id + '\')">Del</button>' +
+            '</td>';
+        }
+        return '<tr><td><span class="cat-badge ' + cat + '">' + th.category + '</span></td><td><a href="#/forum/' + th.id + '" class="thread-title">' + (th.pinned ? '<span class="pin-badge">&#128204;</span> ' : '') + (th.solved ? '<span class="solved-badge">&#10003;</span> ' : '') + th.title + '</a></td><td>' + rep + '</td><td>' + th.views + '</td><td>' + th.likes + '</td><td>' + th.author + '</td>' + adminCol + '</tr>';
       }).join('');
     }
+
+    window._forumPin = function(id) {
+      var ct = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
+      var t = ct.find(function(x) { return x.id === id; });
+      if (t) { t.pinned = !t.pinned; localStorage.setItem('forum_custom_threads', JSON.stringify(ct)); if (window._reloadForum) window._reloadForum(); }
+    };
+
+    window._forumDelete = function(id) {
+      if (!confirm('Hapus thread ini?')) return;
+      var ct = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
+      ct = ct.filter(function(x) { return x.id !== id; });
+      localStorage.setItem('forum_custom_threads', JSON.stringify(ct));
+      if (window._reloadForum) window._reloadForum();
+    };
 
     function initDocsPage() {
       document.querySelectorAll('.docs-nav a').forEach(function(a) {

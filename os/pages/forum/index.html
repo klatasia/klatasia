@@ -3,6 +3,8 @@
 
   <div class="forum-layout" style="padding-top:2rem">
     <aside class="forum-sidebar">
+      <div id="user-profile-area"></div>
+
       <div class="forum-search">
         <input type="text" id="forum-search" data-i18n-placeholder="forum.search_placeholder" placeholder="Cari thread...">
       </div>
@@ -12,7 +14,7 @@
       </ul>
       <div class="forum-stats">
         <h3 style="font-size:.875rem;font-weight:600;margin-bottom:1rem" data-i18n="forum.stats_title">Statistik</h3>
-        <div class="forum-stat"><span data-i18n="forum.stats_threads">Total Thread</span><span>20</span></div>
+        <div class="forum-stat"><span data-i18n="forum.stats_threads">Total Thread</span><span id="stat-threads">0</span></div>
         <div class="forum-stat"><span data-i18n="forum.stats_posts">Total Postingan</span><span>1,250</span></div>
         <div class="forum-stat"><span data-i18n="forum.stats_users">Pengguna Aktif</span><span>89</span></div>
       </div>
@@ -21,10 +23,13 @@
     <div class="forum-main">
       <div class="thread-header">
         <h1 data-i18n="forum.title">Forum</h1>
-        <div class="thread-filters">
-          <button class="filter-btn active" data-view="latest" data-i18n="forum.filters_latest">Terbaru</button>
-          <button class="filter-btn" data-view="popular" data-i18n="forum.filters_popular">Populer</button>
-          <button class="filter-btn" data-view="pinned" data-i18n="forum.filters_pinned">Dipinned</button>
+        <div style="display:flex;gap:0.5rem;align-items:center">
+          <div class="thread-filters">
+            <button class="filter-btn active" data-view="latest" data-i18n="forum.filters_latest">Terbaru</button>
+            <button class="filter-btn" data-view="popular" data-i18n="forum.filters_popular">Populer</button>
+            <button class="filter-btn" data-view="pinned" data-i18n="forum.filters_pinned">Dipinned</button>
+          </div>
+          <button class="btn btn-solid btn-sm" id="btn-new-thread" data-i18n="forum.create_btn">Buat Thread</button>
         </div>
       </div>
       <div style="overflow-x:auto">
@@ -36,8 +41,9 @@
             <th data-i18n="forum.col_views">Dilihat</th>
             <th data-i18n="forum.col_likes">Suka</th>
             <th data-i18n="forum.col_author">Penulis</th>
+            <th id="th-admin" style="display:none" data-i18n="forum.col_admin">Aksi</th>
           </tr></thead>
-          <tbody id="thread-list"><tr><td colspan="6" class="text-center" style="padding:2rem;color:var(--text3)">Loading...</td></tr></tbody>
+          <tbody id="thread-list"><tr><td colspan="7" class="text-center" style="padding:2rem;color:var(--text3)">Loading...</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -45,13 +51,179 @@
 </div>
 
 <div class="container" style="padding-bottom:4rem">
-  <div class="card">
+  <div class="card" id="create-thread-form" style="display:none">
     <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:1.5rem" data-i18n="forum.create_title">Buat Thread Baru</h3>
-    <form onsubmit="event.preventDefault();alert('Thread created!');">
-      <div class="form-group"><label data-i18n="forum.create_cat">Kategori</label><select required><option value="" data-i18n="forum.create_cat_select">Pilih kategori...</option><option>Development</option><option>Kernel</option><option>Desktop</option><option>Drivers</option><option>Applications</option><option>Networking</option><option>Filesystem</option><option>Bug Report</option><option>Feature Request</option><option>General Discussion</option><option>Announcements</option></select></div>
-      <div class="form-group"><label data-i18n="forum.create_title_label">Judul</label><input type="text" required></div>
-      <div class="form-group"><label data-i18n="forum.create_content">Konten</label><textarea rows="6" required></textarea></div>
-      <button type="submit" class="btn btn-solid" data-i18n="forum.create_btn">Buat Thread</button>
+    <form id="thread-form">
+      <div class="form-group"><label data-i18n="forum.create_cat">Kategori</label><select id="f-cat" required><option value="" data-i18n="forum.create_cat_select">Pilih kategori...</option><option>Announcements</option><option>Kernel</option><option>Desktop</option><option>Drivers</option><option>Applications</option><option>Networking</option><option>Filesystem</option><option>Bug Report</option><option>Feature Request</option><option>General Discussion</option></select></div>
+      <div class="form-group"><label data-i18n="forum.create_title_label">Judul</label><input type="text" id="f-title" required></div>
+      <div class="form-group"><label data-i18n="forum.create_content">Konten</label><textarea id="f-content" rows="6" required></textarea></div>
+      <div style="display:flex;gap:0.75rem">
+        <button type="submit" class="btn btn-solid" data-i18n="forum.create_btn">Buat Thread</button>
+        <button type="button" class="btn btn-outline" id="btn-cancel-thread" data-i18n="forum.create_cancel">Batal</button>
+      </div>
     </form>
   </div>
 </div>
+
+<!-- Login/Register Modal -->
+<div class="modal-overlay" id="auth-modal">
+  <div class="modal" style="position:relative">
+    <button class="modal-close" id="auth-close">&times;</button>
+    <h2 data-i18n="forum.auth_title">Masuk ke Forum</h2>
+    <p class="modal-subtitle" data-i18n="forum.auth_sub">Bergabunglah dengan komunitas KlatOS</p>
+    <div class="modal-tabs">
+      <button class="modal-tab active" data-tab="login" data-i18n="forum.auth_login_tab">Masuk</button>
+      <button class="modal-tab" data-tab="register" data-i18n="forum.auth_register_tab">Daftar</button>
+    </div>
+    <div id="tab-login">
+      <form id="login-form">
+        <div class="form-group"><label data-i18n="forum.auth_username">Username</label><input type="text" id="login-user" required></div>
+        <div class="form-group"><label data-i18n="forum.auth_password">Password</label><input type="password" id="login-pass" required></div>
+        <button type="submit" class="btn btn-solid" style="width:100%" data-i18n="forum.auth_login_btn">Masuk</button>
+      </form>
+    </div>
+    <div id="tab-register" style="display:none">
+      <form id="register-form">
+        <div class="form-row">
+          <div class="form-group"><label data-i18n="forum.auth_fullname">Nama Lengkap</label><input type="text" id="reg-name" required></div>
+          <div class="form-group"><label data-i18n="forum.auth_username">Username</label><input type="text" id="reg-user" required></div>
+        </div>
+        <div class="form-group"><label data-i18n="forum.auth_email">Email</label><input type="email" id="reg-email" required></div>
+        <div class="form-row">
+          <div class="form-group"><label data-i18n="forum.auth_password">Password</label><input type="password" id="reg-pass" required minlength="6"></div>
+          <div class="form-group"><label data-i18n="forum.auth_confirm">Konfirmasi</label><input type="password" id="reg-pass2" required></div>
+        </div>
+        <button type="submit" class="btn btn-solid" style="width:100%" data-i18n="forum.auth_register_btn">Daftar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var currentUser = JSON.parse(localStorage.getItem('forum_user') || 'null');
+
+  function renderUserProfile() {
+    var el = document.getElementById('user-profile-area');
+    if (!el) return;
+    if (!currentUser) {
+      el.innerHTML = '<div class="card user-profile-card"><p style="color:var(--text3);font-size:.875rem;margin-bottom:1rem" data-i18n="forum.login_prompt">Masuk untuk membuat thread dan berinteraksi.</p><button class="btn btn-solid btn-sm" style="width:100%" id="btn-login" data-i18n="forum.auth_login_btn">Masuk</button></div>';
+      var b = document.getElementById('btn-login');
+      if (b) b.onclick = function() { document.getElementById('auth-modal').classList.add('show'); };
+      return;
+    }
+    var role = currentUser.role || 'member';
+    var initial = currentUser.username.charAt(0).toUpperCase();
+    el.innerHTML = '<div class="card user-profile-card"><div class="user-avatar ' + role + '">' + initial + '</div><h4>' + currentUser.fullname + '</h4><span class="user-role-badge ' + role + '">' + role.charAt(0).toUpperCase() + role.slice(1) + '</span><div class="user-stats"><div class="user-stat"><strong>12</strong><span data-i18n="forum.user_threads">Thread</span></div><div class="user-stat"><strong>48</strong><span data-i18n="forum.user_posts">Postingan</span></div></div><button class="btn btn-outline btn-sm" style="width:100%;margin-top:1rem" id="btn-logout" data-i18n="forum.auth_logout">Keluar</button></div>';
+    document.getElementById('btn-logout').onclick = function() {
+      currentUser = null;
+      localStorage.removeItem('forum_user');
+      renderUserProfile();
+      renderAdminControls();
+    };
+  }
+
+  function renderAdminControls() {
+    var th = document.getElementById('th-admin');
+    if (th) th.style.display = (currentUser && (currentUser.role === 'admin' || currentUser.role === 'moderator')) ? '' : 'none';
+  }
+
+  // Auth modal tabs
+  document.querySelectorAll('.modal-tab').forEach(function(tab) {
+    tab.onclick = function() {
+      document.querySelectorAll('.modal-tab').forEach(function(t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+      var name = tab.getAttribute('data-tab');
+      document.getElementById('tab-login').style.display = name === 'login' ? '' : 'none';
+      document.getElementById('tab-register').style.display = name === 'register' ? '' : 'none';
+    };
+  });
+
+  document.getElementById('auth-close').onclick = function() {
+    document.getElementById('auth-modal').classList.remove('show');
+  };
+
+  document.getElementById('login-form').onsubmit = function(e) {
+    e.preventDefault();
+    var u = document.getElementById('login-user').value.trim();
+    var p = document.getElementById('login-pass').value;
+    // Hardcoded admin
+    if (u === 'admin' && p === 'Wsmaja123') {
+      currentUser = { username: 'admin', fullname: 'Administrator', email: 'admin@klatos.dev', role: 'admin' };
+      localStorage.setItem('forum_user', JSON.stringify(currentUser));
+      document.getElementById('auth-modal').classList.remove('show');
+      renderUserProfile();
+      renderAdminControls();
+      return;
+    }
+    var users = JSON.parse(localStorage.getItem('forum_users') || '[]');
+    var found = users.find(function(x) { return x.username === u && x.password === p; });
+    if (!found) { alert('Username atau password salah!'); return; }
+    currentUser = { username: found.username, fullname: found.fullname, email: found.email, role: found.role };
+    localStorage.setItem('forum_user', JSON.stringify(currentUser));
+    document.getElementById('auth-modal').classList.remove('show');
+    renderUserProfile();
+    renderAdminControls();
+  };
+
+  document.getElementById('register-form').onsubmit = function(e) {
+    e.preventDefault();
+    var name = document.getElementById('reg-name').value.trim();
+    var u = document.getElementById('reg-user').value.trim();
+    var email = document.getElementById('reg-email').value.trim();
+    var p = document.getElementById('reg-pass').value;
+    var p2 = document.getElementById('reg-pass2').value;
+    if (p !== p2) { alert('Password tidak cocok!'); return; }
+    var users = JSON.parse(localStorage.getItem('forum_users') || '[]');
+    if (users.find(function(x) { return x.username === u; })) { alert('Username sudah digunakan!'); return; }
+    var newUser = { username: u, fullname: name, email: email, password: p, role: 'member', joinDate: new Date().toISOString().slice(0,10) };
+    users.push(newUser);
+    localStorage.setItem('forum_users', JSON.stringify(users));
+    currentUser = { username: u, fullname: name, email: email, role: 'member' };
+    localStorage.setItem('forum_user', JSON.stringify(currentUser));
+    document.getElementById('auth-modal').classList.remove('show');
+    renderUserProfile();
+    renderAdminControls();
+  };
+
+  // Thread creation
+  var btnNew = document.getElementById('btn-new-thread');
+  var createForm = document.getElementById('create-thread-form');
+  var btnCancel = document.getElementById('btn-cancel-thread');
+
+  btnNew.onclick = function() {
+    if (!currentUser) { document.getElementById('auth-modal').classList.add('show'); return; }
+    createForm.style.display = createForm.style.display === 'none' ? '' : 'none';
+  };
+  btnCancel.onclick = function() { createForm.style.display = 'none'; };
+
+  document.getElementById('thread-form').onsubmit = function(e) {
+    e.preventDefault();
+    var cat = document.getElementById('f-cat').value;
+    var title = document.getElementById('f-title').value.trim();
+    var content = document.getElementById('f-content').value.trim();
+    if (!cat || !title || !content) return;
+    var threads = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
+    threads.unshift({
+      id: 'custom-' + Date.now(),
+      title: title,
+      category: cat,
+      author: currentUser.username,
+      date: new Date().toISOString().slice(0,10),
+      views: 0, likes: 0, pinned: false, solved: false,
+      excerpt: content.slice(0, 120),
+      replies: []
+    });
+    localStorage.setItem('forum_custom_threads', JSON.stringify(threads));
+    createForm.style.display = 'none';
+    document.getElementById('f-cat').value = '';
+    document.getElementById('f-title').value = '';
+    document.getElementById('f-content').value = '';
+    if (typeof window._reloadForum === 'function') window._reloadForum();
+  };
+
+  window._forumUser = { get: function() { return currentUser; }, refresh: renderUserProfile, refreshAdmin: renderAdminControls };
+  renderUserProfile();
+  renderAdminControls();
+})();
+</script>
