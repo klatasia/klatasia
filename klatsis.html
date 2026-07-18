@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klat SIS - School Information System | KlatAsia Software</title>
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="css/light-theme.css">
+  <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="iconify" data-icon="mdi:code-braces"></span>
+        <span>KlatAsia <span>Software</span></span>
+      </a>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home" class="nav-link"><span class="iconify" data-icon="mdi:home"></span> <span data-i18n="nav.home">Home</span></a></li>
+        <li class="nav-has-submenu">
+          <a href="index.html#products" class="nav-link"><span class="iconify" data-icon="mdi:package-variant"></span> <span data-i18n="nav.products">Products</span> <span class="iconify nav-submenu-arrow" data-icon="mdi:chevron-down"></span></a>
+          <ul class="nav-submenu">
+            <li><a href="klatai.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:robot"></span><span data-i18n="nav.products.sub.klat-ai">Klat AI</span></a></li>
+            <li><a href="klatoffice.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:file-document"></span><span data-i18n="nav.products.sub.klat-office">Klat Office</span></a></li>
+            <li><a href="klattube.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:youtube"></span><span data-i18n="nav.products.sub.klat-tube">Klat Tube</span></a></li>
+            <li><a href="klatdownloader.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:download"></span><span data-i18n="nav.products.sub.klat-downloader">Klat Downloader</span></a></li>
+            <li><a href="klatmusic.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:music"></span><span data-i18n="nav.products.sub.klat-music">Klat Music</span></a></li>
+            <li><a href="klatkasir.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:cash-register"></span><span data-i18n="nav.products.sub.klat-kasir">Klat Kasir</span></a></li>
+            <li><a href="klatsis.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:school"></span><span data-i18n="nav.products.sub.klat-sis">Klat SIS</span></a></li>
+            <li><a href="os/index.html" class="nav-submenu-link"><span class="iconify" data-icon="mdi:monitor"></span><span data-i18n="nav.products.sub.klat-os">Klat OS</span></a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#about" class="nav-link"><span class="iconify" data-icon="mdi:information-outline"></span> <span data-i18n="nav.about">About</span></a></li>
+        <li><a href="index.html#founder" class="nav-link"><span class="iconify" data-icon="mdi:account-tie"></span> <span data-i18n="nav.founder">Founder</span></a></li>
+        <li><a href="index.html#contact" class="nav-link"><span class="iconify" data-icon="mdi:email"></span> <span data-i18n="nav.contact">Contact</span></a></li>
+      </ul>
+      <div class="lang-toggle" id="langToggle" role="button" tabindex="0" aria-label="Switch language">
+        <span class="iconify" data-icon="mdi:earth"></span>
+        <span id="langLabel">EN</span>
+      </div>
+      <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle theme">
+        <span id="themeIcon">☀</span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section hero product-hero">
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <span class="product-badge" data-i18n="product.free">Free License</span>
+        <h1 class="product-hero-title">Klat <span>SIS</span></h1>
+        <p class="product-hero-desc" data-i18n="product.sis.desc">Comprehensive School Information System built with Laravel 12 backend and React + Vite + TypeScript frontend. Manages students, teachers, academics, attendance, grades, CBT exams, e-learning, finances, and parent portal. RBAC multi-role system, offline mode, real-time dashboard, AI-powered analytics, and full Indonesian education support.</p>
+        <div class="product-hero-meta">
+          <div class="product-platforms">
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:web"></span>Web App</span>
+            <span class="platform-chip"><span class="iconify" data-icon="mdi:cellphone"></span>PWA</span>
+          </div>
+          <div class="product-rating">
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span>5.0/5</span>
+          </div>
+        </div>
+        <div class="product-hero-actions">
+          <a href="#download" class="btn btn-primary btn-lg"><span class="iconify" data-icon="mdi:download"></span> <span data-i18n="hero.cta1">Download Now</span></a>
+          <a href="https://github.com/klatasia/klat-sis" target="_blank" rel="noopener" class="btn btn-outline btn-lg"><span class="iconify" data-icon="mdi:github"></span> <span data-i18n="product.viewSource">View Source</span></a>
+        </div>
+      </div>
+      <div class="hero-visual fade-in">
+        <img src="images/klatsis-hero.png" alt="Klat SIS Dashboard" class="hero-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.features">Key Features</span>
+        <h2 data-i18n="product.sis.featuresTitle">Complete <span>School Management</span></h2>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #0ea5e9, #38bdf8);">
+            <span class="iconify" data-icon="mdi:shield-lock"></span>
+          </div>
+          <h3 data-i18n="product.sis.feat1.title">Multi-Role RBAC</h3>
+          <p data-i18n="product.sis.feat1.desc">JWT + 2FA authentication with role-based access control. Support for admin, principal, teacher, student, parent, and staff roles with granular permissions.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #10b981, #34d399);">
+            <span class="iconify" data-icon="mdi:clipboard-check"></span>
+          </div>
+          <h3 data-i18n="product.sis.feat2.title">Attendance System</h3>
+          <p data-i18n="product.sis.feat2.desc">Manual entry, QR code scan, RFID card, and fingerprint attendance. Real-time tracking, geo-fencing, late/early detection, and automatic parent notifications.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">
+            <span class="iconify" data-icon="mdi:chart-areaspline"></span>
+          </div>
+          <h3 data-i18n="product.sis.feat3.title">Grade Management</h3>
+          <p data-i18n="product.sis.feat3.desc">Pengetahuan, Keterampilan, Sikap, Rapor, and Ranking. Automated report cards, class ranking, subject analysis, and GPA calculation per Indonesian curriculum standards.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+            <span class="iconify" data-icon="mdi:monitor-shade"></span>
+          </div>
+          <h3 data-i18n="product.sis.feat4.title">CBT Online Exams</h3>
+          <p data-i18n="product.sis.feat4.desc">Question bank management, random question selection, exam timer, auto-correction, anti-cheat measures, and instant result analytics for Computer Based Testing.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ef4444, #f87171);">
+            <span class="iconify" data-icon="mdi:book-open-variant"></span>
+          </div>
+          <h3 data-i18n="product.sis.feat5.title">e-Learning Platform</h3>
+          <p data-i18n="product.sis.feat5.desc">Learning materials, assignments, discussion forums, file submissions, grading, and progress tracking. Built-in LMS without needing separate platforms.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ec4899, #f472b6);">
+            <span class="iconify" data-icon="mdi:finance"></span>
+          </div>
+          <h3 data-i18n="product.sis.feat6.title">Finance & SPP</h3>
+          <p data-i18n="product.sis.feat6.desc">Tuition (SPP) management, invoice generation, payment tracking, installment plans, overdue reminders, and comprehensive financial reports for school administration.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #14b8a6, #5eead4);">
+            <span class="iconify" data-icon="mdi:family-tree"></span>
+          </div>
+          <h3 data-i18n="product.sis.feat7.title">Parent Portal</h3>
+          <p data-i18n="product.sis.feat7.desc">Dedicated parent view for grades, attendance, schedules, payment status, teacher communication, and chat. Keep parents involved in their child's education.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #6366f1, #818cf8);">
+            <span class="iconify" data-icon="mdi:brain"></span>
+          </div>
+          <h3 data-i18n="product.sis.feat8.title">AI Analytics</h3>
+          <p data-i18n="product.sis.feat8.desc">AI-powered student performance analysis, dropout prediction, learning pattern insights, automated recommendations, and natural language chatbot for school data queries.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f97316, #fb923c);">
+            <span class="iconify" data-icon="mdi:bell-ring"></span>
+          </div>
+          <h3 data-i18n="product.sis.feat9.title">Notifications</h3>
+          <p data-i18n="product.sis.feat9.desc">WhatsApp, Email, and Telegram notifications for attendance, grades, payments, announcements, and emergency alerts. Parents and students stay informed automatically.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-use-cases" id="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.useCases">Use Cases</span>
+        <h2 data-i18n="product.useCasesTitle">Perfect for <span>Every School</span></h2>
+      </div>
+      <div class="use-cases-grid">
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:school"></span></div>
+          <h3 data-i18n="product.sis.use1.title">Elementary & Middle School</h3>
+          <p data-i18n="product.sis.use1.desc">SD, SMP management with Kurikulum Merdeka support. Attendance, report cards, parent communication, and SPP billing for daily operations.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:account-group"></span></div>
+          <h3 data-i18n="product.sis.use2.title">High School & Vocational</h3>
+          <p data-i18n="product.sis.use2.desc">SMA/SMK with major specialization (Jurusan), competency tracking, graduation requirements, and university preparation data management.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:office-building"></span></div>
+          <h3 data-i18n="product.sis.use3.title">Education Offices</h3>
+          <p data-i18n="product.sis.use3.desc">Dinas Pendidikan managing multiple schools. Aggregate dashboards, district-wide reporting, teacher assignments, and centralized policy management.</p>
+        </article>
+        <article class="use-case-card">
+          <div class="use-case-icon"><span class="iconify" data-icon="mdi:family-wireless"></span></div>
+          <h3 data-i18n="product.sis.use4.title">Tutoring & Courses</h3>
+          <p data-i18n="product.sis.use4.desc">Bimbel and course centers with student enrollment, class scheduling, attendance, progress tracking, and payment management for flexible learning.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-tech" id="tech-details">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.techDetails">Technical Details</span>
+        <h2 data-i18n="product.techTitle">Built for <span>Performance & Scale</span></h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3 data-i18n="product.sis.tech1.title">Backend Stack</h3>
+          <ul>
+            <li>Laravel 12 (PHP 8.3+)</li>
+            <li>PostgreSQL 16 (primary database)</li>
+            <li>Redis + Horizon (queues & caching)</li>
+            <li>REST + GraphQL API</li>
+            <li>JWT + 2FA authentication</li>
+            <li>Docker containerization</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.sis.tech2.title">Frontend Stack</h3>
+          <ul>
+            <li>React 19 + Vite 6</li>
+            <li>TypeScript 5</li>
+            <li>TailwindCSS 4 + Shadcn UI</li>
+            <li>Dark mode support</li>
+            <li>PWA (Progressive Web App)</li>
+            <li>Offline-first architecture</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.sis.tech3.title">Database & Performance</h3>
+          <ul>
+            <li>100K+ student records support</li>
+            <li>Query optimization & indexing</li>
+            <li>Big data optimization</li>
+            <li>Automated backups</li>
+            <li>Connection pooling</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3 data-i18n="product.sis.tech4.title">Security & Integration</h3>
+          <ul>
+            <li>Audit logging & compliance</li>
+            <li>Rate limiting & CSRF protection</li>
+            <li>WhatsApp / Email / Telegram API</li>
+            <li>PDF / Excel / Word export</li>
+            <li>Docker & CI/CD ready</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-download" id="download">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.downloadTitle">Download</span>
+        <h2 data-i18n="product.sis.downloadTitle">Get Klat SIS <span>Today</span></h2>
+      </div>
+      <div class="download-grid">
+        <article class="download-card windows">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:server"></span></div>
+          <h3>Docker</h3>
+          <p class="download-version">v1.0.0</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> Docker Compose ready</li>
+          </ul>
+          <a href="https://github.com/klatasia/klat-sis" class="btn btn-primary btn-block download-btn" target="_blank" rel="noopener">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.sis.downloadDocker">Deploy with Docker</span>
+          </a>
+        </article>
+        <article class="download-card linux">
+          <div class="download-icon"><span class="iconify" data-icon="mdi:github"></span></div>
+          <h3>Source Code</h3>
+          <p class="download-version">v1.0.0</p>
+          <ul class="download-info">
+            <li><span class="iconify" data-icon="mdi:check"></span> Full source + documentation</li>
+          </ul>
+          <a href="https://github.com/klatasia/klat-sis" class="btn btn-primary btn-block download-btn" target="_blank" rel="noopener">
+            <span class="iconify" data-icon="mdi:download"></span>
+            <span data-i18n="product.downloadLinux">Download Source</span>
+          </a>
+        </article>
+      </div>
+      <div class="download-footer">
+        <p data-i18n="product.freeLicense">Completely free &bull; Open source (GPL-3.0) &bull; Self-hosted &bull; No vendor lock-in</p>
+        <a href="https://github.com/klatasia/klat-sis" target="_blank" rel="noopener" class="btn btn-ghost">
+          <span class="iconify" data-icon="mdi:github"></span>
+          <span>View Source on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="product.faq">FAQ</span>
+        <h2 data-i18n="product.faqTitle">Frequently Asked <span>Questions</span></h2>
+      </div>
+      <div class="faq-grid">
+        <details class="faq-item">
+          <summary data-i18n="product.sis.faq1.q">Is Klat SIS free?</summary>
+          <p data-i18n="product.sis.faq1.a">Yes! Klat SIS is 100% free and open source (GPL-3.0). No subscription fees, no per-student fees, no hidden costs. All features are available including CBT, e-learning, and AI analytics.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.sis.faq2.q">How many students can it handle?</summary>
+          <p data-i18n="product.sis.faq2.a">Klat SIS supports 100K+ student records with optimized queries, proper indexing, and Redis caching. Tested with single schools of 5,000+ students and district-wide deployments of 100,000+.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.sis.faq3.q">Does it support Kurikulum Merdeka?</summary>
+          <p data-i18n="product.sis.faq3.a">Yes! Klat SIS fully supports Kurikulum Merdeka (Indonesia's current curriculum) including PPKn, assessment types (Pengetahuan, Keterampilan, Sikap), and P5 project tracking. Also supports Kurikulum 2013 for transition periods.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.sis.faq4.q">Can it work offline?</summary>
+          <p data-i18n="product.sis.faq4.a">Yes! Klat SIS has an offline-first PWA architecture. Teachers and students can use the system without internet. Data syncs automatically when connection is restored. Perfect for areas with unreliable internet.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.sis.faq5.q">How does the CBT system work?</summary>
+          <p data-i18n="product.sis.faq5.a">The CBT module includes a question bank, random question selection per exam, configurable timers, auto-grading for multiple choice, anti-cheat tab switching detection, and instant result analytics with detailed reports.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="product.sis.faq6.q">Can I migrate from another system?</summary>
+          <p data-i18n="product.sis.faq6.a">Yes! Klat SIS includes CSV/Excel import tools for students, teachers, classes, and historical data. We provide migration guides and can assist with large-scale data imports from other SIS platforms.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="iconify" data-icon="mdi:code-braces"></span> KlatAsia <span>Software</span>
+        </div>
+        <p data-i18n="footer.copyright">&copy; 2026 KlatAsia Software. All rights reserved. Made with <span class="iconify" data-icon="mdi:heart"></span> from Klaten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
