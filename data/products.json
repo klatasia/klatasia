@@ -46,8 +46,8 @@
   },
   {
     "name": "Klat OS",
-    "desc": "Linux-based operating system built on Klat kernel. Lightweight, modern UI, pre-installed Klat apps (AI, Browser, Downloader, Office, Tube), driver manager, software center, rolling updates. Visit klatos.klat.asia for ISO download and documentation.",
-    "desc_id": "Sistem operasi berbasis Linux dengan kernel Klat. Ringan, UI modern, aplikasi Klat terpasang (AI, Browser, Downloader, Office, Tube), driver manager, software center, rolling update. Kunjungi klatos.klat.asia untuk download ISO dan dokumentasi.",
+    "desc": "A modern operating system built on JowoKernel — a 64-bit monolithic kernel developed entirely from scratch. Built for performance, stability, and POSIX compatibility..",
+    "desc_id": "Sistem operasi modern berbasis JowoKernel — kernel monolitik 64-bit yang dikembangkan sepenuhnya dari nol. Dibangun untuk performa, stabilitas, dan kompatibilitas POSIX..",
     "icon": "mdi:monitor",
     "color": "#8b5cf6",
     "platforms": ["Linux (ISO)"],
