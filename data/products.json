@@ -6,7 +6,7 @@
     "icon": "mdi:robot",
     "color": "#5c6bc0",
     "platforms": ["Windows", "Linux"],
-    "url": "klat-ai.html"
+    "url": "klatai.html"
   },
   {
     "name": "Klat Browser",
@@ -15,7 +15,7 @@
     "icon": "mdi:web",
     "color": "#3b82f6",
     "platforms": ["Windows", "Linux"],
-    "url": "klat-browser.html"
+    "url": "klatbrowser.html"
   },
   {
     "name": "Klat Downloader",
@@ -24,7 +24,7 @@
     "icon": "mdi:download",
     "color": "#10b981",
     "platforms": ["Windows", "Linux"],
-    "url": "klat-downloader.html"
+    "url": "klatdownloader.html"
   },
   {
     "name": "Klat Office",
@@ -33,7 +33,7 @@
     "icon": "mdi:file-document",
     "color": "#f59e0b",
     "platforms": ["Windows", "Linux"],
-    "url": "klat-office.html"
+    "url": "klatoffice.html"
   },
   {
     "name": "Klat Tube",
@@ -42,7 +42,7 @@
     "icon": "mdi:youtube",
     "color": "#ef4444",
     "platforms": ["Windows", "Linux"],
-    "url": "klat-tube.html"
+    "url": "klattube.html"
   },
   {
     "name": "Klat OS",
@@ -51,6 +51,6 @@
     "icon": "mdi:monitor",
     "color": "#8b5cf6",
     "platforms": ["Linux (ISO)"],
-    "url": "https://klatos.klat.asia"
+    "url": "os/index.html"
   }
 ]
