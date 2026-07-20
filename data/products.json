@@ -50,7 +50,7 @@
     "desc_id": "Sistem operasi modern berbasis JowoKernel — kernel monolitik 64-bit yang dikembangkan sepenuhnya dari nol. Dibangun untuk performa, stabilitas, dan kompatibilitas POSIX..",
     "icon": "mdi:monitor",
     "color": "#8b5cf6",
-    "platforms": ["Linux (ISO)"],
+    "platforms": ["KlatOS (ISO)"],
     "url": "os/index.html"
   }
 ]
