@@ -86,6 +86,7 @@
       'product.compare.custom': 'Custom Engine Mods',
       'nav.products.sub.klat-kasir': 'Klat Kasir',
       'nav.products.sub.klat-music': 'Klat Music',
+      'nav.products.sub.klat-karaoke': 'Klat Karaoke',
       'nav.products.sub.klat-sis': 'Klat SIS',
       'hero.stat1': 'Products',
       'hero.stat2': 'Platforms',
@@ -533,7 +534,51 @@
       'product.sis.faq5.a': 'The CBT module includes a question bank, random question selection per exam, configurable timers, auto-grading for multiple choice, anti-cheat tab switching detection, and instant result analytics with detailed reports.',
       'product.sis.faq6.q': 'Can I migrate from another system?',
       'product.sis.faq6.a': 'Yes! Klat SIS includes CSV/Excel import tools for students, teachers, classes, and historical data. We provide migration guides and can assist with large-scale data imports from other SIS platforms.',
-      'mega.footer.allFree': 'All products are free & open source',
+      'product.karaoke.desc': 'Free karaoke player for Windows & Linux. Sing along with synced lyrics, search millions of karaoke songs from YouTube, dual display mode for karaoke TV output, recording, scoring, effects, party mode, and playlist management. No ads, no subscriptions, completely free.',
+      'product.karaoke.featuresTitle': 'Sing Like a <span>Superstar</span>',
+      'product.karaoke.feat1.title': 'YouTube Karaoke Search',
+      'product.karaoke.feat1.desc': 'Search millions of karaoke songs from YouTube. Find any song by title, artist, or language. Instant playback with synced lyrics overlay on screen.',
+      'product.karaoke.feat2.title': 'Synced Lyrics Display',
+      'product.karaoke.feat2.desc': 'Real-time synced lyrics with karaoke-style color highlighting. Highlighted words follow the beat. Customizable font size, color, and position on screen.',
+      'product.karaoke.feat3.title': 'Dual Display / TV Output',
+      'product.karaoke.feat3.desc': 'Mirror or extend karaoke display to a second screen or TV. Control panel on your laptop, lyrics on the big screen. Perfect for home karaoke setups and parties.',
+      'product.karaoke.feat4.title': 'Vocal Effects & Processing',
+      'product.karaoke.feat4.desc': 'Built-in vocal effects: reverb, echo, delay, pitch shift, and autotune. Adjust key and tempo of any song. Mic volume and EQ controls for professional sound.',
+      'product.karaoke.feat5.title': 'Record & Share',
+      'product.karaoke.feat5.desc': 'Record your karaoke performance with vocals and background music mixed. Export as MP3 or MP4. Share recordings with friends or save your best performances.',
+      'product.karaoke.feat6.title': 'Scoring & Competitions',
+      'product.karaoke.feat6.desc': 'Automatic pitch scoring based on vocal accuracy. Leaderboard for party mode. Compare scores between singers. Fun competition mode for group karaoke nights.',
+      'product.karaoke.feat7.title': 'Playlist & Queue System',
+      'product.karaoke.feat7.desc': 'Create and manage song queues. Drag & drop reordering. Party mode with automatic rotation so everyone gets a turn. Save playlists for different occasions.',
+      'product.karaoke.feat8.title': 'Smart Search & Discovery',
+      'product.karaoke.feat8.desc': 'Search by title, artist, or lyrics. Browse trending karaoke songs. Filter by language (Indonesian, English, Korean, Japanese, etc.). Recently played and favorites lists.',
+      'product.karaoke.feat9.title': 'Party Mode & Fun',
+      'product.karaoke.feat9.desc': 'Party mode with random song selection, countdown timer between songs, audience vote, and visual effects. Background visualizer and disco light effects for atmosphere.',
+      'product.karaoke.use1.title': 'Home Karaoke Night',
+      'product.karaoke.use1.desc': 'Turn your living room into a karaoke bar. Connect your laptop to the TV, plug in a USB mic, and sing all night. Dual display shows lyrics on TV while you control from laptop.',
+      'product.karaoke.use2.title': 'Party & Events',
+      'product.karaoke.use2.desc': 'Birthday parties, family gatherings, holiday celebrations. Party mode with queue rotation ensures everyone gets to sing. Score competitions add fun and excitement.',
+      'product.karaoke.use3.title': 'Karaoke Business (KTV)',
+      'product.karaoke.use3.desc': 'Small KTV rooms and karaoke cafes. Dual display, professional vocal effects, recording, and playlist management. No licensing fees - uses free YouTube karaoke content.',
+      'product.karaoke.use4.title': 'School & Community',
+      'product.karaoke.use4.desc': 'School talent shows, community events, team building activities. Easy setup, scoring system for competitions, and recording for sharing highlights.',
+      'product.karaoke.tech1.title': 'Song Sources',
+      'product.karaoke.tech2.title': 'System Requirements',
+      'product.karaoke.tech3.title': 'Audio Processing',
+      'product.karaoke.tech4.title': 'Display & Output',
+      'product.karaoke.downloadTitle': 'Get Klat Karaoke <span>Today</span>',
+      'product.karaoke.faq1.q': 'Is Klat Karaoke free?',
+      'product.karaoke.faq1.a': 'Yes! Klat Karaoke is 100% free and open source (GPL-3.0). No subscription fees, no ads, no in-app purchases. All features including recording, scoring, and dual display are free.',
+      'product.karaoke.faq2.q': 'Do I need a microphone?',
+      'product.karaoke.faq2.a': 'Yes, a USB microphone is recommended for the best experience. Klat Karaoke works with any standard USB mic, headset mic, or audio interface. You can also use your laptop\'s built-in mic for testing.',
+      'product.karaoke.faq3.q': 'Where do the karaoke songs come from?',
+      'product.karaoke.faq3.a': 'Klat Karaoke searches YouTube for karaoke versions of songs. There are millions of karaoke tracks available with synced lyrics. You can also use your own local MP3/FLAC files with LRC lyrics.',
+      'product.karaoke.faq4.q': 'Can I connect to a TV or projector?',
+      'product.karaoke.faq4.a': 'Yes! Dual display mode lets you show lyrics on a TV/projector while keeping the control panel on your laptop screen. Supports HDMI, VGA, and wireless casting (Chromecast).',
+      'product.karaoke.faq5.q': 'Does it support Indonesian songs?',
+      'product.karaoke.faq5.a': 'Yes! Klat Karaoke supports songs in any language including Indonesian, English, Korean (K-Pop), Japanese (J-Pop), Chinese, Spanish, and more. You can filter search results by language.',
+      'product.karaoke.faq6.q': 'Can I record my singing?',
+      'product.karaoke.faq6.a': 'Yes! Klat Karaoke can record your vocals mixed with the background music. Export as MP3 (audio) or MP4 (video with lyrics overlay). Perfect for sharing performances or reviewing your singing.',
       'mega.footer.viewAll': 'View All Products',
       'mega.menu.allFree': 'All products are free &bull; Windows & Linux',
       'mega.menu.viewAll': 'View All Products',
@@ -619,6 +664,7 @@
       'product.compare.custom': 'Modifikasi Engine',
       'nav.products.sub.klat-kasir': 'Klat Kasir',
       'nav.products.sub.klat-music': 'Klat Music',
+      'nav.products.sub.klat-karaoke': 'Klat Karaoke',
       'nav.products.sub.klat-sis': 'Klat SIS',
       'hero.stat1': 'Produk',
       'hero.stat2': 'Platform',
@@ -1066,7 +1112,51 @@
       'product.sis.faq5.a': 'Modul CBT mencakup bank soal, seleksi soal acak per ujian, timer yang dapat dikonfigurasi, auto-grading untuk pilihan ganda, deteksi anti-cheat perpindahan tab, dan analisis hasil instan dengan laporan detail.',
       'product.sis.faq6.q': 'Bisakah migrasi dari sistem lain?',
       'product.sis.faq6.a': 'Ya! Klat SIS menyertakan alat impor CSV/Excel untuk siswa, guru, kelas, dan data historis. Kami menyediakan panduan migrasi dan dapat membantu impor data berskala besar dari platform SIS lainnya.',
-      'mega.footer.allFree': 'Semua produk gratis & open source',
+      'product.karaoke.desc': 'Pemutar karaoke gratis untuk Windows & Linux. Bernyanyi dengan lirik sinkron, cari jutaan lagu karaoke dari YouTube, mode dual display untuk output TV karaoke, perekaman, skoring, efek, party mode, dan manajemen playlist. Tanpa iklan, tanpa langganan, sepenuhnya gratis.',
+      'product.karaoke.featuresTitle': 'Bernyanyi Seperti <span>Bintang</span>',
+      'product.karaoke.feat1.title': 'Pencarian Karaoke YouTube',
+      'product.karaoke.feat1.desc': 'Cari jutaan lagu karaoke dari YouTube. Temukan lagu apa saja berdasarkan judul, artis, atau bahasa. Pemutaran instan dengan overlay lirik sinkron di layar.',
+      'product.karaoke.feat2.title': 'Tampilan Lirik Sinkron',
+      'product.karaoke.feat2.desc': 'Lirik sinkron real-time dengan penyorotan warna gaya karaoke. Kata yang disorot mengikuti irama. Font size, warna, dan posisi bisa dikustomisasi.',
+      'product.karaoke.feat3.title': 'Dual Display / Output TV',
+      'product.karaoke.feat3.desc': 'Mirror atau extend tampilan karaoke ke layar kedua atau TV. Panel kontrol di laptop, lirik di layar besar. Sempurna untuk setup karaoke rumahan dan pesta.',
+      'product.karaoke.feat4.title': 'Efek & Prosesing Vokal',
+      'product.karaoke.feat4.desc': 'Efek vokal bawaan: reverb, echo, delay, pitch shift, dan autotune. Atur key dan tempo lagu. Kontrol volume mic dan EQ untuk suara profesional.',
+      'product.karaoke.feat5.title': 'Rekam & Bagikan',
+      'product.karaoke.feat5.desc': 'Rekam penampilan karaoke Anda dengan vokal dan musik latar yang tercampur. Ekspor sebagai MP3 atau MP4. Bagikan rekaman dengan teman atau simpan penampilan terbaik.',
+      'product.karaoke.feat6.title': 'Skoring & Kompetisi',
+      'product.karaoke.feat6.desc': 'Skoring pitch otomatis berdasarkan akurasi vokal. Papan skor untuk party mode. Bandingkan skor antar penyanyi. Mode kompetisi seru untuk malam karaoke kelompok.',
+      'product.karaoke.feat7.title': 'Sistem Playlist & Antrian',
+      'product.karaoke.feat7.desc': 'Buat dan kelola antrian lagu. Drag & drop untuk mengurutkan. Party mode dengan rotasi otomatis agar semua orang mendapat giliran. Simpan playlist untuk berbagai kesempatan.',
+      'product.karaoke.feat8.title': 'Pencarian & Penemuan Cerdas',
+      'product.karaoke.feat8.desc': 'Cari berdasarkan judul, artis, atau lirik. Jelajahi lagu karaoke trending. Filter berdasarkan bahasa (Indonesia, Inggris, Korea, Jepang, dll.). Daftar yang baru diputar dan favorit.',
+      'product.karaoke.feat9.title': 'Party Mode & Hiburan',
+      'product.karaoke.feat9.desc': 'Party mode dengan pemilihan lagu acak, timer hitung mundur antar lagu, voting penonton, dan efek visual. Visualizer latar dan efek lampu disko untuk suasana.',
+      'product.karaoke.use1.title': 'Malam Karaoke di Rumah',
+      'product.karaoke.use1.desc': 'Jadikan ruang tamu Anda bar karaoke. Sambungkan laptop ke TV, colok mic USB, dan bernyanyi sepanjang malam. Dual display menampilkan lirik di TV sambil Anda mengontrol dari laptop.',
+      'product.karaoke.use2.title': 'Pesta & Acara',
+      'product.karaoke.use2.desc': 'Pesta ulang tahun, kumpul keluarga, perayaan hari libur. Party mode dengan rotasi antrian memastikan semua orang bisa bernyanyi. Kompetisi skor menambah keseruan.',
+      'product.karaoke.use3.title': 'Bisnis Karaoke (KTV)',
+      'product.karaoke.use3.desc': 'Ruang KTV kecil dan cafe karaoke. Dual display, efek vokal profesional, perekaman, dan manajemen playlist. Tanpa biaya lisensi - menggunakan konten karaoke gratis dari YouTube.',
+      'product.karaoke.use4.title': 'Sekolah & Komunitas',
+      'product.karaoke.use4.desc': 'Pentas bakat sekolah, acara komunitas, kegiatan team building. Setup mudah, sistem skoring untuk kompetisi, dan perekaman untuk berbagi highlight.',
+      'product.karaoke.tech1.title': 'Sumber Lagu',
+      'product.karaoke.tech2.title': 'Spesifikasi Sistem',
+      'product.karaoke.tech3.title': 'Prosesing Audio',
+      'product.karaoke.tech4.title': 'Display & Output',
+      'product.karaoke.downloadTitle': 'Dapatkan Klat Karaoke <span>Hari Ini</span>',
+      'product.karaoke.faq1.q': 'Apakah Klat Karaoke gratis?',
+      'product.karaoke.faq1.a': 'Ya! Klat Karaoke 100% gratis dan open source (GPL-3.0). Tidak ada biaya langganan, tidak ada iklan, tidak ada pembelian dalam aplikasi. Semua fitur termasuk perekaman, skoring, dan dual display gratis.',
+      'product.karaoke.faq2.q': 'Apakah saya perlu mikrofon?',
+      'product.karaoke.faq2.a': 'Ya, mikrofon USB direkomendasikan untuk pengalaman terbaik. Klat Karaoke bekerja dengan mic USB standar, mic headset, atau audio interface. Anda juga bisa menggunakan mic bawaan laptop untuk uji coba.',
+      'product.karaoke.faq3.q': 'Dari mana lagu karaoke berasal?',
+      'product.karaoke.faq3.a': 'Klat Karaoke mencari versi karaoke lagu di YouTube. Ada jutaan trek karaoke yang tersedia dengan lirik sinkron. Anda juga bisa menggunakan file MP3/FLAC lokal sendiri dengan lirik LRC.',
+      'product.karaoke.faq4.q': 'Bisakah saya menyambungkan ke TV atau proyektor?',
+      'product.karaoke.faq4.a': 'Ya! Mode dual display memungkinkan Anda menampilkan lirik di TV/proyektor sambil menjaga panel kontrol di layar laptop. Mendukung HDMI, VGA, dan wireless casting (Chromecast).',
+      'product.karaoke.faq5.q': 'Apakah mendukung lagu Indonesia?',
+      'product.karaoke.faq5.a': 'Ya! Klat Karaoke mendukung lagu dalam bahasa apapun termasuk Indonesia, Inggris, Korea (K-Pop), Jepang (J-Pop), Cina, Spanyol, dan lainnya. Anda bisa memfilter hasil pencarian berdasarkan bahasa.',
+      'product.karaoke.faq6.q': 'Bisakah saya merekam nyanyian saya?',
+      'product.karaoke.faq6.a': 'Ya! Klat Karaoke bisa merekam vokal Anda yang tercampur dengan musik latar. Ekspor sebagai MP3 (audio) atau MP4 (video dengan overlay lirik). Sempurna untuk berbagi penampilan atau mengulas nyanyian Anda.',
       'mega.footer.viewAll': 'Lihat Semua Produk',
       'mega.menu.allFree': 'Semua produk gratis &bull; Windows & Linux',
       'mega.menu.viewAll': 'Lihat Semua Produk',
@@ -1082,6 +1172,7 @@
       { name: 'Klat Office', desc: 'Complete office suite alternative to MS Office. Includes: Klat Writer (word processor), Klat Calc (spreadsheet), Klat Impress (presentations), Klat Draw (vector graphics), Klat Math (formula editor), Klat Base (database). Full MS Office format compatibility, PDF export, templates, macros. Free on Windows & Linux.', desc_id: 'Suite kantor lengkap alternatif MS Office. Termasuk: Klat Writer (kata), Klat Calc (spreadsheet), Klat Impress (presentasi), Klat Draw (grafis vektor), Klat Math (editor formula), Klat Base (database). Kompatibel format MS Office penuh, ekspor PDF, template, macro. Gratis di Windows & Linux.', icon: 'mdi:file-document', color: '#f59e0b', platforms: ['Windows', 'Linux'], url: 'klatoffice.html' },
       { name: 'Klat Tube', desc: 'YouTube client for watching videos without ads. Features: ad-free playback, background play, picture-in-picture, download videos/audio, subscription management without account, sponsor block, quality selector, dark mode, no tracking. Free on Windows & Linux.', desc_id: 'Klien YouTube untuk menonton video tanpa iklan. Fitur: putar tanpa iklan, background play, picture-in-picture, unduh video/audio, kelola langganan tanpa akun, sponsor block, pemilih kualitas, dark mode, tanpa tracking. Gratis di Windows & Linux.', icon: 'mdi:youtube', color: '#ef4444', platforms: ['Windows', 'Linux'], url: 'klattube.html' },
       { name: 'Klat Music', desc: 'Music player and downloader for Windows & Linux. Stream, download, and manage your music library with a modern interface. Supports online sources, local files, playlists, synced lyrics, audio visualizer, equalizer, and internet radio. No ads, no tracking, completely free.', desc_id: 'Pemutar dan pengunduh musik untuk Windows & Linux. Streaming, unduh, dan kelola perpustakaan musik Anda dengan antarmuka modern. Mendukung sumber online, file lokal, playlist, lirik sinkron, visualizer audio, equalizer, dan radio internet. Tanpa iklan, tanpa tracking, sepenuhnya gratis.', icon: 'mdi:music', color: '#e91e63', platforms: ['Windows', 'Linux'], url: 'klatmusic.html' },
+      { name: 'Klat Karaoke', desc: 'Free karaoke player for Windows & Linux. Sing along with synced lyrics, search millions of karaoke songs from YouTube, dual display mode for karaoke TV output, recording, scoring, effects, party mode, and playlist management. No ads, no subscriptions, completely free.', desc_id: 'Pemutar karaoke gratis untuk Windows & Linux. Bernyanyi dengan lirik sinkron, cari jutaan lagu karaoke dari YouTube, mode dual display untuk output TV karaoke, perekaman, skoring, efek, party mode, dan manajemen playlist. Tanpa iklan, tanpa langganan, sepenuhnya gratis.', icon: 'mdi:microphone-variant', color: '#d946ef', platforms: ['Windows', 'Linux'], url: 'klatkaraoke.html' },
       { name: 'Klat SIS', desc: 'Comprehensive School Information System built with Laravel 12 backend and React + Vite + TypeScript frontend. Manages students, teachers, academics, attendance, grades, CBT exams, e-learning, finances, and parent portal. RBAC multi-role system, offline mode, real-time dashboard, AI-powered analytics, and full Indonesian education support.', desc_id: 'Sistem Informasi Sekolah lengkap dengan backend Laravel 12 dan frontend React + Vite + TypeScript. Mengelola siswa, guru, akademik, kehadiran, nilai, ujian CBT, e-learning, keuangan, dan portal orang tua. Sistem multi-peran RBAC, mode offline, dashboard real-time, analitik AI, dan dukungan penuh pendidikan Indonesia.', icon: 'mdi:school', color: '#0ea5e9', platforms: ['Web App', 'PWA'], url: 'klatsis.html' },
       { name: 'Klat OS', desc: 'Linux-based operating system built on Klat kernel. Lightweight, modern UI, pre-installed Klat apps (AI, Browser, Downloader, Office, Tube), driver manager, software center, rolling updates. Visit klatos.klat.asia for ISO download and documentation.', desc_id: 'Sistem operasi berbasis Linux dengan kernel Klat. Ringan, UI modern, aplikasi Klat terpasang (AI, Browser, Downloader, Office, Tube), driver manager, software center, rolling update. Kunjungi klatos.klat.asia untuk download ISO dan dokumentasi.', icon: 'mdi:monitor', color: '#8b5cf6', platforms: ['Linux (ISO)'], url: 'os/index.html' }
     ],
@@ -1092,6 +1183,7 @@
       { name: 'Klat Office', desc: 'Suite kantor lengkap alternatif MS Office. Termasuk: Klat Writer (kata), Klat Calc (spreadsheet), Klat Impress (presentasi), Klat Draw (grafis vektor), Klat Math (editor formula), Klat Base (database). Kompatibel format MS Office penuh, ekspor PDF, template, macro. Gratis di Windows & Linux.', desc_id: 'Suite kantor lengkap alternatif MS Office. Termasuk: Klat Writer (kata), Klat Calc (spreadsheet), Klat Impress (presentasi), Klat Draw (grafis vektor), Klat Math (editor formula), Klat Base (database). Kompatibel format MS Office penuh, ekspor PDF, template, macro. Gratis di Windows & Linux.', icon: 'mdi:file-document', color: '#f59e0b', platforms: ['Windows', 'Linux'], url: 'klatoffice.html' },
       { name: 'Klat Tube', desc: 'Klien YouTube untuk menonton video tanpa iklan. Fitur: putar tanpa iklan, background play, picture-in-picture, unduh video/audio, kelola langganan tanpa akun, sponsor block, pemilih kualitas, dark mode, tanpa tracking. Gratis di Windows & Linux.', desc_id: 'Klien YouTube untuk menonton video tanpa iklan. Fitur: putar tanpa iklan, background play, picture-in-picture, unduh video/audio, kelola langganan tanpa akun, sponsor block, pemilih kualitas, dark mode, tanpa tracking. Gratis di Windows & Linux.', icon: 'mdi:youtube', color: '#ef4444', platforms: ['Windows', 'Linux'], url: 'klattube.html' },
       { name: 'Klat Music', desc: 'Pemutar dan pengunduh musik untuk Windows & Linux. Streaming, unduh, dan kelola perpustakaan musik Anda dengan antarmuka modern. Mendukung sumber online, file lokal, playlist, lirik sinkron, visualizer audio, equalizer, dan radio internet. Tanpa iklan, tanpa tracking, sepenuhnya gratis.', desc_id: 'Pemutar dan pengunduh musik untuk Windows & Linux. Streaming, unduh, dan kelola perpustakaan musik Anda dengan antarmuka modern. Mendukung sumber online, file lokal, playlist, lirik sinkron, visualizer audio, equalizer, dan radio internet. Tanpa iklan, tanpa tracking, sepenuhnya gratis.', icon: 'mdi:music', color: '#e91e63', platforms: ['Windows', 'Linux'], url: 'klatmusic.html' },
+      { name: 'Klat Karaoke', desc: 'Pemutar karaoke gratis untuk Windows & Linux. Bernyanyi dengan lirik sinkron, cari jutaan lagu karaoke dari YouTube, mode dual display untuk output TV karaoke, perekaman, skoring, efek, party mode, dan manajemen playlist. Tanpa iklan, tanpa langganan, sepenuhnya gratis.', desc_id: 'Pemutar karaoke gratis untuk Windows & Linux. Bernyanyi dengan lirik sinkron, cari jutaan lagu karaoke dari YouTube, mode dual display untuk output TV karaoke, perekaman, skoring, efek, party mode, dan manajemen playlist. Tanpa iklan, tanpa langganan, sepenuhnya gratis.', icon: 'mdi:microphone-variant', color: '#d946ef', platforms: ['Windows', 'Linux'], url: 'klatkaraoke.html' },
       { name: 'Klat SIS', desc: 'Comprehensive School Information System built with Laravel 12 backend and React + Vite + TypeScript frontend. Manages students, teachers, academics, attendance, grades, CBT exams, e-learning, finances, and parent portal. RBAC multi-role system, offline mode, real-time dashboard, AI-powered analytics, and full Indonesian education support.', desc_id: 'Sistem Informasi Sekolah lengkap dengan backend Laravel 12 dan frontend React + Vite + TypeScript. Mengelola siswa, guru, akademik, kehadiran, nilai, ujian CBT, e-learning, keuangan, dan portal orang tua. Sistem multi-peran RBAC, mode offline, dashboard real-time, analitik AI, dan dukungan penuh pendidikan Indonesia.', icon: 'mdi:school', color: '#0ea5e9', platforms: ['Web App', 'PWA'], url: 'klatsis.html' },
       { name: 'Klat OS', desc: 'Sistem operasi berbasis Linux dengan kernel Klat. Ringan, UI modern, aplikasi Klat terpasang (AI, Browser, Downloader, Office, Tube), driver manager, software center, rolling update. Kunjungi klatos.klat.asia untuk download ISO dan dokumentasi.', desc_id: 'Sistem operasi berbasis Linux dengan kernel Klat. Ringan, UI modern, aplikasi Klat terpasang (AI, Browser, Downloader, Office, Tube), driver manager, software center, rolling update. Kunjungi klatos.klat.asia untuk download ISO dan dokumentasi.', icon: 'mdi:monitor', color: '#8b5cf6', platforms: ['Linux (ISO)'], url: 'os/index.html' }
     ]
@@ -1113,6 +1205,11 @@
     navToggle.addEventListener('click', function () {
       this.classList.toggle('active');
       navMenu.classList.toggle('show');
+      if (!navMenu.classList.contains('show')) {
+        document.querySelectorAll('.nav-has-submenu.open').forEach(function(el) {
+          el.classList.remove('open');
+        });
+      }
     });
   }
 
@@ -1130,8 +1227,32 @@
       if (window.innerWidth <= 991) {
         e.preventDefault();
         var parent = this.parentElement;
-        parent.classList.toggle('open');
+        var wasOpen = parent.classList.contains('open');
+        document.querySelectorAll('.nav-has-submenu.open').forEach(function(el) {
+          el.classList.remove('open');
+        });
+        if (!wasOpen) {
+          parent.classList.add('open');
+        }
       }
+    });
+  });
+
+  // ========== CLOSE SUBMENU ON OUTSIDE CLICK ==========
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.nav-has-submenu')) {
+      document.querySelectorAll('.nav-has-submenu.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+    }
+  });
+
+  // ========== CLOSE MENU ON PAGE LOAD ==========
+  window.addEventListener('load', function () {
+    if (navToggle) navToggle.classList.remove('active');
+    if (navMenu) navMenu.classList.remove('show');
+    document.querySelectorAll('.nav-has-submenu.open').forEach(function(el) {
+      el.classList.remove('open');
     });
   });
 
