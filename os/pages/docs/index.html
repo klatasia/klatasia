@@ -14,10 +14,15 @@
         <li><a href="#ipc" data-i18n="docs.nav_ipc">IPC</a></li>
         <li><a href="#events" data-i18n="docs.nav_events">Event Infrastructure</a></li>
       </ul>
-      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_userspace">Userspace</h3>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_runtime_section">Runtime &amp; Loader</h3>
       <ul class="docs-nav">
-        <li><a href="#runtime" data-i18n="docs.nav_runtime">Runtime</a></li>
+        <li><a href="#klatloader" data-i18n="docs.nav_klatloader">KlatLoader</a></li>
+        <li><a href="#runtime" data-i18n="docs.nav_runtime">Runtime Userspace</a></li>
         <li><a href="#posix" data-i18n="docs.nav_posix">Kompatibilitas POSIX</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_fsys_section">Filesystem KLATOS</h3>
+      <ul class="docs-nav">
+        <li><a href="#sistem" data-i18n="docs.nav_sistem">Struktur /Sistem</a></li>
       </ul>
       <h3 style="margin-top:1.5rem" data-i18n="docs.nav_graphics">Grafis</h3>
       <ul class="docs-nav">
@@ -26,25 +31,86 @@
       </ul>
       <h3 style="margin-top:1.5rem" data-i18n="docs.nav_desktop">Desktop</h3>
       <ul class="docs-nav">
+        <li><a href="#klatde" data-i18n="docs.nav_klatde">KlatDE / Nawolo</a></li>
         <li><a href="#desktop" data-i18n="docs.nav_desktop_plat">Desktop Platform</a></li>
-        <li><a href="#security" data-i18n="docs.nav_security">Keamanan</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_tools_section">Tools</h3>
+      <ul class="docs-nav">
+        <li><a href="#klat_shell" data-i18n="docs.nav_klat_shell">KLAT Shell</a></li>
+        <li><a href="#klatcli" data-i18n="docs.nav_klatcli">KlatCLI</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_apps_section">Application Platform</h3>
+      <ul class="docs-nav">
+        <li><a href="#kap" data-i18n="docs.nav_kap">KAP</a></li>
+        <li><a href="#appinstaller" data-i18n="docs.nav_appinstaller">AppInstaller</a></li>
+        <li><a href="#appregistry" data-i18n="docs.nav_appregistry">AppRegistry</a></li>
+        <li><a href="#applauncher" data-i18n="docs.nav_applauncher">AppLauncher</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_dev_section">Developer</h3>
+      <ul class="docs-nav">
+        <li><a href="#native" data-i18n="docs.nav_native">Native Executable</a></li>
+        <li><a href="#rust" data-i18n="docs.nav_rust">Rust di KLATOS</a></li>
+        <li><a href="#libs" data-i18n="docs.nav_libs">Library &amp; Runtime</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_sec_section">Keamanan</h3>
+      <ul class="docs-nav">
+        <li><a href="#security_model" data-i18n="docs.nav_security_model">Security Model</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_browser_section">Browser</h3>
+      <ul class="docs-nav">
+        <li><a href="#firefox" data-i18n="docs.nav_firefox">Firefox</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_devproc_section">Pengembangan</h3>
+      <ul class="docs-nav">
+        <li><a href="#tahapan" data-i18n="docs.nav_tahapan">Tahapan Pengembangan</a></li>
+        <li><a href="#pengujian" data-i18n="docs.nav_pengujian">Tingkat Pengujian</a></li>
+        <li><a href="#ringan" data-i18n="docs.nav_ringan">Runtime vs Devkit</a></li>
+      </ul>
+      <h3 style="margin-top:1.5rem" data-i18n="docs.nav_visi">Visi</h3>
+      <ul class="docs-nav">
+        <li><a href="#visi" data-i18n="docs.nav_visi">Visi KLATOS</a></li>
       </ul>
     </aside>
 
     <div class="docs-content">
       <h2 id="introduction" data-i18n="docs.title_intro">Pendahuluan</h2>
-      <p><strong>KlatOS</strong> adalah sistem operasi modern berbasis <strong>JowoKernel</strong>, sebuah kernel monolitik 64-bit yang dikembangkan sepenuhnya dari nol (from scratch). Seluruh komponen inti sistem, mulai dari kernel, manajemen memori, scheduler, virtual file system, runtime userspace, sistem grafis, hingga desktop environment dirancang dan diimplementasikan secara mandiri tanpa menggunakan kode kernel dari sistem operasi lain.</p>
-      <p>Tujuan utama KlatOS adalah menghadirkan platform desktop modern yang ringan, cepat, stabil, dan kompatibel dengan standar POSIX sehingga mampu menjalankan aplikasi modern melalui antarmuka yang familiar bagi pengembang.</p>
+      <p><strong>KLATOS</strong> adalah sistem operasi desktop modern yang dibangun sebagai sebuah platform terpadu untuk perangkat komputasi modern.</p>
+      <p>KLATOS menggabungkan <strong>kernel</strong>, <strong>runtime</strong>, <strong>desktop</strong>, <strong>filesystem</strong>, <strong>application platform</strong>, <strong>developer tools</strong>, <strong>security model</strong>, dan <strong>application ecosystem</strong> dalam satu arsitektur yang dirancang secara terintegrasi.</p>
+      <p>KLATOS tidak hanya menyediakan lingkungan untuk menjalankan program. KLATOS dibangun sebagai <strong>platform tempat sistem, aplikasi, dan developer bekerja dalam satu model yang sama</strong>.</p>
+
+      <h3>Teknologi KLATOS</h3>
+      <pre><code>                    KLATOS
+                       |
+       +---------------+---------------+
+       |               |               |
+  JowoKernel        Runtime        Desktop
+       |               |               |
+       |          KlatLoader      KlatDE/Nawolo
+       |               |               |
+       +---------------+---------------+
+                       |
+              Application Platform
+                       |
+          +------------+------------+
+          |            |            |
+        .KAP       AppRegistry   AppLauncher
+          |            |            |
+          +------------+------------+
+                       |
+                   Applications</code></pre>
+      <p>Setiap lapisan mempunyai tanggung jawab sendiri, tetapi seluruhnya dirancang agar dapat bekerja sebagai satu platform.</p>
 
       <div class="card mt-4 mb-4">
         <h3>Key Facts</h3>
         <ul style="margin-top:.75rem">
-          <li>Kernel monolitik 64-bit</li>
-          <li>Dikembangkan from scratch</li>
-          <li>Kompatibel POSIX</li>
-          <li>Event-driven architecture</li>
-          <li>Graphics stack berbasis DRM</li>
-          <li>Desktop environment modular</li>
+          <li>Kernel, runtime, desktop, dan aplikasi dalam satu arsitektur terintegrasi</li>
+          <li>KlatLoader sebagai runtime loader native</li>
+          <li>Filesystem root <code>/Sistem</code></li>
+          <li>Desktop KlatDE / Nawolo</li>
+          <li>Application platform dengan format <code>.kap</code></li>
+          <li>Dukungan pengembangan aplikasi native dengan Rust</li>
+          <li>Security model berbasis pembatasan resource (<code>unveil</code> / <code>pledge</code>)</li>
+          <li>Dukungan Firefox modern secara bertahap</li>
         </ul>
       </div>
 
@@ -64,7 +130,7 @@
       </ul>
 
       <h3 data-i18n="home.posix_title">POSIX Compatibility</h3>
-      <p data-i18n="home.posix_desc">KlatOS mengimplementasikan antarmuka POSIX sehingga berbagai aplikasi dan pustaka dapat dipindahkan dengan perubahan seminimal mungkin.</p>
+      <p data-i18n="home.posix_desc">KLATOS mengimplementasikan antarmuka POSIX sehingga berbagai aplikasi dan pustaka dapat dipindahkan dengan perubahan seminimal mungkin.</p>
 
       <h3 data-i18n="home.clean_title">Clean Architecture</h3>
       <p data-i18n="home.clean_desc">Kernel tidak dibangun dari kumpulan patch, tetapi menggunakan desain modular yang memiliki batas antarsubsistem yang jelas.</p>
@@ -98,7 +164,7 @@
       </ul>
 
       <h2 id="filesystem" data-i18n="docs.title_filesystem">Filesystem</h2>
-      <p>Virtual File System (VFS) dan filesystem yang tersedia:</p>
+      <p>Virtual File System (VFS) dan filesystem kernel yang tersedia:</p>
       <ul>
         <li><strong>Virtual File System (VFS)</strong> — layer abstraksi untuk semua filesystem</li>
         <li><strong>TmpFS</strong> — filesystem berbasis RAM untuk file sementara</li>
@@ -109,6 +175,7 @@
         <li>Permission Management</li>
         <li>Path Resolution</li>
       </ul>
+      <p>Struktur filesystem tingkat sistem KLATOS dibahas pada bagian <a href="#sistem">Filesystem KLATOS</a>.</p>
 
       <h2 id="ipc" data-i18n="docs.title_ipc">IPC (Inter-Process Communication)</h2>
       <p>Implementasi IPC menggunakan Unix Domain Socket modern:</p>
@@ -132,8 +199,22 @@ waitqueue_wait(&obj->wq, &ctx);
 // Thread sleeps until event occurs
 // No polling, no busy-waiting</code></pre>
 
+      <h2 id="klatloader" data-i18n="docs.title_klatloader">KlatLoader</h2>
+      <p>Program native KLATOS dijalankan melalui <strong>KlatLoader</strong> — runtime loader sistem yang berada pada:</p>
+      <pre><code>/Sistem/Runtime/KlatLoader.so</code></pre>
+      <p>Ketika sebuah executable native dijalankan, sistem melakukan proses:</p>
+      <pre><code>Application ELF
+      |
+KlatLoader
+      |
+Native Runtime
+      |
+JowoKernel</code></pre>
+      <p>KlatLoader bertanggung jawab mempersiapkan executable dan dependency yang diperlukan sebelum program mulai berjalan.</p>
+      <p>Dengan adanya loader sendiri, KLATOS mempunyai execution environment yang terintegrasi dengan runtime sistem.</p>
+
       <h2 id="runtime" data-i18n="docs.title_runtime">Runtime Userspace</h2>
-      <p>KlatOS memiliki runtime userspace yang lengkap. Kernel mampu menjalankan executable ELF 64-bit melalui loader internal.</p>
+      <p>KLATOS memiliki runtime userspace yang lengkap. Kernel mampu menjalankan executable ELF 64-bit melalui loader internal.</p>
       <ul>
         <li>ELF Loader</li>
         <li>Dynamic Linker</li>
@@ -163,8 +244,33 @@ listen()  accept4()  sendmsg()  recvmsg()
 // Events
 poll()  select()  epoll()</code></pre>
 
+      <h2 id="sistem" data-i18n="docs.title_sistem">Filesystem KLATOS</h2>
+      <p>KLATOS memiliki struktur filesystem yang dirancang sebagai bagian dari platform. Root sistem menggunakan:</p>
+      <pre><code>/Sistem</code></pre>
+      <p>Struktur utama:</p>
+      <pre><code>/Sistem
++-- Program
++-- Perpustakaan
++-- Aplikasi
++-- SumberDaya
++-- Konfigurasi
++-- Data
++-- Pengguna
++-- Runtime</code></pre>
+      <p>Masing-masing direktori memiliki fungsi yang jelas.</p>
+      <ul>
+        <li><strong><code>/Sistem/Program</code></strong> — berisi program native sistem</li>
+        <li><strong><code>/Sistem/Perpustakaan</code></strong> — berisi library yang digunakan program</li>
+        <li><strong><code>/Sistem/Aplikasi</code></strong> — berisi aplikasi yang telah dipasang</li>
+        <li><strong><code>/Sistem/SumberDaya</code></strong> — berisi resource sistem dan aplikasi</li>
+        <li><strong><code>/Sistem/Konfigurasi</code></strong> — berisi konfigurasi sistem</li>
+        <li><strong><code>/Sistem/Data</code></strong> — berisi data sistem</li>
+        <li><strong><code>/Sistem/Pengguna</code></strong> — berisi environment pengguna</li>
+        <li><strong><code>/Sistem/Runtime</code></strong> — berisi komponen runtime sistem</li>
+      </ul>
+
       <h2 id="graphics" data-i18n="docs.title_graphics">Graphics Stack</h2>
-      <p>KlatOS menggunakan graphics stack modern berbasis DRM (Direct Rendering Manager):</p>
+      <p>KLATOS menggunakan graphics stack modern berbasis DRM (Direct Rendering Manager):</p>
       <ul>
         <li><strong>DRM Device</strong> — interface ke GPU melalui <code>/dev/dri/card0</code></li>
         <li><strong>Dumb Buffer</strong> — framebuffer sederhana tanpa GPU acceleration</li>
@@ -177,7 +283,7 @@ poll()  select()  epoll()</code></pre>
       </ul>
 
       <h2 id="libdrm" data-i18n="docs.title_libdrm">Kompatibilitas libdrm</h2>
-      <p>Untuk meningkatkan kompatibilitas, KlatOS menyediakan implementasi clean-room dari API libdrm:</p>
+      <p>Untuk meningkatkan kompatibilitas, KLATOS menyediakan implementasi clean-room dari API libdrm:</p>
       <pre><code>// Available API
 drmIoctl()
 drmModeGetResources()
@@ -187,21 +293,213 @@ drmModeAddFB()
 drmModePageFlip()</code></pre>
       <p>Aplikasi dapat menggunakan API standar tanpa perlu mengetahui implementasi internal kernel.</p>
 
-      <h2 id="desktop" data-i18n="docs.title_desktop">Desktop Platform</h2>
-      <p>Desktop KlatOS dibangun sebagai kumpulan proses independen yang saling berkomunikasi melalui POSIX IPC:</p>
+      <h2 id="klatde" data-i18n="docs.title_klatde">KlatDE / Nawolo</h2>
+      <p>Di atas kernel dan runtime terdapat desktop KLATOS yang dikembangkan melalui <strong>KlatDE / Nawolo</strong>.</p>
+      <p>Desktop menyediakan lingkungan interaktif bagi pengguna:</p>
+      <pre><code>Desktop
++-- Window
++-- Panel
++-- Application Launcher
++-- Terminal
++-- System Monitor
++-- Settings
++-- File Management
++-- Application Interface</code></pre>
+      <p><strong>Nawolo</strong> adalah bagian dari lingkungan desktop KLATOS yang menangani proses utama desktop dan integrasi aplikasi dengan lingkungan grafis. Nawolo menjadi komponen penting dalam pengembangan:</p>
       <ul>
-        <li><strong>Display Server</strong> — mengelola output display</li>
-        <li><strong>Window Manager</strong> — mengelola jendela dan tata letak</li>
-        <li><strong>Input Server</strong> — menangani keyboard, mouse, touchscreen</li>
-        <li><strong>Desktop Shell</strong> — wallpaper, panel, taskbar</li>
-        <li><strong>Launcher</strong> — peluncur aplikasi</li>
-        <li><strong>Notification Service</strong> — sistem notifikasi</li>
-        <li><strong>Session Manager</strong> — manajemen sesi login</li>
+        <li>Window</li>
+        <li>Rendering</li>
+        <li>Application Lifecycle</li>
+        <li>Desktop Event Loop</li>
+        <li>System Interface</li>
       </ul>
-      <p>Pendekatan ini meningkatkan stabilitas karena kegagalan satu komponen tidak secara langsung menghentikan keseluruhan desktop.</p>
+      <p>KlatDE menggunakan teknologi GUI native yang dikembangkan untuk kebutuhan KLATOS. Salah satu fondasinya adalah:</p>
+      <pre><code>Dear ImGui
+LibKlatImGui</code></pre>
+      <p>Dengan pendekatan tersebut, komponen desktop dapat dibuat ringan dan terintegrasi dengan runtime KLATOS.</p>
 
-      <h2 id="security" data-i18n="docs.title_security">Keamanan &amp; Keandalan</h2>
-      <p>JowoKernel dirancang dengan fokus pada stabilitas dan isolasi proses:</p>
+      <h2 id="desktop" data-i18n="docs.title_desktop">Desktop Platform</h2>
+      <p>Desktop KLATOS dibangun sebagai kumpulan komponen yang saling terhubung melalui platform sistem:</p>
+      <ul>
+        <li><strong>Window Management</strong> — pengelolaan jendela aplikasi</li>
+        <li><strong>Panel</strong> — bar antarmuka desktop</li>
+        <li><strong>Application Launcher</strong> — peluncur aplikasi</li>
+        <li><strong>Terminal</strong> — command-line environment</li>
+        <li><strong>System Monitor</strong> — pemantauan sistem</li>
+        <li><strong>Settings</strong> — konfigurasi sistem</li>
+        <li><strong>File Management</strong> — pengelolaan file</li>
+      </ul>
+      <p>Desktop KLATOS terus dikembangkan untuk menyediakan pengalaman modern dengan penggunaan resource yang efisien.</p>
+
+      <h2 id="klat_shell" data-i18n="docs.title_klat_shell">KLAT Shell</h2>
+      <p>KLATOS memiliki command-line environment sendiri: <strong>KLAT Shell</strong>.</p>
+      <p>KLAT Shell memberikan interface langsung terhadap sistem KLATOS. Developer dan pengguna dapat menggunakan shell untuk:</p>
+      <ul>
+        <li>Menjalankan program</li>
+        <li>Mengelola aplikasi</li>
+        <li>Mengelola filesystem</li>
+        <li>Menjalankan developer tools</li>
+        <li>Melakukan debugging</li>
+        <li>Mengelola sistem</li>
+      </ul>
+      <p>KLAT Shell dirancang agar memahami struktur native KLATOS.</p>
+
+      <h2 id="klatcli" data-i18n="docs.title_klatcli">KlatCLI</h2>
+      <p>Untuk developer tersedia <strong>KlatCLI</strong> — command-line interface untuk membangun dan mengelola aplikasi KLATOS.</p>
+      <p>Workflow aplikasi dirancang sederhana:</p>
+      <pre><code>klat new
+    |
+klat build
+    |
+klat run
+    |
+klat package
+    |
+application.kap</code></pre>
+      <p>Dengan workflow tersebut developer tidak harus menangani seluruh detail sistem secara manual.</p>
+
+      <h2 id="kap" data-i18n="docs.title_kap">KAP — Application Package</h2>
+      <p>Salah satu bagian penting KLATOS adalah application platform. Aplikasi tidak hanya dianggap sebagai file executable — aplikasi memiliki:</p>
+      <pre><code>Program
+Library
+Resources
+Metadata
+Identity</code></pre>
+      <p>Seluruhnya dapat dikemas sebagai satu application package dalam format <strong>KAP</strong> (<code>.kap</code>):</p>
+      <pre><code>MyApplication
++-- Program
++-- Perpustakaan
++-- SumberDaya
++-- Metadata</code></pre>
+      <p>Package tersebut kemudian diproses oleh application platform KLATOS.</p>
+
+      <h2 id="appinstaller" data-i18n="docs.title_appinstaller">AppInstaller</h2>
+      <p>Ketika pengguna memasang aplikasi <code>MyApplication.kap</code>, package diproses oleh <strong>AppInstaller</strong>:</p>
+      <pre><code>.kap
+  |
+Validation
+  |
+Installation
+  |
+Registration</code></pre>
+      <p>AppInstaller bertanggung jawab memastikan package ditempatkan sesuai struktur aplikasi KLATOS.</p>
+
+      <h2 id="appregistry" data-i18n="docs.title_appregistry">AppRegistry</h2>
+      <p>Setelah aplikasi dipasang, informasi aplikasi disimpan oleh <strong>AppRegistry</strong>. Registry mengetahui informasi seperti:</p>
+      <pre><code>Application ID
+Name
+Version
+Program
+Resources
+Location
+Metadata</code></pre>
+      <p>Dengan demikian sistem tidak perlu mencari aplikasi secara manual dari seluruh filesystem.</p>
+
+      <h2 id="applauncher" data-i18n="docs.title_applauncher">AppLauncher</h2>
+      <p>Ketika pengguna memilih aplikasi, KLATOS menggunakan <strong>AppLauncher</strong>:</p>
+      <pre><code>User
+  |
+AppLauncher
+  |
+AppRegistry
+  |
+Application
+  |
+KlatLoader
+  |
+JowoKernel</code></pre>
+      <p>Pengguna cukup memilih aplikasi. Platform menangani detail bagaimana aplikasi ditemukan dan dijalankan.</p>
+
+      <h2 id="native" data-i18n="docs.title_native">Native Executable</h2>
+      <p>Ketika aplikasi dibangun, source code dikompilasi menjadi executable native KLATOS:</p>
+      <pre><code>Source Code
+    |
+Compiler
+    |
+Native Object
+    |
+Linker
+    |
+ELF
+    |
+KlatLoader</code></pre>
+      <p>Executable tersebut kemudian dapat dikemas menjadi application package.</p>
+      <p>Konsep workflow pengembangan aplikasi:</p>
+      <pre><code>Project
+  |
+Source Code
+  |
+KlatCLI
+  |
+Build
+  |
+Native ELF
+  |
+Package
+  |
+.kap</code></pre>
+      <pre><code>klat new HelloWorld
+cd HelloWorld
+klat build
+klat run
+klat package</code></pre>
+      <p>Hasil akhirnya adalah file seperti <code>HelloWorld.kap</code> yang dapat dipasang ke sistem:</p>
+      <pre><code>HelloWorld.kap
+      |
+AppInstaller
+      |
+AppRegistry
+      |
+AppLauncher</code></pre>
+
+      <h2 id="rust" data-i18n="docs.title_rust">Rust di KLATOS</h2>
+      <p>Rust merupakan salah satu teknologi penting dalam platform developer KLATOS. KLATOS memiliki target:</p>
+      <pre><code>x86_64-klatos</code></pre>
+      <p>yang memungkinkan program Rust dibangun untuk platform KLATOS. Dukungan Rust telah dikembangkan sampai:</p>
+      <pre><code>Rust Core
+    |
+Rust Alloc
+    |
+Rust Std
+    |
+Native KLATOS executable</code></pre>
+      <p>Program Rust telah berhasil diuji berjalan secara native pada KLATOS.</p>
+      <h3>Rust Application</h3>
+      <p>Contoh sederhana aplikasi Rust:</p>
+      <pre><code>fn main() {
+    println!("Hello from KLATOS!");
+}</code></pre>
+      <p>Workflow yang dituju:</p>
+      <pre><code>main.rs
+   |
+Rust Compiler
+   |
+x86_64-klatos
+   |
+Native ELF
+   |
+klat package
+   |
+HelloWorld.kap</code></pre>
+      <p>Dengan demikian Rust dapat menjadi salah satu bahasa untuk membangun aplikasi native KLATOS.</p>
+
+      <h2 id="libs" data-i18n="docs.title_libs">Library &amp; Runtime</h2>
+      <p>Aplikasi KLATOS dapat menggunakan library native yang tersedia di:</p>
+      <pre><code>/Sistem/Perpustakaan</code></pre>
+      <p>Dependency aplikasi dikelola melalui application platform sehingga runtime aplikasi dapat dipisahkan dari komponen sistem yang tidak diperlukan.</p>
+      <p>Tujuannya adalah membuat aplikasi lebih terstruktur dan menjaga sistem tetap efisien.</p>
+
+      <h2 id="security_model" data-i18n="docs.title_security_model">Security Model</h2>
+      <p>Security KLATOS dibangun sebagai bagian dari execution environment. Salah satu konsep penting adalah <strong>pembatasan resource aplikasi</strong> — aplikasi hanya mendapatkan akses terhadap resource yang diperlukan:</p>
+      <pre><code>Application
+      |
+Permissions / Resource Access
+      |
+Runtime
+      |
+JowoKernel</code></pre>
+      <p>KLATOS menggunakan mekanisme seperti <code>unveil</code> dan <code>pledge</code> untuk membantu membatasi akses aplikasi terhadap sistem. Security regression menjadi bagian dari pengujian setiap perubahan besar.</p>
+      <p>Selain itu, JowoKernel dirancang dengan fokus pada stabilitas dan isolasi proses:</p>
       <ul>
         <li>Per-process Virtual Address Space</li>
         <li>Process Isolation</li>
@@ -213,9 +511,179 @@ drmModePageFlip()</code></pre>
         <li>Automated Stress Testing</li>
       </ul>
 
+      <h2 id="firefox" data-i18n="docs.title_firefox">Firefox</h2>
+      <p>KLATOS sedang membangun dukungan untuk <strong>Firefox modern</strong>. Firefox dipilih sebagai salah satu aplikasi besar yang menjadi target platform karena browser membutuhkan banyak kemampuan sistem:</p>
+      <pre><code>Rust
+Networking
+TLS
+Fonts
+Graphics
+Media
+Threads
+Processes
+Storage
+Windowing
+Rendering</code></pre>
+      <h3>Firefox dan Rust</h3>
+      <p>Langkah awal pengembangan Firefox adalah memastikan ecosystem Rust dapat berjalan di KLATOS:</p>
+      <pre><code>Rust target
+      |
+Rust std
+      |
+Firefox Rust crate
+      |
+Native execution</code></pre>
+      <p>Salah satu crate Rust Firefox, <code>runloop</code>, telah berhasil dikompilasi tanpa modifikasi source dan dijalankan pada KLATOS. Ini menjadi dasar untuk melanjutkan integrasi Firefox yang lebih besar.</p>
+      <h3>Tahapan Firefox</h3>
+      <pre><code>Rust Ecosystem
+      |
+NSPR
+      |
+Gecko Platform
+      |
+Networking
+      |
+Graphics
+      |
+Window System
+      |
+libxul
+      |
+Firefox</code></pre>
+      <p>Setiap tahap diuji sebelum melanjutkan ke tahap berikutnya. Tujuan akhirnya adalah:</p>
+      <pre><code>Boot KLATOS
+    |
+Open Firefox
+    |
+Open Website
+    |
+Render HTML/CSS
+    |
+Run JavaScript
+    |
+Networking + TLS
+    |
+Stable Browser</code></pre>
+      <p>Firefox akan menjadi salah satu komponen utama untuk menghadirkan pengalaman web modern pada KLATOS. Karena itu browser menjadi salah satu proyek integrasi terbesar dalam pengembangan KLATOS.</p>
+
+      <h2 id="tahapan" data-i18n="docs.title_tahapan">Tahapan Pengembangan</h2>
+      <p>KLATOS dikembangkan menggunakan pendekatan bertahap. Setiap bagian diuji melalui gate:</p>
+      <pre><code>Design
+  |
+Implementation
+  |
+Build
+  |
+Runtime Test
+  |
+Security Test
+  |
+Regression Test
+  |
+Validation</code></pre>
+      <p>Sebuah fitur tidak dianggap selesai hanya karena source code berhasil dikompilasi. Fitur harus dapat digunakan pada sistem nyata dan tidak merusak komponen yang sudah berjalan.</p>
+      <p>KLATOS juga sedang membangun ecosystem developer yang lengkap:</p>
+      <pre><code>JowoKernel
+    |
+Runtime
+    |
+Compiler
+    |
+KlatCLI
+    |
+Application SDK
+    |
+.kap
+    |
+AppRegistry
+    |
+AppLauncher</code></pre>
+      <p>Developer dapat membangun aplikasi dari source code sampai menjadi package yang dapat dipasang pengguna.</p>
+
+      <h2 id="pengujian" data-i18n="docs.title_pengujian">Tingkat Pengujian</h2>
+      <p>Pengujian dilakukan pada beberapa tingkatan:</p>
+      <ul>
+        <li><strong>Build Test</strong> — memastikan source code dapat dibangun</li>
+        <li><strong>ELF Test</strong> — memastikan executable mempunyai format dan dependency yang benar</li>
+        <li><strong>Runtime Test</strong> — memastikan program dapat berjalan di KLATOS</li>
+        <li><strong>Security Test</strong> — memastikan perubahan tidak membuka akses yang tidak diizinkan</li>
+        <li><strong>Regression Test</strong> — memastikan komponen lama tetap bekerja</li>
+        <li><strong>Integration Test</strong> — memastikan beberapa komponen dapat bekerja sebagai satu sistem</li>
+      </ul>
+
+      <h2 id="ringan" data-i18n="docs.title_ringan">Runtime vs Devkit</h2>
+      <p>Salah satu tujuan utama KLATOS adalah menjadi sistem operasi yang ringan. Namun ringan bukan berarti sekadar menghapus file. KLATOS membedakan:</p>
+      <pre><code>Runtime
+Development Tools
+Build Artifacts
+Debug Data
+Cache
+Source Code</code></pre>
+      <p>Komponen yang hanya diperlukan untuk development tidak seharusnya menjadi bagian dari runtime release. Dengan pendekatan tersebut, ukuran sistem dapat dioptimalkan tanpa mengurangi kemampuan pengguna.</p>
+      <pre><code>               KLATOS PROJECT
+                      |
+         +------------+------------+
+         |                         |
+      RUNTIME                   DEVKIT
+         |                         |
+  JowoKernel                  Compiler
+  KlatLoader                  Rust
+  Libraries                   KlatCLI
+  Desktop                     Build Tools
+  Applications                SDK
+  Runtime Data                Debug Tools</code></pre>
+      <p>Pemisahan ini memungkinkan developer mempunyai environment lengkap tanpa menjadikan sistem pengguna penuh dengan tool yang tidak diperlukan.</p>
+
+      <h2 id="visi" data-i18n="docs.title_visi">Visi KLATOS</h2>
+      <p>KLATOS ingin menghadirkan sebuah sistem operasi yang:</p>
+      <ul>
+        <li><strong>Ringan</strong> — menggunakan resource secara efisien dan memisahkan runtime dari kebutuhan development</li>
+        <li><strong>Modern</strong> — menyediakan desktop, browser, graphics, developer tools, dan application platform modern</li>
+        <li><strong>Native</strong> — memiliki kernel, runtime, filesystem, loader, dan application model yang terintegrasi</li>
+        <li><strong>Aman</strong> — security menjadi bagian dari execution model dan diuji sebagai bagian dari setiap perubahan besar</li>
+        <li><strong>Terbuka untuk Developer</strong> — developer dapat membangun aplikasi melalui toolchain native dan mendistribusikannya dalam format <code>.kap</code></li>
+      </ul>
+      <p>KLATOS bukan hanya tempat untuk menjalankan aplikasi. KLATOS dibangun sebagai sebuah <strong>platform</strong>:</p>
+      <pre><code>Kernel
++
+Runtime
++
+Desktop
++
+Developer Tools
++
+Application Platform
++
+Security
++
+Applications</code></pre>
+      <p>Perjalanan sebuah aplikasi KLATOS dapat diringkas:</p>
+      <pre><code>Source Code
+    |
+Compiler
+    |
+Native ELF
+    |
+KlatLoader
+    |
+Runtime
+    |
+JowoKernel
+    |
+.kap
+    |
+AppInstaller
+    |
+AppRegistry
+    |
+AppLauncher
+    |
+KLATOS Desktop</code></pre>
+      <p><strong>KLATOS adalah sistem operasi yang dibangun dari fondasi hingga aplikasi, dengan satu tujuan: menghadirkan platform desktop yang ringan, modern, native, dan dapat dikembangkan bersama.</strong></p>
+
       <div class="card mt-4" style="background:var(--primary);color:#fff;border-color:var(--primary)">
         <h3 style="color:#fff" data-i18n="docs.explore_title">Siap menjelajahi?</h3>
-        <p style="opacity:.9;margin-top:.5rem"><span data-i18n="docs.explore_desc">Kunjungi repository GitHub kami untuk melihat kode sumber.</span> <a href="https://github.com/KlatAsia/KLAT-OS" target="_blank" style="color:#fff;text-decoration:underline">GitHub</a></p>
+        <p style="opacity:.9;margin-top:.5rem"><span data-i18n="docs.explore_desc">Kunjungi repository GitHub kami untuk melihat kode sumber.</span> <a href="https://github.com/KlatAsia" target="_blank" style="color:#fff;text-decoration:underline">GitHub</a></p>
       </div>
     </div>
   </div>
