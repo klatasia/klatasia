@@ -1,11 +1,13 @@
-var CACHE_NAME = 'klat-os-v1';
+var CACHE_NAME = 'klat-os-v2';
 var urlsToCache = [
   '/',
   '/index.html',
   '/css/style.css',
   '/lang/id.json',
   '/lang/en.json',
-  '/database/forum.json'
+  '/database/forum.json',
+  '/icons/logo-mark.svg',
+  '/icons/logoklatos.svg'
 ];
 
 self.addEventListener('install', function(event) {
