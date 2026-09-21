@@ -9,33 +9,6 @@
     "url": "klatai.html"
   },
   {
-    "name": "Klat Browser",
-    "desc": "Modern web browser powered by Klat Engine (proprietary, not Chrome/Gecko/WebKit). Features: built-in ad blocker, tracker protection, video downloader, reader mode, custom themes, privacy-first design, fast rendering, low memory usage. Free on Windows & Linux.",
-    "desc_id": "Browser web modern didukung Klat Engine (engine proprietary, bukan Chrome/Gecko/WebKit). Fitur: ad blocker bawaan, perlindungan tracker, video downloader, reader mode, tema kustom, desain privacy-first, rendering cepat, penggunaan memori rendah. Gratis di Windows & Linux.",
-    "icon": "mdi:web",
-    "color": "#3b82f6",
-    "platforms": ["Windows", "Linux"],
-    "url": "klatbrowser.html"
-  },
-  {
-    "name": "Klat Downloader",
-    "desc": "Fast and stable download manager supporting HTTP/HTTPS/FTP, BitTorrent, and video streaming sites. Features: multi-threaded downloads, resume capability, scheduler, bandwidth limiter, browser integration, clipboard monitoring, virus scanning. Free on Windows & Linux.",
-    "desc_id": "Download manager cepat dan stabil mendukung HTTP/HTTPS/FTP, BitTorrent, dan situs streaming video. Fitur: multi-threaded download, resume, scheduler, pembatas bandwidth, integrasi browser, monitoring clipboard, scan virus. Gratis di Windows & Linux.",
-    "icon": "mdi:download",
-    "color": "#10b981",
-    "platforms": ["Windows", "Linux"],
-    "url": "klatdownloader.html"
-  },
-  {
-    "name": "Klat Office",
-    "desc": "Complete office suite alternative to MS Office. Includes: Klat Writer (word processor), Klat Calc (spreadsheet), Klat Impress (presentations), Klat Draw (vector graphics), Klat Math (formula editor), Klat Base (database). Full MS Office format compatibility, PDF export, templates, macros. Free on Windows & Linux.",
-    "desc_id": "Suite kantor lengkap alternatif MS Office. Termasuk: Klat Writer (kata), Klat Calc (spreadsheet), Klat Impress (presentasi), Klat Draw (grafis vektor), Klat Math (editor formula), Klat Base (database). Kompatibel format MS Office penuh, ekspor PDF, template, macro. Gratis di Windows & Linux.",
-    "icon": "mdi:file-document",
-    "color": "#f59e0b",
-    "platforms": ["Windows", "Linux"],
-    "url": "klatoffice.html"
-  },
-  {
     "name": "Klat Tube",
     "desc": "YouTube client for watching videos without ads. Features: ad-free playback, background play, picture-in-picture, download videos/audio, subscription management without account, sponsor block, quality selector, dark mode, no tracking. Free on Windows & Linux.",
     "desc_id": "Klien YouTube untuk menonton video tanpa iklan. Fitur: putar tanpa iklan, background play, picture-in-picture, unduh video/audio, kelola langganan tanpa akun, sponsor block, pemilih kualitas, dark mode, tanpa tracking. Gratis di Windows & Linux.",
