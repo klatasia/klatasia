@@ -113,5 +113,4 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 * **YANG BOLEH DILAKUKAN:** Anda boleh mengambil kode dasar ekosistem aplikasi, mempelajarinya, memodifikasinya, mengintegrasikannya, dan menggunakannya pada software buatan Anda sendiri sesuai aturan Lisensi MIT yang fleksibel.
 * **YANG TIDAK BOLEH DILAKUKAN:** Anda tidak boleh mengompilasi ulang repositori ini, mengubah sedikit konfigurasi sistem, lalu menyebarkannya ke publik dengan nama "KLATOS Remix", "KLATOS Light", "KLATOS Distro", atau variasi apa pun yang menyalahgunakan merek **KLATOS** atau melangkahi hak distribusi eksklusif milik **KlatAsia Software**.
-klatasia/klatasia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
