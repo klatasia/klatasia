@@ -20,7 +20,7 @@ Unlike standard open-source projects, the identity, branding, and distribution o
 
 ### B. Exclusive Distribution Rights
 * **KlatAsia Software** holds the sole and exclusive right to build, compile, package, and distribute the official **KLATOS Operating System** binaries, ISO images, installation media, and system updates.
-* You **ARE NOT ALLOWED** to create alternative distributions, spin-offs, forks, or "distros" using the KLATOS identity, codebase configurations, or official repositories. Any distribution of modified versions must completely strip out all KLATOS branding and logos, and must be released under an entirely different name.
+* You **ARE NOT ALLOWED** to create alternative distributions, spin-offs, forks, or "distros" using the KLATOS identity, codebase configurations, or official repositories.
 
 ---
 
@@ -76,7 +76,7 @@ Berbeda dengan proyek open-source standar, identitas, merek, dan jalur distribus
 
 ### B. Hak Distribusi Eksklusif
 * **KlatAsia Software** memegang hak tunggal dan eksklusif untuk membangun (build), mengompilasi (compile), mengemas, dan mendistribusikan file biner resmi, file ISO, media instalasi, serta pembaruan sistem **Sistem Operasi KLATOS**.
-* Anda **DILARANG KERAS** membuat distribusi alternatif, produk turunan (*spin-off*), *fork*, atau "distro baru" yang menggunakan identitas KLATOS, konfigurasi basis kode, maupun repositori resmi kami. Jika Anda ingin mendistribusikan kode yang telah dimodifikasi, Anda wajib menghapus seluruh merek dan logo KLATOS secara total, serta wajib merilisnya dengan nama yang sepenuhnya berbeda.
+* Anda **DILARANG KERAS** membuat distribusi alternatif, produk turunan (*spin-off*), *fork*, atau "distro baru" yang menggunakan identitas KLATOS, konfigurasi basis kode, maupun repositori resmi kami.
 
 ---
 
