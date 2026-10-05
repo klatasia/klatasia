@@ -1,12 +1,21 @@
 {
-  "name": "KLAT OS",
-  "short_name": "KlatOS",
-  "description": "Modern operating system built on JowoKernel",
+  "name": "KLATOS — Native Operating System & Computing Platform",
+  "short_name": "KLATOS",
+  "description": "KLATOS is a Rust-first native operating system with its own kernel, KSM capability security, KlatIPC, KlatGUI, Nawolo desktop, KAP packages, native runtime, and /Sistem filesystem.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#0f1117",
   "theme_color": "#2563eb",
+  "lang": "id",
+  "categories": ["os", "developer", "utilities"],
   "icons": [
+    {
+      "src": "icons/logo-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
     {
       "src": "icons/icon-192x192.svg",
       "sizes": "192x192",
@@ -15,6 +24,11 @@
     {
       "src": "icons/icon-512x512.svg",
       "sizes": "512x512",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icons/logoklatos.svg",
+      "sizes": "any",
       "type": "image/svg+xml"
     }
   ]

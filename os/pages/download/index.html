@@ -1,66 +1,33 @@
-<section class="download-hero">
-  <div class="container">
-    <h1 data-i18n="download.hero_title">Unduh KlatOS</h1>
-    <p data-i18n="download.hero_desc">Sistem operasi modern berbasis JowoKernel</p>
-  </div>
-</section>
-
-<div class="container" style="padding-bottom:4rem">
-  <div class="download-card">
-    <h2 data-i18n="download.latest_title">Versi Terbaru</h2>
-    <p class="version" data-i18n="download.latest_version">KlatOS 1.0 — Rilis Stabil</p>
-    <div class="download-btns">
-      <a href="#" class="btn btn-solid" data-i18n="download.btn_iso">Unduh ISO</a>
-      <a href="#" class="btn btn-outline" style="color:var(--primary);border-color:var(--border)" data-i18n="download.btn_source">Kode Sumber</a>
-    </div>
-  </div>
-
-  <div class="mt-8">
-    <h2 class="section-title" data-i18n="download.req_title">Persyaratan Sistem</h2>
-    <div class="req-grid">
-      <div class="req-card"><h4>CPU</h4><p data-i18n="download.cpu">x86_64 atau ARM64</p></div>
-      <div class="req-card"><h4>RAM</h4><p data-i18n="download.ram">Minimal 512 MB</p></div>
-      <div class="req-card"><h4>Storage</h4><p data-i18n="download.storage">2 GB ruang kosong</p></div>
-      <div class="req-card"><h4>Display</h4><p data-i18n="download.display">GPU kompatibel DRM</p></div>
-    </div>
-  </div>
-
-  <div class="mt-8">
-    <h2 class="section-title" data-i18n="download.included_title">Yang Termasuk</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3 data-i18n="download.kernel_name">JowoKernel</h3>
-        <p style="color:var(--text3);font-size:.8125rem" data-i18n="download.kernel_desc">Kernel monolitik 64-bit dengan process management, memory management, VFS, IPC, dan event infrastructure.</p>
-      </div>
-      <div class="card">
-        <h3 data-i18n="download.gfx_name">Graphics Stack</h3>
-        <p style="color:var(--text3);font-size:.8125rem" data-i18n="download.gfx_desc">DRM device, dumb buffer, page flipping, VBlank sync, libdrm compatibility.</p>
-      </div>
-      <div class="card">
-        <h3 data-i18n="download.desktop_name">Desktop Platform</h3>
-        <p style="color:var(--text3);font-size:.8125rem" data-i18n="download.desktop_desc">Display server, window manager, input server, desktop shell, launcher.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="mt-8">
-    <h2 class="section-title" data-i18n="download.guides_title">Panduan Instalasi</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3 data-i18n="download.guide1_title">Mulai Cepat</h3>
-        <p style="color:var(--text3);font-size:.8125rem;margin-bottom:1rem" data-i18n="download.guide1_desc">Panduan instalasi untuk pemula.</p>
-        <a href="#/docs" class="btn btn-solid btn-sm" data-i18n="download.btn_guide">Baca Panduan</a>
-      </div>
-      <div class="card">
-        <h3 data-i18n="download.guide2_title">Setup Pengembang</h3>
-        <p style="color:var(--text3);font-size:.8125rem;margin-bottom:1rem" data-i18n="download.guide2_desc">Setup lingkungan pengembangan KlatOS.</p>
-        <a href="#/docs" class="btn btn-solid btn-sm" data-i18n="download.btn_guide">Baca Panduan</a>
-      </div>
-      <div class="card">
-        <h3 data-i18n="download.guide3_title">Mesin Virtual</h3>
-        <p style="color:var(--text3);font-size:.8125rem;margin-bottom:1rem" data-i18n="download.guide3_desc">Jalankan KlatOS di QEMU atau VirtualBox.</p>
-        <a href="#/docs" class="btn btn-solid btn-sm" data-i18n="download.btn_guide">Baca Panduan</a>
-      </div>
-    </div>
-  </div>
+<section class="page-hero"><div class="container"><h1 data-id="Unduh KLATOS" data-en="Download KLATOS">Unduh KLATOS</h1><p data-id="Source code, developer build, dan toolchain native KLATOS." data-en="KLATOS source code, developer build, and native toolchain.">Source code, developer build, dan toolchain native KLATOS.</p></div></section><div class="container page-body"><div class="page-narrow"><div class="callout warn"><div class="callout-title" data-id="Belum ada rilis image stabil untuk pengguna umum. Yang tersedia adalah source code dan build developer." data-en="There is no stable image release for general users yet. What is available is the source code and developer build.">Belum ada rilis image stabil untuk pengguna umum. Yang tersedia adalah source code dan build developer.</div><p data-id="Belum ada rilis image stabil untuk pengguna umum. Yang tersedia adalah source code dan build developer." data-en="There is no stable image release for general users yet. What is available is the source code and developer build.">Belum ada rilis image stabil untuk pengguna umum. Yang tersedia adalah source code dan build developer.</p></div>
+<h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Kebutuhan Build" data-en="Build Requirements">Kebutuhan Build</h2>
+<div class="req-grid">
+<div class="req-card"><h3 data-id="Host Build" data-en="Build Host">Host Build</h3><p data-id="Linux x86_64 dengan akses ke repository KLATOS." data-en="Linux x86_64 with access to the KLATOS repository.">Linux x86_64 dengan akses ke repository KLATOS.</p></div>
+<div class="req-card"><h3 data-id="Toolchain" data-en="Toolchain">Toolchain</h3><p data-id="GCC, G++, dan GCCGo dari KLATOS DevKit." data-en="GCC, G++, and GCCGo from KLATOS DevKit.">GCC, G++, dan GCCGo dari KLATOS DevKit.</p></div>
+<div class="req-card"><h3 data-id="Build System" data-en="Build System">Build System</h3><p data-id="CMake untuk menghasilkan native executable dan image." data-en="CMake to produce native executables and images.">CMake untuk menghasilkan native executable dan image.</p></div>
+<div class="req-card"><h3 data-id="Version Control" data-en="Version Control">Version Control</h3><p data-id="Git untuk memperoleh source code KLATOS." data-en="Git to obtain the KLATOS source code.">Git untuk memperoleh source code KLATOS.</p></div>
+<div class="req-card"><h3 data-id="Shell" data-en="Shell">Shell</h3><p data-id="Bash untuk workflow build dan developer." data-en="Bash for build and developer workflows.">Bash untuk workflow build dan developer.</p></div>
+<div class="req-card"><h3 data-id="Target Platform" data-en="Target Platform">Target Platform</h3><p data-id="x86_64-klatos sebagai target platform native." data-en="x86_64-klatos as the native target platform.">x86_64-klatos sebagai target platform native.</p></div>
 </div>
+<h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Target Platform" data-en="Target Platform">Target Platform</h2>
+<table class="spec-table"><thead><tr><th data-id="Target" data-en="Target">Target</th><th data-id="Keterangan" data-en="Description">Keterangan</th></tr></thead><tbody><tr><td data-id="x86_64-klatos" data-en="x86_64-klatos">x86_64-klatos</td><td data-id="Target platform native KLATOS untuk executable dan image." data-en="The native KLATOS target platform for executables and images.">Target platform native KLATOS untuk executable dan image.</td></tr><tr><td data-id="DevKit toolchain" data-en="DevKit toolchain">DevKit toolchain</td><td data-id="Compiler, assembler, dan linker native yang Target Platform gunakan." data-en="Native compiler, assembler, and linker used by the target platform.">Compiler, assembler, dan linker native yang Target Platform gunakan.</td></tr><tr><td data-id="Runtime image" data-en="Runtime image">Runtime image</td><td data-id="Image berisi /Sistem, runtime, dan service dasar." data-en="An image containing /Sistem, the runtime, and base services.">Image berisi /Sistem, runtime, dan service dasar.</td></tr></tbody></table>
+<h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Unduh" data-en="Download">Unduh</h2>
+<div class="card-grid">
+<div class="dl-card"><h3 data-id="Source Code" data-en="Source Code">Source Code</h3><p data-id="Repository KLATOS beserta kernel, KSM, KlatIPC, KlatGUI, Nawolo, KAP, dan DevKit." data-en="The KLATOS repository including kernel, KSM, KlatIPC, KlatGUI, Nawolo, KAP, and DevKit.">Repository KLATOS beserta kernel, KSM, KlatIPC, KlatGUI, Nawolo, KAP, dan DevKit.</p><div class="dl-req"><strong>Requirement:</strong> <span data-id="Akses repository KLATOS." data-en="Access to the KLATOS repository.">Akses repository KLATOS.</span></div><div class="download-btns"><a href="https://github.com/KlatAsia" target="_blank" class="btn btn-primary btn-sm">GitHub</a></div></div>
+<div class="dl-card"><h3 data-id="Developer Build" data-en="Developer Build">Developer Build</h3><p data-id="Build native developer yang dapat dijalankan pada emulator." data-en="A native developer build that can be run in an emulator.">Build native developer yang dapat dijalankan pada emulator.</p><div class="dl-req"><strong>Requirement:</strong> <span data-id="Membutuhkan toolchain DevKit." data-en="Requires the DevKit toolchain.">Membutuhkan toolchain DevKit.</span></div><div class="download-btns"><a href="#/docs#devkit" class="btn btn-outline btn-sm" data-id="DevKit" data-en="DevKit">DevKit</a></div></div>
+<div class="dl-card"><h3 data-id="Dokumentasi" data-en="Documentation">Dokumentasi</h3><p data-id="Rujukan teknis arsitektur, kernel, keamanan, runtime, desktop, dan platform aplikasi." data-en="Technical reference for architecture, kernel, security, runtime, desktop, and application platform.">Rujukan teknis arsitektur, kernel, keamanan, runtime, desktop, dan platform aplikasi.</p><div class="dl-req"><strong>Requirement:</strong> <span data-id="Selalu tersedia." data-en="Always available.">Selalu tersedia.</span></div><div class="download-btns"><a href="#/docs" class="btn btn-outline btn-sm" data-i18n="nav.docs">Documentation</a></div></div>
+</div>
+<h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Isi Ekosistem" data-en="Ecosystem Contents">Isi Ekosistem</h2>
+<ul class="comp-list">
+<li><span class="comp-name" data-id="JowoKernel" data-en="JowoKernel">JowoKernel</span><span class="comp-desc" data-id=Kernel native: memory, process, thread, scheduler, VFS, IPC, security, resource management."Kernel native: memory, process, thread, scheduler, VFS, IPC, security, resource management." data-en="Native kernel: memory, process, thread, scheduler, VFS, IPC, security, resource management.">Kernel native: memory, process, thread, scheduler, VFS, IPC, security, resource management.</span></li>
+<li><span class="comp-name" data-id="KSM" data-en="KSM">KSM</span><span class="comp-desc" data-id=Klat Security Manager: otoritas capability dan keputusan akses."Klat Security Manager: otoritas capability dan keputusan akses." data-en="Klat Security Manager: capability authority and access decisions.">Klat Security Manager: otoritas capability dan keputusan akses.</span></li>
+<li><span class="comp-name" data-id="KlatIPC" data-en="KlatIPC">KlatIPC</span><span class="comp-desc" data-id=Native inter-process communication untuk aplikasi dan service."Native inter-process communication untuk aplikasi dan service." data-en="Native inter-process communication for applications and services.">Native inter-process communication untuk aplikasi dan service.</span></li>
+<li><span class="comp-name" data-id="KlatLoader" data-en="KlatLoader">KlatLoader</span><span class="comp-desc" data-id=Runtime loader native pada /Sistem/Runtime/KlatLoader.so."Runtime loader native pada /Sistem/Runtime/KlatLoader.so." data-en="Native runtime loader in /Sistem/Runtime/KlatLoader.so.">Runtime loader native pada /Sistem/Runtime/KlatLoader.so.</span></li>
+<li><span class="comp-name" data-id="KlatGUI" data-en="KlatGUI">KlatGUI</span><span class="comp-desc" data-id=Framework graphical user interface native."Framework graphical user interface native." data-en="Native graphical user interface framework.">Framework graphical user interface native.</span></li>
+<li><span class="comp-name" data-id="Nawolo" data-en="Nawolo">Nawolo</span><span class="comp-desc" data-id=Window system dan compositor."Window system dan compositor." data-en="Window system and compositor.">Window system dan compositor.</span></li>
+<li><span class="comp-name" data-id="KAP" data-en="KAP">KAP</span><span class="comp-desc" data-id=Klat Application Package dengan format .kap."Klat Application Package dengan format .kap." data-en="Klat Application Package with the .kap format.">Klat Application Package dengan format .kap.</span></li>
+<li><span class="comp-name" data-id="KLATOS DevKit" data-en="KLATOS DevKit">KLATOS DevKit</span><span class="comp-desc" data-id=Lingkungan pengembangan native pada /Sistem/DevKit/."Lingkungan pengembangan native pada /Sistem/DevKit/." data-en="Native development environment in /Sistem/DevKit/.">Lingkungan pengembangan native pada /Sistem/DevKit/.</span></li>
+<li><span class="comp-name" data-id="KlatCLI" data-en="KlatCLI">KlatCLI</span><span class="comp-desc" data-id=Command-line interface native untuk workflow pengembangan."Command-line interface native untuk workflow pengembangan." data-en="Native command-line interface for the development workflow.">Command-line interface native untuk workflow pengembangan.</span></li>
+</ul>
+<h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Menjalankan di Emulator" data-en="Running in an Emulator">Menjalankan di Emulator</h2>
+<p data-id="Developer build KLATOS dapat dijalankan pada emulator untuk pengujian kernel, desktop, dan aplikasi native." data-en="A KLATOS developer build can be run in an emulator to test the kernel, desktop, and native applications.">Developer build KLATOS dapat dijalankan pada emulator untuk pengujian kernel, desktop, dan aplikasi native.</p>
+<div class="cmd-line"><div class="prompt">$</div><div>qemu-system-x86_64 &mdash;enable-kvm &mdash;cdrom klatos-dev.img</div></div></div></div>

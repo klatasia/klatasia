@@ -1,0 +1,216 @@
+<section class="page-hero">
+  <div class="container">
+    <h1 data-id="Teknologi" data-en="Technology">Teknologi</h1>
+    <p data-id="Arsitektur, kernel, keamanan, runtime, desktop, filesystem, dan platform aplikasi KLATOS sebagai satu ekosistem terpadu." data-en="KLATOS architecture, kernel, security, runtime, desktop, filesystem, and application platform as one integrated ecosystem.">Arsitektur, kernel, keamanan, runtime, desktop, filesystem, dan platform aplikasi KLATOS sebagai satu ekosistem terpadu.</p>
+  </div>
+</section>
+<div class="page-body">
+  <div class="page-narrow">
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Diagram Arsitektur" data-en="Architecture Diagram">Diagram Arsitektur</h2>
+    <pre class="diagram">┌─────────────────────────────────────────────┐
+│                 APLIKASI                    │
+│          Native KLATOS Application          │
+├─────────────────────────────────────────────┤
+│                 KLATGUI                     │
+│          User Interface & Widgets           │
+├─────────────────────────────────────────────┤
+│                  NAWOLO                     │
+│       Window System & Compositor            │
+├─────────────────────────────────────────────┤
+│              SYSTEM SERVICES                │
+│   Display · Graphics · Input · Filesystem   │
+├─────────────────────────────────────────────┤
+│                 KLATIPC                     │
+│       Native Inter-Process Communication    │
+├─────────────────────────────────────────────┤
+│                   KSM                       │
+│          Klat Security Manager              │
+├─────────────────────────────────────────────┤
+│                JOWOKERNEL                   │
+│ Memory · Process · Thread · Scheduler       │
+│ VFS · IPC · Security · Resource Management  │
+├─────────────────────────────────────────────┤
+│             HARDWARE LAYER                  │
+│ CPU · GPU · Storage · Network · USB         │
+└─────────────────────────────────────────────┘</pre>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Struktur Platform" data-en="Platform Structure">Struktur Platform</h2>
+    <pre class="diagram">KLATOS
+│
+├── JowoKernel
+│   ├── Memory
+│   ├── Process
+│   ├── Thread
+│   ├── Scheduler
+│   ├── Security
+│   ├── IPC
+│   ├── VFS
+│   └── Resource
+│
+├── KSM
+│
+├── KlatIPC
+│
+├── KlatLoader
+│
+├── System Services
+│
+├── Nawolo
+│
+├── KlatGUI
+│
+├── KLATOS DevKit
+│
+├── KlatCLI
+│
+└── Native Applications</pre>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="JowoKernel" data-en="JowoKernel">JowoKernel</h2>
+    <p data-id="JowoKernel adalah kernel native KLATOS. JowoKernel mengatur fondasi utama sistem:" data-en="JowoKernel is the native KLATOS kernel. JowoKernel governs the core foundations of the system:">JowoKernel adalah kernel native KLATOS. JowoKernel mengatur fondasi utama sistem:</p>
+    <ul><li data-id="Memory Management" data-en="Memory Management">Memory Management</li><li data-id="Process Management" data-en="Process Management">Process Management</li><li data-id="Thread Management" data-en="Thread Management">Thread Management</li><li data-id="Scheduler" data-en="Scheduler">Scheduler</li><li data-id="Virtual Memory" data-en="Virtual Memory">Virtual Memory</li><li data-id="Address Space" data-en="Address Space">Address Space</li><li data-id="Filesystem" data-en="Filesystem">Filesystem</li><li data-id="Resource Management" data-en="Resource Management">Resource Management</li><li data-id="Inter-Process Communication" data-en="Inter-Process Communication">Inter-Process Communication</li><li data-id="Security" data-en="Security">Security</li><li data-id="Capability" data-en="Capability">Capability</li><li data-id="Synchronization" data-en="Synchronization">Synchronization</li><li data-id="Timer" data-en="Timer">Timer</li><li data-id="Device Management" data-en="Device Management">Device Management</li><li data-id="System Call" data-en="System Call">System Call</li><li data-id="Kernel Boot" data-en="Kernel Boot">Kernel Boot</li></ul>
+    <p data-id-html="JowoKernel menggunakan <strong>Rust</strong> sebagai fondasi utama mekanisme dan otoritas kernel, dengan komponen low-level yang digunakan untuk kebutuhan hardware, arsitektur sistem, bootstrap, dan interface perangkat." data-en-html="JowoKernel uses <strong>Rust</strong> as the main foundation for kernel mechanisms and authority, with low-level components used for hardware needs, system architecture, bootstrap, and device interfaces.">JowoKernel menggunakan <strong>Rust</strong> sebagai fondasi utama mekanisme dan otoritas kernel, dengan komponen low-level yang digunakan untuk kebutuhan hardware, arsitektur sistem, bootstrap, dan interface perangkat.</p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="KSM" data-en="KSM">KSM</h2>
+    <p data-id="KSM adalah sistem keamanan native KLATOS. KSM mengatur otoritas dan hak akses terhadap resource sistem melalui mekanisme capability." data-en="KSM is the native KLATOS security system. KSM governs authority and access rights to system resources through the capability mechanism.">KSM adalah sistem keamanan native KLATOS. KSM mengatur otoritas dan hak akses terhadap resource sistem melalui mekanisme capability.</p>
+    <h4 data-id="Resource" data-en="Resources">Resource</h4>
+    <ul><li data-id="Memory" data-en="Memory">Memory</li><li data-id="Device" data-en="Device">Device</li><li data-id="Endpoint" data-en="Endpoint">Endpoint</li><li data-id="Task" data-en="Task">Task</li><li data-id="Service" data-en="Service">Service</li><li data-id="File" data-en="File">File</li><li data-id="Directory" data-en="Directory">Directory</li><li data-id="Keymap" data-en="Keymap">Keymap</li></ul>
+    <pre class="diagram">Capability
+     │
+     ├── Validate
+     ├── Derive
+     ├── Transfer
+     └── Revoke</pre>
+    <p data-id="KSM memastikan setiap operasi dilakukan dengan authority yang valid." data-en="KSM ensures every operation is carried out with valid authority.">KSM memastikan setiap operasi dilakukan dengan authority yang valid.</p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="KlatIPC" data-en="KlatIPC">KlatIPC</h2>
+    <p data-id="KlatIPC adalah sistem komunikasi antarproses KLATOS. KlatIPC memungkinkan:" data-en="KlatIPC is the KLATOS inter-process communication system. KlatIPC enables:">KlatIPC adalah sistem komunikasi antarproses KLATOS. KlatIPC memungkinkan:</p>
+    <ul><li data-id="aplikasi berkomunikasi dengan service" data-en="applications to communicate with services">aplikasi berkomunikasi dengan service</li><li data-id="service berkomunikasi dengan service lain" data-en="services to communicate with other services">service berkomunikasi dengan service lain</li><li data-id="komunikasi antara aplikasi dan sistem" data-en="communication between applications and the system">komunikasi antara aplikasi dan sistem</li><li data-id="pertukaran data melalui endpoint" data-en="data exchange through endpoints">pertukaran data melalui endpoint</li><li data-id="pengiriman resource menggunakan capability" data-en="resource transfer using capabilities">pengiriman resource menggunakan capability</li></ul>
+    <pre class="diagram">Application
+     │
+     ▼
+  KlatIPC
+     │
+     ▼
+System Service
+     │
+     ▼
+JowoKernel</pre>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="KlatLoader" data-en="KlatLoader">KlatLoader</h2>
+    <p data-id="KlatLoader adalah runtime loader native KLATOS. KlatLoader menangani pemuatan executable dan library ke dalam lingkungan KLATOS." data-en="KlatLoader is the native KLATOS runtime loader. KlatLoader handles loading executables and libraries into the KLATOS environment.">KlatLoader adalah runtime loader native KLATOS. KlatLoader menangani pemuatan executable dan library ke dalam lingkungan KLATOS.</p>
+    <p  data-id-html="Runtime utama berada pada: <code>/Sistem/Runtime/KlatLoader.so</code>" data-en-html="The main runtime is located at: <code>/Sistem/Runtime/KlatLoader.so</code>">Runtime utama berada pada: <code>/Sistem/Runtime/KlatLoader.so</code></p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Filesystem KLATOS" data-en="KLATOS Filesystem">Filesystem KLATOS</h2>
+    <p data-id="KLATOS menggunakan struktur filesystem native dengan /Sistem sebagai pusat sistem." data-en="KLATOS uses a native filesystem structure with /Sistem as the system center.">KLATOS menggunakan struktur filesystem native dengan /Sistem sebagai pusat sistem.</p>
+    <pre class="diagram">/Sistem
+├── Program
+├── Perpustakaan
+├── Runtime
+├── DevKit
+├── Aplikasi
+├── Konfigurasi
+└── SumberDaya</pre>
+    <table class="spec-table"><thead><tr><th data-id="Folder" data-en="Folder">Folder</th><th data-id="Keterangan" data-en="Description">Keterangan</th></tr></thead><tbody><tr><td data-id="Program" data-en="Program">Program</td><td data-id="Executable native KLATOS." data-en="Native KLATOS executable.">Executable native KLATOS.</td></tr><tr><td data-id=Perpustakaan"Perpustakaan" data-en="Library">Perpustakaan</td><td data-id="Library sistem KLATOS." data-en="KLATOS system library.">Library sistem KLATOS.</td></tr><tr><td data-id="Runtime" data-en="Runtime">Runtime</td><td data-id="Komponen runtime sistem." data-en="System runtime components.">Komponen runtime sistem.</td></tr><tr><td data-id="DevKit" data-en="DevKit">DevKit</td><td data-id="Toolchain dan development resources." data-en="Toolchain and development resources.">Toolchain dan development resources.</td></tr><tr><td data-id=Aplikasi"Aplikasi" data-en="Application">Aplikasi</td><td data-id="Aplikasi native yang terpasang." data-en="Installed native applications.">Aplikasi native yang terpasang.</td></tr><tr><td data-id=Konfigurasi"Konfigurasi" data-en="Configuration">Konfigurasi</td><td data-id="Konfigurasi sistem dan service." data-en="System and service configuration.">Konfigurasi sistem dan service.</td></tr><tr><td data-id=SumberDaya"SumberDaya" data-en="Resource">SumberDaya</td><td data-id="Resource sistem dan aplikasi." data-en="System and application resources.">Resource sistem dan aplikasi.</td></tr></tbody></table>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Native Application" data-en="Native Application">Native Application</h2>
+    <p data-id="KLATOS memiliki platform aplikasi native dengan alur berikut:" data-en="KLATOS has a native application platform with the following flow:">KLATOS memiliki platform aplikasi native dengan alur berikut:</p>
+    <pre class="diagram">Create
+  ↓
+Build
+  ↓
+Native Executable
+  ↓
+Run
+  ↓
+Package
+  ↓
+KAP
+  ↓
+Install
+  ↓
+AppRegistry
+  ↓
+Launch</pre>
+    <p  data-id-html="Format paket aplikasi: <code>.kap</code>" data-en-html="Application package format: <code>.kap</code>">Format paket aplikasi: <code>.kap</code></p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="KAP — Klat Application Package" data-en="KAP — Klat Application Package">KAP — Klat Application Package</h2>
+    <p data-id="KAP menyediakan struktur paket untuk executable, library, resource, dan metadata aplikasi KLATOS." data-en="KAP provides the package structure for KLATOS application executables, libraries, resources, and metadata.">KAP menyediakan struktur paket untuk executable, library, resource, dan metadata aplikasi KLATOS.</p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="KLATGUI" data-en="KLATGUI">KLATGUI</h2>
+    <p data-id="KlatGUI adalah framework graphical user interface native KLATOS. KlatGUI menyediakan:" data-en="KlatGUI is the native KLATOS graphical user interface framework. KlatGUI provides:">KlatGUI adalah framework graphical user interface native KLATOS. KlatGUI menyediakan:</p>
+    <ul><li data-id="Window" data-en="Window">Window</li><li data-id="Widget" data-en="Widget">Widget</li><li data-id="Application UI" data-en="Application UI">Application UI</li><li data-id="Input" data-en="Input">Input</li><li data-id="Rendering" data-en="Rendering">Rendering</li><li data-id="Layout" data-en="Layout">Layout</li><li data-id="Desktop integration" data-en="Desktop integration">Desktop integration</li></ul>
+    <p data-id="KlatGUI terintegrasi langsung dengan platform graphical KLATOS." data-en="KlatGUI is directly integrated with the KLATOS graphical platform.">KlatGUI terintegrasi langsung dengan platform graphical KLATOS.</p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Nawolo" data-en="Nawolo">Nawolo</h2>
+    <p data-id="Nawolo adalah window system dan compositor KLATOS. Nawolo menangani:" data-en="Nawolo is the KLATOS window system and compositor. Nawolo handles:">Nawolo adalah window system dan compositor KLATOS. Nawolo menangani:</p>
+    <ul><li data-id="Window management" data-en="Window management">Window management</li><li data-id="Desktop surface" data-en="Desktop surface">Desktop surface</li><li data-id="Compositing" data-en="Compositing">Compositing</li><li data-id="Pointer" data-en="Pointer">Pointer</li><li data-id="Input routing" data-en="Input routing">Input routing</li><li data-id="Application presentation" data-en="Application presentation">Application presentation</li><li data-id="Display interaction" data-en="Display interaction">Display interaction</li></ul>
+    <h4 data-id="Alur graphical KLATOS" data-en="KLATOS Graphical Flow">Alur graphical KLATOS</h4>
+    <pre class="diagram">Application
+     ↓
+KlatGUI
+     ↓
+Nawolo
+     ↓
+Graphics Service
+     ↓
+Display Service
+     ↓
+JowoKernel
+     ↓
+Hardware</pre>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="KLATOS Desktop" data-en="KLATOS Desktop">KLATOS Desktop</h2>
+    <p data-id="Desktop KLATOS menyediakan lingkungan graphical terpadu dengan komponen utama:" data-en="The KLATOS desktop provides an integrated graphical environment with these main components:">Desktop KLATOS menyediakan lingkungan graphical terpadu dengan komponen utama:</p>
+    <ul><li data-id="Desktop" data-en="Desktop">Desktop</li><li data-id="Taskbar" data-en="Taskbar">Taskbar</li><li data-id="Dock" data-en="Dock">Dock</li><li data-id="Application launcher" data-en="Application launcher">Application launcher</li><li data-id="Window system" data-en="Window system">Window system</li><li data-id="System tray" data-en="System tray">System tray</li><li data-id="Native application window" data-en="Native application window">Native application window</li><li data-id="Pointer" data-en="Pointer">Pointer</li><li data-id="Input" data-en="Input">Input</li><li data-id="Compositor" data-en="Compositor">Compositor</li></ul>
+    <p data-id="Semua komponen tersebut terintegrasi dengan runtime KLATOS." data-en="All of these components are integrated with the KLATOS runtime.">Semua komponen tersebut terintegrasi dengan runtime KLATOS.</p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Graphics" data-en="Graphics">Graphics</h2>
+    <p data-id="KLATOS memiliki graphical stack untuk menangani:" data-en="KLATOS has a graphical stack that handles:">KLATOS memiliki graphical stack untuk menangani:</p>
+    <ul><li data-id="GPU" data-en="GPU">GPU</li><li data-id="Framebuffer" data-en="Framebuffer">Framebuffer</li><li data-id="Display" data-en="Display">Display</li><li data-id="Rendering" data-en="Rendering">Rendering</li><li data-id="Window composition" data-en="Window composition">Window composition</li><li data-id="Input" data-en="Input">Input</li><li data-id="Screen output" data-en="Screen output">Screen output</li></ul>
+    <p data-id="Graphics service bekerja bersama Nawolo dan KlatGUI untuk menghasilkan lingkungan desktop KLATOS." data-en="The graphics service works together with Nawolo and KlatGUI to produce the KLATOS desktop environment.">Graphics service bekerja bersama Nawolo dan KlatGUI untuk menghasilkan lingkungan desktop KLATOS.</p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Hardware" data-en="Hardware">Hardware</h2>
+    <p data-id="KLATOS memiliki lapisan hardware yang menangani perangkat sistem. Dukungan hardware mencakup:" data-en="KLATOS has a hardware layer that handles system devices. Hardware support covers:">KLATOS memiliki lapisan hardware yang menangani perangkat sistem. Dukungan hardware mencakup:</p>
+    <ul><li data-id="CPU" data-en="CPU">CPU</li><li data-id="GPU" data-en="GPU">GPU</li><li data-id="PCI" data-en="PCI">PCI</li><li data-id="USB" data-en="USB">USB</li><li data-id="Storage" data-en="Storage">Storage</li><li data-id="NVMe" data-en="NVMe">NVMe</li><li data-id="Network" data-en="Network">Network</li><li data-id="Audio" data-en="Audio">Audio</li><li data-id="Display" data-en="Display">Display</li><li data-id="Interrupt" data-en="Interrupt">Interrupt</li><li data-id="DMA" data-en="DMA">DMA</li><li data-id="MMIO" data-en="MMIO">MMIO</li><li data-id="VirtIO" data-en="VirtIO">VirtIO</li></ul>
+    <p data-id="JowoKernel mempertahankan kontrol terhadap resource hardware dan memberikan akses melalui mekanisme sistem yang terkontrol." data-en="JowoKernel retains control over hardware resources and grants access through controlled system mechanisms.">JowoKernel mempertahankan kontrol terhadap resource hardware dan memberikan akses melalui mekanisme sistem yang terkontrol.</p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="KLATOS DevKit" data-en="KLATOS DevKit">KLATOS DevKit</h2>
+    <p  data-id-html="KLATOS DevKit adalah lingkungan pengembangan native KLATOS. Lokasi: <code>/Sistem/DevKit/</code>" data-en-html="KLATOS DevKit is the native KLATOS development environment. Location: <code>/Sistem/DevKit/</code>">KLATOS DevKit adalah lingkungan pengembangan native KLATOS. Lokasi: <code>/Sistem/DevKit/</code></p>
+    <pre class="diagram">/Sistem/DevKit/
+├── bin
+├── include
+├── lib
+├── libexec
+└── x86_64-klatos</pre>
+    <p data-id="DevKit menyediakan tool dan resource untuk membangun software native KLATOS. Komponen DevKit mencakup:" data-en="DevKit provides tools and resources for building native KLATOS software. DevKit components include:">DevKit menyediakan tool dan resource untuk membangun software native KLATOS. Komponen DevKit mencakup:</p>
+    <ul><li data-id="GCC" data-en="GCC">GCC</li><li data-id="G++" data-en="G++">G++</li><li data-id="GCCGo" data-en="GCCGo">GCCGo</li><li data-id="CMake" data-en="CMake">CMake</li><li data-id="Git" data-en="Git">Git</li><li data-id="Bash" data-en="Bash">Bash</li><li data-id="Header" data-en="Header">Header</li><li data-id="Library" data-en="Library">Library</li><li data-id="Compiler Runtime" data-en="Compiler Runtime">Compiler Runtime</li><li data-id="Target Platform" data-en="Target Platform">Target Platform</li><li data-id="Development Tools" data-en="Development Tools">Development Tools</li></ul>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="KlatCLI" data-en="KlatCLI">KlatCLI</h2>
+    <p data-id="KlatCLI adalah command-line interface native KLATOS. Workflow pengembangan:" data-en="KlatCLI is the native KLATOS command-line interface. Development workflow:">KlatCLI adalah command-line interface native KLATOS. Workflow pengembangan:</p>
+    <pre class="diagram">klat new
+    ↓
+klat build
+    ↓
+klat run
+    ↓
+klat package
+    ↓
+klat install</pre>
+    <p data-id="KlatCLI menyatukan proses pembuatan, pembangunan, pengujian, packaging, dan instalasi aplikasi KLATOS." data-en="KlatCLI unifies the process of creating, building, testing, packaging, and installing KLATOS applications.">KlatCLI menyatukan proses pembuatan, pembangunan, pengujian, packaging, dan instalasi aplikasi KLATOS.</p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Security Architecture" data-en="Security Architecture">Security Architecture</h2>
+    <p data-id="Keamanan KLATOS dibangun dengan beberapa prinsip utama." data-en="KLATOS security is built on several core principles.">Keamanan KLATOS dibangun dengan beberapa prinsip utama.</p>
+    <ul><li data-id="Capability &mdash; akses terhadap resource dikendalikan melalui capability." data-en="Capability &mdash; access to resources is controlled through capabilities.">Capability &mdash; akses terhadap resource dikendalikan melalui capability.</li><li data-id="Least Privilege &mdash; komponen memperoleh authority sesuai kebutuhan." data-en="Least Privilege &mdash; components obtain authority according to need.">Least Privilege &mdash; komponen memperoleh authority sesuai kebutuhan.</li><li data-id="Explicit Authority &mdash; akses resource harus memiliki authority yang valid." data-en="Explicit Authority &mdash; resource access must have valid authority.">Explicit Authority &mdash; akses resource harus memiliki authority yang valid.</li><li data-id="Isolation &mdash; process dan service memiliki batas akses yang terkontrol." data-en="Isolation &mdash; processes and services have controlled access boundaries.">Isolation &mdash; process dan service memiliki batas akses yang terkontrol.</li><li data-id="Resource Ownership &mdash; JowoKernel mengendalikan kepemilikan resource sistem." data-en="Resource Ownership &mdash; JowoKernel controls ownership of system resources.">Resource Ownership &mdash; JowoKernel mengendalikan kepemilikan resource sistem.</li><li data-id="Fail Closed &mdash; operasi tanpa authority yang valid ditolak." data-en="Fail Closed &mdash; operations without valid authority are rejected.">Fail Closed &mdash; operasi tanpa authority yang valid ditolak.</li></ul>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Native Runtime" data-en="Native Runtime">Native Runtime</h2>
+    <p data-id="Struktur runtime KLATOS:" data-en="The KLATOS runtime structure:">Struktur runtime KLATOS:</p>
+    <pre class="diagram">Application
+     ↓
+KlatLoader
+     ↓
+KlatIPC
+     ↓
+System Services
+     ↓
+KSM
+     ↓
+JowoKernel
+     ↓
+Hardware</pre>
+    <p data-id="Setiap lapisan memiliki tanggung jawab dan interface yang jelas." data-en="Each layer has a clear responsibility and interface.">Setiap lapisan memiliki tanggung jawab dan interface yang jelas.</p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="ABI KLATOS" data-en="KLATOS ABI">ABI KLATOS</h2>
+    <p data-id="KLATOS memiliki ABI native yang menjadi kontrak antara kernel, service, runtime, dan aplikasi. ABI menyediakan:" data-en="KLATOS has a native ABI that serves as the contract between kernel, services, runtime, and applications. The ABI provides:">KLATOS memiliki ABI native yang menjadi kontrak antara kernel, service, runtime, dan aplikasi. ABI menyediakan:</p>
+    <ul><li data-id="System Call" data-en="System Call">System Call</li><li data-id="Object" data-en="Object">Object</li><li data-id="Handle" data-en="Handle">Handle</li><li data-id="Capability" data-en="Capability">Capability</li><li data-id="Rights" data-en="Rights">Rights</li><li data-id="Request" data-en="Request">Request</li><li data-id="Response" data-en="Response">Response</li><li data-id="Error Status" data-en="Error Status">Error Status</li><li data-id="IPC Interface" data-en="IPC Interface">IPC Interface</li></ul>
+    <p data-id="ABI v2 menyediakan interface terstruktur untuk mekanisme native KLATOS." data-en="ABI v2 provides a structured interface for native KLATOS mechanisms.">ABI v2 menyediakan interface terstruktur untuk mekanisme native KLATOS.</p>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Bahasa Pemrograman" data-en="Programming Languages">Bahasa Pemrograman</h2>
+    <p data-id="KLATOS menggunakan bahasa pemrograman sesuai kebutuhan setiap lapisan." data-en="KLATOS uses programming languages according to the needs of each layer.">KLATOS menggunakan bahasa pemrograman sesuai kebutuhan setiap lapisan.</p>
+    <table class="spec-table"><thead><tr><th data-id="Bahasa" data-en="Language">Bahasa</th><th data-id="Peran" data-en="Role">Peran</th></tr></thead><tbody><tr><td data-id="Rust" data-en="Rust">Rust</td><td data-id="Fondasi utama JowoKernel: security, capability, memory, process, thread, scheduler, IPC, resource ownership, dan system mechanisms." data-en="Main foundation of JowoKernel: security, capability, memory, process, thread, scheduler, IPC, resource ownership, and system mechanisms.">Fondasi utama JowoKernel: security, capability, memory, process, thread, scheduler, IPC, resource ownership, dan system mechanisms.</td></tr><tr><td data-id="C++" data-en="C++">C++</td><td data-id="Komponen hardware, driver, GPU, PCI, USB, DMA, MMIO, arsitektur, bootstrap, dan low-level interfaces." data-en="Hardware, driver, GPU, PCI, USB, DMA, MMIO, architecture, bootstrap, and low-level interface components.">Komponen hardware, driver, GPU, PCI, USB, DMA, MMIO, arsitektur, bootstrap, dan low-level interfaces.</td></tr><tr><td data-id="Assembly" data-en="Assembly">Assembly</td><td data-id="Kebutuhan instruksi prosesor dan bagian bootstrap tingkat rendah." data-en="Processor instruction needs and low-level bootstrap sections.">Kebutuhan instruksi prosesor dan bagian bootstrap tingkat rendah.</td></tr></tbody></table>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="Filosofi KLATOS" data-en="KLATOS Philosophy">Filosofi KLATOS</h2>
+    <ul><li  data-id-html="<strong>Native</strong> &mdash; setiap komponen utama dirancang untuk menjadi bagian dari platform KLATOS." data-en-html="<strong>Native</strong> &mdash; every major component is designed to be part of the KLATOS platform."><strong>Native</strong> &mdash; setiap komponen utama dirancang untuk menjadi bagian dari platform KLATOS.</li><li  data-id-html="<strong>Secure</strong> &mdash; keamanan menjadi bagian dari fondasi kernel dan resource management." data-en-html="<strong>Secure</strong> &mdash; security is part of the kernel foundation and resource management."><strong>Secure</strong> &mdash; keamanan menjadi bagian dari fondasi kernel dan resource management.</li><li  data-id-html="<strong>Modular</strong> &mdash; kernel, service, graphical stack, runtime, dan aplikasi memiliki batas interface yang jelas." data-en-html="<strong>Modular</strong> &mdash; kernel, services, graphical stack, runtime, and applications have clear interface boundaries."><strong>Modular</strong> &mdash; kernel, service, graphical stack, runtime, dan aplikasi memiliki batas interface yang jelas.</li><li  data-id-html="<strong>Integrated</strong> &mdash; kernel, security, IPC, filesystem, runtime, desktop, dan application platform bekerja sebagai satu ekosistem." data-en-html="<strong>Integrated</strong> &mdash; kernel, security, IPC, filesystem, runtime, desktop, and application platform work as one ecosystem."><strong>Integrated</strong> &mdash; kernel, security, IPC, filesystem, runtime, desktop, dan application platform bekerja sebagai satu ekosistem.</li><li  data-id-html="<strong>Developer Friendly</strong> &mdash; KLATOS menyediakan DevKit dan KlatCLI untuk membangun aplikasi native secara langsung." data-en-html="<strong>Developer Friendly</strong> &mdash; KLATOS provides DevKit and KlatCLI to build native applications directly."><strong>Developer Friendly</strong> &mdash; KLATOS menyediakan DevKit dan KlatCLI untuk membangun aplikasi native secara langsung.</li></ul>
+    <h2 class="section-title" style="text-align:left;margin-top:3rem" data-id="KLATOS Identity" data-en="KLATOS Identity">KLATOS Identity</h2>
+    <table class="spec-table"><thead><tr><th data-id="Komponen" data-en="Component">Komponen</th><th data-id="Nilai" data-en="Value">Nilai</th></tr></thead><tbody><tr><td data-id="Operating System" data-en="Operating System">Operating System</td><td>KLATOS</td></tr><tr><td data-id="Kernel" data-en="Kernel">Kernel</td><td>JowoKernel</td></tr><tr><td data-id="Security" data-en="Security">Security</td><td>KSM</td></tr><tr><td data-id="IPC" data-en="IPC">IPC</td><td>KlatIPC</td></tr><tr><td data-id="Loader" data-en="Loader">Loader</td><td>KlatLoader</td></tr><tr><td data-id="GUI" data-en="GUI">GUI</td><td>KlatGUI</td></tr><tr><td data-id="Window System" data-en="Window System">Window System</td><td>Nawolo</td></tr><tr><td data-id="Package" data-en="Package">Package</td><td>KAP</td></tr><tr><td data-id="Filesystem" data-en="Filesystem">Filesystem</td><td>/Sistem</td></tr><tr><td data-id="CLI" data-en="CLI">CLI</td><td>KlatCLI</td></tr><tr><td data-id="Developer Kit" data-en="Developer Kit">Developer Kit</td><td>KLATOS DevKit</td></tr><tr><td data-id="Developer" data-en="Developer">Developer</td><td>WSM SOFTWARE</td></tr></tbody></table>
+  </div>
+</div>

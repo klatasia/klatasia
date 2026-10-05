@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KLAT OS</title>
-  <meta name="description" content="Modern operating system built on JowoKernel">
+  <title>KLATOS — Native Operating System &amp; Computing Platform</title>
+  <meta name="description" content="KLATOS is a native operating system developed by WSM SOFTWARE: JowoKernel, KSM capability security, KlatIPC, KlatLoader, KlatGUI, Nawolo, KAP application packages, native runtime, KLATOS DevKit, and the /Sistem filesystem.">
   <link rel="icon" href="icons/logo-mark.svg">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <style>.nav-links.show{display:flex!important;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:var(--card);border-bottom:1px solid var(--border);padding:1rem;z-index:999}</style>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-inner">
-      <a href="#/" class="logo"><img src="icons/logo-mark.svg" alt="KLAT OS" class="logo-icon"><span>KLAT OS</span></a>
+      <a href="#/" class="logo"><img src="icons/logo-mark.svg" alt="KLATOS" class="logo-icon"><span>KLATOS</span></a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#/" data-page="home" data-i18n="nav.home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a></li>
-        <li><a href="#/download" data-page="download" data-i18n="nav.download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</a></li>
-        <li><a href="#/docs" data-page="docs" data-i18n="nav.docs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Documentation</a></li>
-        <li><a href="https://klatos.forumotion.com/" data-page="forum" data-i18n="nav.forum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Forum</a></li>
-        <li><a href="#/roadmap" data-page="roadmap" data-i18n="nav.roadmap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>Roadmap</a></li>
-        <li><a href="#/releases" data-page="releases" data-i18n="nav.releases"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Releases</a></li>
-        <li><a href="#/blog" data-page="blog" data-i18n="nav.blog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Blog</a></li>
-        <li><a href="#/about" data-page="about" data-i18n="nav.about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>About</a></li>
+        <li><a href="#/" data-page="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span data-i18n="nav.home">Home</span></a></li>
+        <li><a href="#/technology" data-page="technology"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg><span data-i18n="nav.technology">Technology</span></a></li>
+        <li><a href="#/docs" data-page="docs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span data-i18n="nav.docs">Documentation</span></a></li>
+        <li><a href="#/download" data-page="download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="nav.download">Download</span></a></li>
+        <li><a href="#/roadmap" data-page="roadmap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg><span data-i18n="nav.roadmap">Roadmap</span></a></li>
+        <li><a href="#/releases" data-page="releases"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span data-i18n="nav.releases">Releases</span></a></li>
+        <li><a href="#/developers" data-page="developers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><span data-i18n="nav.developers">Developers</span></a></li>
+        <li><a href="#/blog" data-page="blog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span data-i18n="nav.blog">Blog</span></a></li>
+        <li><a href="https://klatos.forumotion.com/" data-page="forum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><span data-i18n="nav.forum">Forum</span></a></li>
+        <li><a href="#/about" data-page="about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span data-i18n="nav.about">About</span></a></li>
       </ul>
       <div class="nav-actions">
         <button id="theme-toggle" class="nav-btn" title="Toggle Theme">&#9790;</button>
         <button id="lang-toggle" class="nav-btn" title="Toggle Language">ID</button>
-        <button class="nav-btn" onclick="document.getElementById('nav-links').classList.toggle('show')">&#9776;</button>
+        <button class="nav-btn nav-menu-btn" aria-label="Menu" aria-expanded="false" onclick="toggleNavMenu()">&#9776;</button>
       </div>
     </div>
   </nav>
@@ -45,41 +46,46 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h4><img src="icons/logo-mark.svg" alt="" class="footer-logo"><span data-i18n="footer.col1_title">KLAT OS</span></h4>
+          <h4><img src="icons/logo-mark.svg" alt="" class="footer-logo"><span data-i18n="footer.col1_title">KLATOS</span></h4>
           <ul>
-            <li><a href="#/" data-i18n="nav.home">Home</a></li>
+            <li><a href="#/"><span data-i18n="nav.home">Home</span></a></li>
             <li><a href="#/about" data-i18n="footer.col1_about">About</a></li>
+            <li><a href="#/technology" data-i18n="footer.col1_technology">Technology</a></li>
             <li><a href="#/docs" data-i18n="footer.col1_docs">Documentation</a></li>
-            <li><a href="https://klatos.forumotion.com/" data-i18n="footer.col1_forum">Forum</a></li>
           </ul>
         </div>
         <div>
-          <h4 data-i18n="footer.col2_title">Community</h4>
+          <h4 data-i18n="footer.col2_title">Ecosystem</h4>
           <ul>
-            <li><a href="https://github.com/KlatAsia" target="_blank" data-i18n="footer.col2_github"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a></li>
-            <li><a href="https://www.youtube.com/@KlatAsiaSoftware" target="_blank" data-i18n="footer.col2_youtube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>YouTube</a></li>
+            <li><a href="#/docs#kernel" data-i18n="footer.col2_kernel">Kernel</a></li>
+            <li><a href="#/docs#ksm" data-i18n="footer.col2_security">KSM Security</a></li>
+            <li><a href="#/docs#gui" data-i18n="footer.col2_desktop">Desktop &amp; GUI</a></li>
+            <li><a href="#/docs#native-application" data-i18n="footer.col2_apps">Application Platform</a></li>
           </ul>
         </div>
         <div>
           <h4 data-i18n="footer.col3_title">Resources</h4>
           <ul>
-            <li><a href="#/docs" data-i18n="footer.col3_docs">Documentation</a></li>
-            <li><a href="#/download" data-i18n="footer.col3_download">Download</a></li>
-            <li><a href="#/blog" data-i18n="footer.col3_blog">Blog</a></li>
-            <li><a href="#/releases" data-i18n="footer.col3_releases">Releases</a></li>
+            <li><a href="#/download"><span data-i18n="nav.download">Download</span></a></li>
+            <li><a href="#/roadmap"><span data-i18n="nav.roadmap">Roadmap</span></a></li>
+            <li><a href="#/releases"><span data-i18n="nav.releases">Releases</span></a></li>
+            <li><a href="#/developers"><span data-i18n="nav.developers">Developers</span></a></li>
           </ul>
         </div>
         <div>
-          <h4 data-i18n="footer.col4_title">Legal</h4>
+          <h4 data-i18n="footer.col4_title">Community</h4>
           <ul>
-            <li><a href="#/privacy" data-i18n="footer.col4_privacy">Privacy Policy</a></li>
-            <li><a href="#/terms" data-i18n="footer.col4_terms">Terms of Service</a></li>
-            <li><a href="https://github.com/KlatAsia/KLAT-OS/blob/main/LICENSE" target="_blank" data-i18n="footer.col4_license">Apache 2.0</a></li>
+            <li><a href="https://github.com/KlatAsia" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span data-i18n="footer.col4_github">GitHub</span></a></li>
+            <li><a href="https://www.youtube.com/@KlatAsiaSoftware" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg><span data-i18n="footer.col4_youtube">YouTube</span></a></li>
+            <li><a href="https://klatos.forumotion.com/"><span data-i18n="footer.col4_forum">Forum</span></a></li>
+            <li><a href="https://klat.asia" target="_blank" rel="noopener"><span data-i18n="footer.col4_website">Website</span></a></li>
+            <li><a href="https://github.com/KlatAsia/KLAT-OS/blob/main/LICENSE" target="_blank"><span data-i18n="footer.col4_license">Apache 2.0</span></a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p><span data-i18n="footer.copyright">&copy; 2026 KLAT OS - Developed by</span> <a href="https://klat.asia" target="_blank">KlatAsia Software</a></p>
+        <p><span data-i18n="footer.copyright">&copy; 2026 KLATOS &mdash; Developed by</span> <a href="https://github.com/KlatAsia" target="_blank">WSM SOFTWARE</a></p>
+        <p style="margin-top:.5rem;font-size:.75rem;opacity:.8" data-i18n="footer.statement">KLATOS is a native operating system developed by WSM SOFTWARE, with architecture, kernel, security, runtime, desktop, filesystem, and application platform designed as one integrated ecosystem.</p>
       </div>
     </div>
   </footer>
@@ -88,25 +94,54 @@
     var T = {};
     var PAGES = {};
     var currentPage = '';
+    var currentLang = 'id';
 
     function t(key) {
       return T[key] || key;
+    }
+
+    // Only replace text when the host has no element children, so inline SVG/icons
+    // or nested markup inside a translated element are never destroyed.
+    function setLocalizedText(el, val) {
+      if (!val) return;
+      for (var i = 0; i < el.childNodes.length; i++) {
+        if (el.childNodes[i].nodeType === 1) {
+          console.warn('[i18n] skipped: element has child markup', el);
+          return;
+        }
+      }
+      el.textContent = val;
     }
 
     function applyTranslations() {
       document.querySelectorAll('[data-i18n]').forEach(function(el) {
         var key = el.getAttribute('data-i18n');
         var val = t(key);
-        if (val !== key) el.textContent = val;
+        if (val !== key) setLocalizedText(el, val);
       });
       document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
         var key = el.getAttribute('data-i18n-placeholder');
         var val = t(key);
         if (val !== key) el.placeholder = val;
       });
+      applyPageContent();
+    }
+
+    function applyPageContent() {
+      var useEn = currentLang === 'en';
+      document.querySelectorAll('[data-id][data-en]').forEach(function(el) {
+        var val = useEn ? el.getAttribute('data-en') : el.getAttribute('data-id');
+        setLocalizedText(el, val);
+      });
+      document.querySelectorAll('[data-id-html][data-en-html]').forEach(function(el) {
+        var val = useEn ? el.getAttribute('data-en-html') : el.getAttribute('data-id-html');
+        if (val) el.innerHTML = val;
+      });
     }
 
     function loadLang(lang) {
+      currentLang = lang;
+      document.documentElement.setAttribute('lang', lang);
       return fetch('lang/' + lang + '.json')
         .then(function(r) { return r.json(); })
         .then(function(data) {
@@ -134,23 +169,36 @@
       document.getElementById('theme-toggle').innerHTML = isDark ? '&#9788;' : '&#9790;';
     }
 
+    function toggleNavMenu() {
+      var links = document.getElementById('nav-links');
+      var btn = document.querySelector('.nav-menu-btn');
+      var open = links.classList.toggle('show');
+      if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    function closeNavMenu() {
+      var links = document.getElementById('nav-links');
+      var btn = document.querySelector('.nav-menu-btn');
+      if (links) links.classList.remove('show');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }
+
     function toggleLang() {
-      var current = localStorage.getItem('lang') || 'id';
-      var next = current === 'id' ? 'en' : 'id';
+      var next = currentLang === 'id' ? 'en' : 'id';
       localStorage.setItem('lang', next);
       document.getElementById('lang-toggle').textContent = next.toUpperCase();
       loadLang(next).then(function() {
         applyTranslations();
         PAGES = {};
-        loadPage(currentPage);
+        loadPage(currentPage || getPageFromHash());
       });
     }
 
     function getPageFromHash() {
       var hash = window.location.hash || '#/';
-      var path = hash.replace('#', '');
-      if (path === '/' || path === '') return 'home';
-      return path.replace(/^\//, '').split('/')[0];
+      var path = hash.replace(/^#\/?/, '').split('#')[0].replace(/\/+$/, '');
+      if (path === '') return 'home';
+      return path.split('/')[0];
     }
 
     function updateNavActive(page) {
@@ -177,143 +225,108 @@
           PAGES[page] = html;
           renderPage(html, page);
         })
-        .catch(function() {
-          document.getElementById('content').innerHTML =
-            '<div class="section text-center" style="padding:6rem 0">' +
-            '<h1 class="section-title">404</h1>' +
-            '<p class="section-desc">Page not found.</p>' +
-            '<a href="#/" class="btn btn-solid">Go Home</a></div>';
+        .catch(function(err) {
+          if (err && err.message === 'Not found') {
+            renderNotFound();
+          } else if (window.console) {
+            console.error('render:', page, err);
+          }
         });
+    }
+
+    function renderNotFound() {
+      document.getElementById('content').innerHTML =
+        '<div class="section text-center" style="padding:6rem 0">' +
+        '<h1 class="section-title">404</h1>' +
+        '<p class="section-desc">Page not found.</p>' +
+        '<a href="#/" class="btn btn-solid">Go Home</a></div>';
     }
 
     function renderPage(html, page) {
       document.getElementById('content').innerHTML = html;
+      runPageScripts();
       window.scrollTo(0, 0);
-      document.getElementById('nav-links').classList.remove('show');
+      closeNavMenu();
       applyTranslations();
       initPageScripts(page);
+      if (page === 'docs') scrollToDocsHash();
+    }
+
+    function runPageScripts() {
+      var scripts = document.querySelectorAll('#content script');
+      for (var i = 0; i < scripts.length; i++) {
+        var old = scripts[i];
+        var s = document.createElement('script');
+        for (var j = 0; j < old.attributes.length; j++) {
+          s.setAttribute(old.attributes[j].name, old.attributes[j].value);
+        }
+        s.textContent = old.textContent;
+        old.parentNode.replaceChild(s, old);
+      }
+    }
+
+    function scrollToDocsHash() {
+      var hash = window.location.hash;
+      if (hash.indexOf('#/docs#') !== 0) return;
+      var id = hash.split('#')[2];
+      setTimeout(function() {
+        var target = document.getElementById(id);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 60);
     }
 
     function initPageScripts(page) {
       if (page === 'home') loadJSON('database/forum.json', renderHomeThreads);
-      if (page === 'forum') initForumPage();
       if (page === 'docs') initDocsPage();
+      if (page === 'releases') initReleasesPage();
     }
 
     function renderHomeThreads(data) {
       var el = document.getElementById('latest-threads');
       if (!el || !data.threads) return;
       var html = '';
-      data.threads.slice(0, 6).forEach(function(th) {
+      data.threads.slice(0, 3).forEach(function(th) {
         var cat = th.category.toLowerCase().replace(/ /g, '-');
-        html += '<div class="card"><div class="update-meta"><span class="cat-badge ' + cat + '">' + th.category + '</span><span>' + th.date + '</span></div><h3>' + th.title + '</h3><p class="update-excerpt">' + th.excerpt + '</p><div class="update-meta" style="margin-top:.75rem"><span>&#128065; ' + th.views + '</span><span>&#10084; ' + th.likes + '</span><span>&#128172; ' + (typeof th.replies === 'object' ? th.replies.length : th.replies) + '</span></div></div>';
+        html += '<div class="card"><div class="update-meta"><span class="cat-badge ' + cat + '">' + th.category + '</span><span>' + th.date + '</span></div>' +
+          '<h3><a href="#/forum/' + th.id + '">' + th.title + '</a></h3>' +
+          '<p class="update-excerpt">' + th.excerpt + '</p></div>';
       });
       el.innerHTML = html;
     }
 
-    function initForumPage() {
-      loadJSON('database/forum.json', function(data) {
-        var catList = document.getElementById('category-list');
-        var threads = data.threads || [];
-        var customThreads = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
-        threads = customThreads.concat(threads);
-        var categories = data.forum ? data.forum.categories : [];
-        var statEl = document.getElementById('stat-threads');
-        if (statEl) statEl.textContent = threads.length;
-
-        if (catList) {
-          var ch = '<li><a href="#" class="active" data-cat="all" data-i18n="forum.cat_all">' + t('forum.cat_all') + '</a></li>';
-          categories.forEach(function(c) { ch += '<li><a href="#" data-cat="' + c + '">' + c + '</a></li>'; });
-          catList.innerHTML = ch;
-          catList.querySelectorAll('a').forEach(function(a) {
-            a.addEventListener('click', function(e) {
-              e.preventDefault();
-              catList.querySelectorAll('a').forEach(function(x) { x.classList.remove('active'); });
-              a.classList.add('active');
-              var cat = a.getAttribute('data-cat');
-              renderThreads(cat === 'all' ? threads : threads.filter(function(th) { return th.category === cat; }));
-            });
-          });
-        }
-
-        renderThreads(threads);
-
-        var si = document.getElementById('forum-search');
-        if (si) {
-          si.addEventListener('input', function() {
-            var q = si.value.toLowerCase();
-            renderThreads(threads.filter(function(th) {
-              return th.title.toLowerCase().indexOf(q) > -1 || th.author.toLowerCase().indexOf(q) > -1;
-            }));
-          });
-        }
-
-        document.querySelectorAll('.filter-btn').forEach(function(btn) {
-          btn.addEventListener('click', function() {
-            document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            var v = btn.getAttribute('data-view');
-            var sorted = threads.slice();
-            if (v === 'popular') sorted.sort(function(a, b) { return b.views - a.views; });
-            if (v === 'pinned') sorted = sorted.filter(function(th) { return th.pinned; });
-            renderThreads(sorted);
-          });
-        });
-
-        window._reloadForum = function() {
-          var ct = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
-          threads = ct.concat(data.threads || []);
-          if (statEl) statEl.textContent = threads.length;
-          renderThreads(threads);
-        };
-      });
-    }
-
-    function renderThreads(threads) {
-      var list = document.getElementById('thread-list');
-      if (!list) return;
-      if (!threads.length) {
-        list.innerHTML = '<tr><td colspan="7" class="text-center" style="padding:2rem;color:var(--text3)">No threads found</td></tr>';
-        return;
-      }
-      var user = (window._forumUser && window._forumUser.get()) || null;
-      var isAdmin = user && (user.role === 'admin' || user.role === 'moderator');
-      list.innerHTML = threads.map(function(th) {
-        var cat = th.category.toLowerCase().replace(/ /g, '-');
-        var rep = typeof th.replies === 'object' ? th.replies.length : th.replies;
-        var adminCol = '';
-        if (isAdmin) {
-          adminCol = '<td class="admin-controls">' +
-            '<button class="admin-btn" onclick="window._forumPin(\'' + th.id + '\')">' + (th.pinned ? 'Unpin' : 'Pin') + '</button>' +
-            '<button class="admin-btn danger" onclick="window._forumDelete(\'' + th.id + '\')">Del</button>' +
-            '</td>';
-        }
-        return '<tr><td><span class="cat-badge ' + cat + '">' + th.category + '</span></td><td><a href="#/forum/' + th.id + '" class="thread-title">' + (th.pinned ? '<span class="pin-badge">&#128204;</span> ' : '') + (th.solved ? '<span class="solved-badge">&#10003;</span> ' : '') + th.title + '</a></td><td>' + rep + '</td><td>' + th.views + '</td><td>' + th.likes + '</td><td>' + th.author + '</td>' + adminCol + '</tr>';
-      }).join('');
-    }
-
-    window._forumPin = function(id) {
-      var ct = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
-      var t = ct.find(function(x) { return x.id === id; });
-      if (t) { t.pinned = !t.pinned; localStorage.setItem('forum_custom_threads', JSON.stringify(ct)); if (window._reloadForum) window._reloadForum(); }
-    };
-
-    window._forumDelete = function(id) {
-      if (!confirm('Hapus thread ini?')) return;
-      var ct = JSON.parse(localStorage.getItem('forum_custom_threads') || '[]');
-      ct = ct.filter(function(x) { return x.id !== id; });
-      localStorage.setItem('forum_custom_threads', JSON.stringify(ct));
-      if (window._reloadForum) window._reloadForum();
-    };
 
     function initDocsPage() {
-      document.querySelectorAll('.docs-nav a').forEach(function(a) {
+      var links = document.querySelectorAll('.docs-nav a');
+      links.forEach(function(a) {
         a.addEventListener('click', function(e) {
           e.preventDefault();
-          document.querySelectorAll('.docs-nav a').forEach(function(x) { x.classList.remove('active'); });
+          links.forEach(function(x) { x.classList.remove('active'); });
           a.classList.add('active');
           var target = document.getElementById(a.getAttribute('href').replace('#', ''));
           if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function(a) {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+          });
+        });
+      }, { rootMargin: '-80px 0px -70% 0px' });
+      document.querySelectorAll('.docs-content h2[id]').forEach(function(h) { observer.observe(h); });
+    }
+
+    function initReleasesPage() {
+      document.querySelectorAll('[data-gate-toggle]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var el = document.getElementById(btn.getAttribute('data-gate-toggle'));
+          if (!el) return;
+          var open = el.style.display !== 'none';
+          el.style.display = open ? 'none' : 'block';
+          btn.textContent = open ? btn.getAttribute('data-label-open') : btn.getAttribute('data-label-close');
         });
       });
     }
