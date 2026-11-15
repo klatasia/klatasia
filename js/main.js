@@ -1224,7 +1224,7 @@
   // ========== SUBMENU TOGGLE (MOBILE) ==========
   document.querySelectorAll('.nav-has-submenu > .nav-link').forEach(function (link) {
     link.addEventListener('click', function (e) {
-      if (window.innerWidth <= 991) {
+      if (window.innerWidth <= 1100) {
         e.preventDefault();
         var parent = this.parentElement;
         var wasOpen = parent.classList.contains('open');
